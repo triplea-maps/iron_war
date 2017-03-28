@@ -1,0 +1,12 @@
+Norwegian Northern Sea Zone  (5089,147)
+North Atlantic 1 Sea Zone  (4088,1130)
+North Atlantic 4 Sea Zone  (4104,1541)
+North Atlantic 6 Sea Zone  (3881,1938)
+Atlantic 9 Sea Zone (4100,2793)
+Atlantic 10 Sea Zone  (5090,3485)
+South Pacific 11 Sea Zone  (620,3520)
+North Pacific 1 Sea Zone  (11723,1213)
+Indian Ocean 2 Sea Zone  (7790,3238)
+Indian Ocean 3 Sea Zone  (8550,3120)
+Indian Ocean 5 Sea Zone  (8550,3590)
+
