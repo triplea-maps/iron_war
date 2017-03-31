@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War (BETA)" version="0.1.0"/>
+  <info name="Iron War (BETA)" version="0.1.1"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -5016,6 +5016,7 @@
             <option name="isAir" value="true"/>
             <option name="isSuicide" value="true"/>
             <option name="isKamikaze" value="true"/>
+            <option name="carrierCost" value="1"/>
         </attachment>
 
         <attachment name="unitAttachment" attachTo="Transport" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
