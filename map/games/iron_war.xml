@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War (BETA)" version="0.1.1"/>
+  <info name="Iron War (BETA)" version="0.1.2"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -288,7 +288,7 @@
       <territory name="Leningrad"/>
       <territory name="Lensk"/>
       <territory name="Lhasa"/>
-      <territory name="Sierra Leone"/>
+      <territory name="Liberia"/>
       <territory name="Libya"/>
       <territory name="Libyan Desert"/>
       <territory name="Lindi"/>
@@ -516,7 +516,7 @@
       <territory name="Venezuela"/>
       <territory name="Vichy"/>
       <territory name="Victoria"/>
-      <territory name="Visayas"/>
+      <territory name="Philippines"/>
       <territory name="Amur"/>
       <territory name="Volga"/>
       <territory name="Wabakimi"/>
@@ -552,7 +552,7 @@
       <connection t1="Accra Sea Zone" t2="Gold Coast"/>
       <connection t1="Accra Sea Zone" t2="Gulf of Guinea Sea Zone"/>
       <connection t1="Accra Sea Zone" t2="Ivory Coast"/>
-      <connection t1="Accra Sea Zone" t2="Sierra Leone"/>
+      <connection t1="Accra Sea Zone" t2="Liberia"/>
       <connection t1="Accra Sea Zone" t2="Natal Sea Zone"/>
       <connection t1="Aden" t2="Gulf of Aden Sea Zone"/>
       <connection t1="Aden" t2="Oman"/>
@@ -865,7 +865,7 @@
       <connection t1="Baltic States" t2="Leningrad"/>
       <connection t1="Bamako" t2="Guinea"/>
       <connection t1="Bamako" t2="Ivory Coast"/>
-      <connection t1="Bamako" t2="Sierra Leone"/>
+      <connection t1="Bamako" t2="Liberia"/>
       <connection t1="Bamako" t2="Sahara Desert"/>
       <connection t1="Bamako" t2="Senegal"/>
       <connection t1="Bamako" t2="West Africa"/>
@@ -1088,7 +1088,7 @@
       <connection t1="Celebes Sea Zone" t2="Palawan"/>
       <connection t1="Celebes Sea Zone" t2="Philippines Sea Zone"/>
       <connection t1="Celebes Sea Zone" t2="South China Sea Zone"/>
-      <connection t1="Celebes Sea Zone" t2="Visayas"/>
+      <connection t1="Celebes Sea Zone" t2="Philippines"/>
       <connection t1="Celtic Sea Zone" t2="England"/>
       <connection t1="Celtic Sea Zone" t2="Greenland Sea Zone"/>
       <connection t1="Celtic Sea Zone" t2="Hebrides"/>
@@ -1172,7 +1172,6 @@
       <connection t1="Davis Strait Sea Zone" t2="Southern Greenland"/>
       <connection t1="Davis Strait Sea Zone" t2="Western Greenland"/>
       <connection t1="Denmark" t2="North Sea Zone"/>
-      <connection t1="Denmark" t2="Sweden"/>
       <connection t1="Denmark" t2="West Germany"/>
       <connection t1="Denmark Strait Sea Zone" t2="Eastern Greenland"/>
       <connection t1="Denmark Strait Sea Zone" t2="Greenland Sea Zone"/>
@@ -1286,7 +1285,7 @@
       <connection t1="France" t2="Vichy"/>
       <connection t1="France" t2="West Germany"/>
       <connection t1="Freetown Sea Zone" t2="Guinea"/>
-      <connection t1="Freetown Sea Zone" t2="Sierra Leone"/>
+      <connection t1="Freetown Sea Zone" t2="Liberia"/>
       <connection t1="Freetown Sea Zone" t2="Natal Sea Zone"/>
       <connection t1="Freetown Sea Zone" t2="Senegal"/>
       <connection t1="Freetown Sea Zone" t2="West African Sea Zone"/>
@@ -1348,7 +1347,7 @@
       <connection t1="Guam" t2="Philippines Sea Zone"/>
       <connection t1="Guiana Sea Zone" t2="Para Sea Zone"/>
       <connection t1="Guiana Sea Zone" t2="Venezuela"/>
-      <connection t1="Guinea" t2="Sierra Leone"/>
+      <connection t1="Guinea" t2="Liberia"/>
       <connection t1="Guinea" t2="Senegal"/>
       <connection t1="Gulf Coast" t2="Gulf of Mexico Sea Zone"/>
       <connection t1="Gulf Coast" t2="Texas"/>
@@ -1505,7 +1504,7 @@
       <connection t1="Italy" t2="Switzerland"/>
       <connection t1="Italy" t2="Tyrrhenian Sea Zone"/>
       <connection t1="Italy" t2="Vichy"/>
-      <connection t1="Ivory Coast" t2="Sierra Leone"/>
+      <connection t1="Ivory Coast" t2="Liberia"/>
       <connection t1="Ivory Coast" t2="West Africa"/>
       <connection t1="Japan" t2="Japan Sea Zone"/>
       <connection t1="Japan" t2="Japanese East Coast Sea Zone"/>
@@ -1874,7 +1873,7 @@
       <connection t1="Perth Sea Zone" t2="South Indian Ocean 16 Sea Zone"/>
       <connection t1="Philippines Sea Zone" t2="Saipan"/>
       <connection t1="Philippines Sea Zone" t2="South China Sea Zone"/>
-      <connection t1="Philippines Sea Zone" t2="Visayas"/>
+      <connection t1="Philippines Sea Zone" t2="Philippines"/>
       <connection t1="Philippines Sea Zone" t2="Wake Island Sea Zone"/>
       <connection t1="Port Elizabeth Sea Zone" t2="Pretoria"/>
       <connection t1="Port Elizabeth Sea Zone" t2="South Africa"/>
@@ -2052,8 +2051,8 @@
         <player name="Thailand" optional="true"/>
         <player name="French-Colonies" optional="true"/>
         <player name="British-Colonies" optional="true"/>
-        <player name="South-Africa" optional="true"/>
         <player name="KNIL" optional="true"/>
+        <player name="South-Africa" optional="true"/>
         <player name="China" optional="true"/>
         <player name="Brazil" optional="true"/>
         <player name="AI-Neutral" optional="true"/>
@@ -2221,13 +2220,6 @@
                 <step name="French-ColoniesPlace" delegate="place" player="French-Colonies" display="Place Units"/>
                 <step name="French-ColoniesEndTurn" delegate="endTurn" player="French-Colonies" display="Turn Complete"/>
 
-                <step name="ItalyCombatMove" delegate="move" player="Italy" display="Combat Move"/>
-                <step name="ItalyBattle" delegate="battle" player="Italy" display="Combat"/>
-                <step name="ItalyNonCombatMove" delegate="move" player="Italy" display="Non Combat Move"/>
-                <step name="ItalyPurchase" delegate="purchase" player="Italy" display="Purchase Units"/>
-                <step name="ItalyPlace" delegate="place" player="Italy" display="Place Units"/>
-                <step name="ItalyEndTurn" delegate="endTurn" player="Italy" display="Turn Complete"/>
-
                 <step name="BritainCombatMove" delegate="move" player="Britain" display="Combat Move"/>
                 <step name="BritainBattle" delegate="battle" player="Britain" display="Combat"/>
                 <step name="BritainNonCombatMove" delegate="move" player="Britain" display="Non Combat Move"/>
@@ -2241,6 +2233,13 @@
                 <step name="British-ColoniesPurchase" delegate="purchase" player="British-Colonies" display="Purchase Units"/>
                 <step name="British-ColoniesPlace" delegate="place" player="British-Colonies" display="Place Units"/>
                 <step name="British-ColoniesEndTurn" delegate="endTurn" player="British-Colonies" display="Turn Complete"/>
+
+                <step name="ItalyCombatMove" delegate="move" player="Italy" display="Combat Move"/>
+                <step name="ItalyBattle" delegate="battle" player="Italy" display="Combat"/>
+                <step name="ItalyNonCombatMove" delegate="move" player="Italy" display="Non Combat Move"/>
+                <step name="ItalyPurchase" delegate="purchase" player="Italy" display="Purchase Units"/>
+                <step name="ItalyPlace" delegate="place" player="Italy" display="Place Units"/>
+                <step name="ItalyEndTurn" delegate="endTurn" player="Italy" display="Turn Complete"/>
 
                 <step name="South-AfricaCombatMove" delegate="move" player="South-Africa" display="Combat Move"/>
                 <step name="South-AfricaBattle" delegate="battle" player="South-Africa" display="Combat"/>
@@ -4243,17 +4242,17 @@
 
         <playerProduction player="Germany" frontier="production_Germany_1"/>
         <playerProduction player="Slovakia" frontier="production_Slovakia_1"/>
-        <playerProduction player="Hungary" frontier="production_Hungary_1"/>
-        <playerProduction player="Romania" frontier="production_Romania_1"/>
-        <playerProduction player="Bulgaria" frontier="production_Bulgaria_1"/>
         <playerProduction player="Croatia" frontier="production_Croatia_1"/>
+        <playerProduction player="Hungary" frontier="production_Hungary_1"/>
+        <playerProduction player="Bulgaria" frontier="production_Bulgaria_1"/>
+        <playerProduction player="Romania" frontier="production_Romania_1"/>
         <playerProduction player="USSR" frontier="production_USSR_1"/>
         <playerProduction player="Finland" frontier="production_Finland_1"/>
         <playerProduction player="France" frontier="production_France_1"/>
         <playerProduction player="French-Colonies" frontier="production_French-Colonies_1"/>
-        <playerProduction player="Italy" frontier="production_Italy_1"/>
         <playerProduction player="Britain" frontier="production_Britain_1"/>
         <playerProduction player="British-Colonies" frontier="production_British-Colonies_1"/>
+        <playerProduction player="Italy" frontier="production_Italy_1"/>
         <playerProduction player="South-Africa" frontier="production_South-Africa_1"/>
         <playerProduction player="British-India" frontier="production_British-India_1"/>
         <playerProduction player="Iraq" frontier="production_Iraq"/>
@@ -4268,17 +4267,17 @@
 
         <playerRepair player="Germany" frontier="repair"/>
         <playerRepair player="Slovakia" frontier="repair"/>
-        <playerRepair player="Hungary" frontier="repair"/>
-        <playerRepair player="Romania" frontier="repair"/>
-        <playerRepair player="Bulgaria" frontier="repair"/>
         <playerRepair player="Croatia" frontier="repair"/>
+        <playerRepair player="Hungary" frontier="repair"/>
+        <playerRepair player="Bulgaria" frontier="repair"/>
+        <playerRepair player="Romania" frontier="repair"/>
         <playerRepair player="USSR" frontier="repair"/>
         <playerRepair player="Finland" frontier="repair"/>
         <playerRepair player="France" frontier="repair"/>
         <playerRepair player="French-Colonies" frontier="repair"/>
-        <playerRepair player="Italy" frontier="repair"/>
         <playerRepair player="Britain" frontier="repair"/>
         <playerRepair player="British-Colonies" frontier="repair"/>
+        <playerRepair player="Italy" frontier="repair"/>
         <playerRepair player="South-Africa" frontier="repair"/>
         <playerRepair player="British-India" frontier="repair"/>
         <playerRepair player="Iraq" frontier="repair"/>
@@ -4309,13 +4308,13 @@
                 <tech name="mechanizedInfantry"/>
             </category>
         </playerTech>
-        <playerTech player="Hungary">
+        <playerTech player="Croatia">
             <category name="Technology Advances">
                 <tech name="paratroopers"/>
                 <tech name="mechanizedInfantry"/>
             </category>
         </playerTech>
-        <playerTech player="Romania">
+        <playerTech player="Hungary">
             <category name="Technology Advances">
                 <tech name="paratroopers"/>
                 <tech name="mechanizedInfantry"/>
@@ -4327,7 +4326,7 @@
                 <tech name="mechanizedInfantry"/>
             </category>
         </playerTech>
-        <playerTech player="Croatia">
+        <playerTech player="Romania">
             <category name="Technology Advances">
                 <tech name="paratroopers"/>
                 <tech name="mechanizedInfantry"/>
@@ -4357,12 +4356,6 @@
                 <tech name="mechanizedInfantry"/>
             </category>
         </playerTech>
-        <playerTech player="Italy">
-            <category name="Technology Advances">
-                <tech name="paratroopers"/>
-                <tech name="mechanizedInfantry"/>
-            </category>
-        </playerTech>
         <playerTech player="Britain">
             <category name="Technology Advances">
                 <tech name="paratroopers"/>
@@ -4370,6 +4363,12 @@
             </category>
         </playerTech>
         <playerTech player="British-Colonies">
+            <category name="Technology Advances">
+                <tech name="paratroopers"/>
+                <tech name="mechanizedInfantry"/>
+            </category>
+        </playerTech>
+        <playerTech player="Italy">
             <category name="Technology Advances">
                 <tech name="paratroopers"/>
                 <tech name="mechanizedInfantry"/>
@@ -4499,11 +4498,11 @@
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
-        <attachment name="techAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+        <attachment name="techAttachment" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
-        <attachment name="techAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+        <attachment name="techAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
@@ -4511,7 +4510,7 @@
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
-        <attachment name="techAttachment" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+        <attachment name="techAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
@@ -4531,15 +4530,15 @@
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
-        <attachment name="techAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-            <option name="paratroopers" value="true"/>
-            <option name="mechanizedInfantry" value="true"/>
-        </attachment>
         <attachment name="techAttachment" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
         <attachment name="techAttachment" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
+            <option name="paratroopers" value="true"/>
+            <option name="mechanizedInfantry" value="true"/>
+        </attachment>
+        <attachment name="techAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
             <option name="paratroopers" value="true"/>
             <option name="mechanizedInfantry" value="true"/>
         </attachment>
@@ -4596,11 +4595,11 @@
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
-        <attachment name="rulesAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="rulesAttachment" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
-        <attachment name="rulesAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="rulesAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
@@ -4608,7 +4607,7 @@
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
-        <attachment name="rulesAttachment" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="rulesAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
@@ -4628,15 +4627,15 @@
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
-        <attachment name="rulesAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="placementCapturedTerritory" value="false"/>
-            <option name="unlimitedProduction" value="false"/>
-        </attachment>
         <attachment name="rulesAttachment" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
         <attachment name="rulesAttachment" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="placementCapturedTerritory" value="false"/>
+            <option name="unlimitedProduction" value="false"/>
+        </attachment>
+        <attachment name="rulesAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="placementCapturedTerritory" value="false"/>
             <option name="unlimitedProduction" value="false"/>
         </attachment>
@@ -4693,11 +4692,11 @@
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
-        <attachment name="playerAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+        <attachment name="playerAttachment" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
-        <attachment name="playerAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+        <attachment name="playerAttachment" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
@@ -4705,7 +4704,7 @@
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
-        <attachment name="playerAttachment" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+        <attachment name="playerAttachment" attachTo="Romania" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
@@ -4725,15 +4724,15 @@
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
-        <attachment name="playerAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
-            <option name="retainCapitalProduceNumber" value="0"/>
-            <option name="retainCapitalNumber" value="0"/>
-        </attachment>
         <attachment name="playerAttachment" attachTo="Britain" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
         <attachment name="playerAttachment" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
+            <option name="retainCapitalProduceNumber" value="0"/>
+            <option name="retainCapitalNumber" value="0"/>
+        </attachment>
+        <attachment name="playerAttachment" attachTo="Italy" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
             <option name="retainCapitalProduceNumber" value="0"/>
             <option name="retainCapitalNumber" value="0"/>
         </attachment>
@@ -5181,6 +5180,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Aden" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Afghanistan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
@@ -5221,7 +5221,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Ambon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Amoy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -5265,7 +5265,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Aru" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Astana" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -5293,7 +5293,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Bechuanaland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Beira" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5317,7 +5317,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Borneo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
@@ -5328,6 +5328,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="British Guiana" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Buenos Aires" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -5371,7 +5372,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Celebes" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Central America" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5449,6 +5450,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Dutch Guiana" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Dutch Harbor" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5503,11 +5505,9 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Eritrea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Ethiopia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
-            <option name="originalOwner" value="France"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Evenkia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5525,7 +5525,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Flores" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="France" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="7"/>
@@ -5534,16 +5534,17 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="French Guiana" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="French Indochina" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="capital" value="French-Colonies"/>
-            <option name="originalOwner" value="British-India"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="French India" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="capital" value="French-Colonies"/>
-            <option name="originalOwner" value="British-India"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Gabon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
@@ -5567,6 +5568,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Gold Coast" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Goldfields-Esperance" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -5593,7 +5595,7 @@
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Gulf Coast" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="6"/>
+            <option name="production" value="4"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Hailar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5602,19 +5604,19 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Halifax" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="5"/>
+            <option name="production" value="7"/>
             <option name="capital" value="Britain"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Halmahera" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Hanoi" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
-            <option name="originalOwner" value="British-India"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Hawaii" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Hebrides" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5640,7 +5642,7 @@
             <option name="capital" value="Hungary"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Iceland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="7"/>
@@ -5679,8 +5681,8 @@
             <option name="victoryCity" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Java" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="production" value="1"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Jehol" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -5705,7 +5707,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Kenya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Kerman" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -5767,8 +5769,8 @@
         <attachment name="territoryAttachment" attachTo="Lhasa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="Sierra Leone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="1"/>
+        <attachment name="territoryAttachment" attachTo="Liberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Libya" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
@@ -5778,16 +5780,17 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Lindi" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Lower Burma" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Luzon" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="1"/>
+            <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Madagascar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Magadan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5820,7 +5823,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Mexico City" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Mid-West-Gascoyne" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5835,7 +5838,7 @@
             <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Morocco" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Moscow" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="7"/>
@@ -5863,7 +5866,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Namaqualand" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Naryan-Mar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5892,6 +5895,7 @@
         <attachment name="territoryAttachment" attachTo="Nigeria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="capital" value="British-Colonies"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Nikolaevsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5916,7 +5920,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="North Sudan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Northern Congo" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5941,7 +5945,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Nubian Desert" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Okinawa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5950,7 +5954,7 @@
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Ontario" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="1"/>
+            <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Orissa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -5992,7 +5996,7 @@
             <option name="production" value="4"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Peru" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Portugal" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -6007,14 +6011,14 @@
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Quebec" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="1"/>
+            <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Vladivostok" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Rhodesia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Riyadh" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
@@ -6082,11 +6086,10 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Somalia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
-            <option name="originalOwner" value="France"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Somaliland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="South Africa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="6"/>
@@ -6104,7 +6107,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="South Sudan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Southern Alaska" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6127,11 +6130,11 @@
         <attachment name="territoryAttachment" attachTo="Sumatra" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="capital" value="KNIL"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Sumbawa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Svealand" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -6156,6 +6159,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Syria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Formosa" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -6165,7 +6169,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Tanganyika" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Tangier" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6180,7 +6184,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Texas" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="7"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
@@ -6193,16 +6197,16 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Timor" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="ANZAC"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Tobruk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Toronto" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="4"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Transjordan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Troms-Finnmark" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6227,7 +6231,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Uganda" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
-            <option name="originalOwner" value="France"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Ulan Bator" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -6255,10 +6259,10 @@
             <option name="production" value="9"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="USA Midwest" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="4"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="USA North" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="4"/>
+            <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="USA North Atlantic" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="10"/>
@@ -6266,7 +6270,7 @@
             <option name="victoryCity" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="California" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="8"/>
+            <option name="production" value="7"/>
             <option name="capital" value="USA"/>
             <option name="victoryCity" value="1"/>
         </attachment>
@@ -6274,10 +6278,10 @@
             <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="USA South Atlantic" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="10"/>
+            <option name="production" value="8"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="USA Southwest" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="5"/>
+            <option name="production" value="4"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Ust-Maysky" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6294,8 +6298,8 @@
         <attachment name="territoryAttachment" attachTo="Victoria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="Visayas" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="1"/>
+        <attachment name="territoryAttachment" attachTo="Philippines" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Amur" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6330,6 +6334,7 @@
         <attachment name="territoryAttachment" attachTo="Western New Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="capital" value="KNIL"/>
+            <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Western Tibet" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -7352,7 +7357,7 @@
             <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
         <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Sierra_Leone" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
-            <option name="directPresenceTerritories" value="Sierra Leone" count="1"/>
+            <option name="directPresenceTerritories" value="Liberia" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
@@ -8151,8 +8156,8 @@
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
-        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Visayas" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
-            <option name="directPresenceTerritories" value="Visayas" count="1"/>
+        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Philippines" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
+            <option name="directPresenceTerritories" value="Philippines" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
@@ -11187,7 +11192,7 @@
         </attachment>		
         <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Sierra_Leone" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
             <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Sierra_Leone"/>	
-            <option name="placement" value="Sierra Leone:SS-Potential" count="1"/>	
+            <option name="placement" value="Liberia:SS-Potential" count="1"/>	
             <option name="players" value="Germany"/>	
             <option name="when" value="before:SlovakiaEndTurn"/>	
             <option name="when" value="before:HungaryEndTurn"/>	
@@ -13745,9 +13750,9 @@
             <option name="when" value="before:JapanEndTurn"/>	
             <option name="when" value="before:ThailandEndTurn"/>	
         </attachment>		
-        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Visayas" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
-            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Visayas"/>	
-            <option name="placement" value="Visayas:SS-Potential" count="1"/>	
+        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Philippines" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
+            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Philippines"/>	
+            <option name="placement" value="Philippines:SS-Potential" count="1"/>	
             <option name="players" value="Germany"/>	
             <option name="when" value="before:SlovakiaEndTurn"/>	
             <option name="when" value="before:HungaryEndTurn"/>	
@@ -15218,344 +15223,441 @@
         </attachment>
 <!-- End Some resources are claimed buy USSR -->
 
-<!-- Start - German client states, Finland, China and Brazil gets access to stuff in round 2. All players Heavy-Tank in round 3 and Jet-Fighter in round 4. V1-Rocket, Kamikaze and V2-Rocket in rounds 5-7. Nuclear-Bombs can be purchased in rounds 7-9. -->
-        <attachment name="conditionAttachmentFrontier_1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+<!-- Start - The timeline tech development stuff -->
+        <attachment name="conditionAttachmentFrontier_Late_1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="2"/>
         </attachment>
-        <attachment name="triggerAttachment_Slovakia_1940" attachTo="Slovakia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
-            <option name="frontier" value="production_Slovakia_2"/>
-        </attachment>
-        <attachment name="triggerAttachment_Hungary_1940" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
-            <option name="frontier" value="production_Hungary_2"/>
-        </attachment>
-        <attachment name="triggerAttachment_Romania_1940" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
-            <option name="frontier" value="production_Romania_2"/>
-        </attachment>
-        <attachment name="triggerAttachment_Bulgaria_1940" attachTo="Bulgaria" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
-            <option name="frontier" value="production_Bulgaria_2"/>
-        </attachment>
-        <attachment name="triggerAttachment_Croatia_1940" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
-            <option name="frontier" value="production_Croatia_2"/>
-        </attachment>
-        <attachment name="triggerAttachment_Finland_1940" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
+        <attachment name="triggerAttachment_Finland_Late_1940" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1940"/>
             <option name="frontier" value="production_Finland_2"/>
         </attachment>
-        <attachment name="triggerAttachment_China_1940" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
+
+        <attachment name="conditionAttachmentFrontier_Early_1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="3"/>
+        </attachment>
+        <attachment name="triggerAttachment_Slovakia_Early_1941" attachTo="Slovakia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1941"/>
+            <option name="frontier" value="production_Slovakia_2"/>
+        </attachment>
+        <attachment name="triggerAttachment_Hungary_Early_1941" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1941"/>
+            <option name="frontier" value="production_Hungary_2"/>
+        </attachment>
+        <attachment name="triggerAttachment_Romania_Early_1941" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1941"/>
+            <option name="frontier" value="production_Romania_2"/>
+        </attachment>
+        <attachment name="triggerAttachment_Bulgaria_Early_1941" attachTo="Bulgaria" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1941"/>
+            <option name="frontier" value="production_Bulgaria_2"/>
+        </attachment>
+        <attachment name="triggerAttachment_Croatia_Early_1941" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1941"/>
+            <option name="frontier" value="production_Croatia_2"/>
+        </attachment>
+
+        <attachment name="conditionAttachmentFrontier_Late_1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="4"/>
+        </attachment>
+        <attachment name="triggerAttachment_China_Late_1941" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1941"/>
             <option name="frontier" value="production_China_2"/>
         </attachment>
-        <attachment name="triggerAttachment_Brazil_1940" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1940"/>
+
+        <attachment name="conditionAttachmentFrontier_Early_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="5"/>
+        </attachment>
+        <attachment name="triggerAttachment_Brazil_Early_1942" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1942"/>
             <option name="frontier" value="production_Brazil_2"/>
         </attachment>
         
-        <attachment name="conditionAttachmentFrontier_1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="3"/>
+        <attachment name="conditionAttachmentFrontier_Late_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="6"/>
         </attachment>
-        <attachment name="triggerAttachment_Germany_1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Germany_Late_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Germany_2"/>
         </attachment>
-        <attachment name="triggerAttachment_Slovakia_1941" attachTo="Slovakia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Slovakia_Late_1942" attachTo="Slovakia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Slovakia_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Hungary_1941" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Hungary_Late_1942" attachTo="Hungary" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Hungary_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Romania_1941" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Romania_Late_1942" attachTo="Romania" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Romania_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Bulgaria_1941" attachTo="Bulgaria" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Bulgaria_Late_1942" attachTo="Bulgaria" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Bulgaria_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Croatia_1941" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Croatia_Late_1942" attachTo="Croatia" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Croatia_3"/>
         </attachment>
-        <attachment name="triggerAttachment_USSR_1941" attachTo="USSR" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_USSR_Late_1942" attachTo="USSR" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_USSR_2"/>
         </attachment>
-        <attachment name="triggerAttachment_Finland_1941" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Finland_Late_1942" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Finland_3"/>
         </attachment>
-        <attachment name="triggerAttachment_France_1941" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_France_Late_1942" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_France_2"/>
         </attachment>
-        <attachment name="triggerAttachment_French-Colonies_1941" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_French-Colonies_Late_1942" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_French-Colonies_2"/>
         </attachment>
-        <attachment name="triggerAttachment_Italy_1941" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Italy_Late_1942" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Italy_2"/>
         </attachment>
-        <attachment name="triggerAttachment_Britain_1941" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Britain_Late_1942" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Britain_2"/>
         </attachment>
-        <attachment name="triggerAttachment_British-Colonies_1941" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_British-Colonies_Late_1942" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_British-Colonies_2"/>
         </attachment>
-        <attachment name="triggerAttachment_South-Africa_1941" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_South-Africa_Late_1942" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_South-Africa_2"/>
         </attachment>
-        <attachment name="triggerAttachment_British-India_1941" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_British-India_Late_1942" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_British-India_2"/>
         </attachment>
-        <attachment name="triggerAttachment_ANZAC_1941" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_ANZAC_Late_1942" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_ANZAC_2"/>
         </attachment>
-        <attachment name="triggerAttachment_KNIL_1941" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_KNIL_Late_1942" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_KNIL_2"/>
         </attachment>
-        <attachment name="triggerAttachment_China_1941" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_China_Late_1942" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_China_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Japan_1941" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Japan_Late_1942" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Japan_2"/>
         </attachment>
-        <attachment name="triggerAttachment_USA_1941" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_USA_Late_1942" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_USA_2"/>
         </attachment>
-        <attachment name="triggerAttachment_Brazil_1941" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1941"/>
+        <attachment name="triggerAttachment_Brazil_Late_1942" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1942"/>
             <option name="frontier" value="production_Brazil_3"/>
         </attachment>
 
-        <attachment name="conditionAttachmentFrontier_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="4"/>
+        <attachment name="conditionAttachmentFrontier_Early_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="7"/>
         </attachment>
-        <attachment name="triggerAttachment_Germany_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_Germany_Early_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_Germany_3"/>
         </attachment>
-        <attachment name="triggerAttachment_USSR_1942" attachTo="USSR" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_USSR_Early_1943" attachTo="USSR" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_USSR_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Finland_1942" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_Finland_Early_1943" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_Finland_4"/>
         </attachment>
-        <attachment name="triggerAttachment_France_1942" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_France_Early_1943" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_France_3"/>
         </attachment>
-        <attachment name="triggerAttachment_French-Colonies_1942" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_French-Colonies_Early_1943" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_French-Colonies_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Italy_1942" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_Italy_Early_1943" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_Italy_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Britain_1942" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_Britain_Early_1943" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_Britain_3"/>
         </attachment>
-        <attachment name="triggerAttachment_British-Colonies_1942" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_British-Colonies_Early_1943" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_British-Colonies_3"/>
         </attachment>
-        <attachment name="triggerAttachment_South-Africa_1942" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_South-Africa_Early_1943" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_South-Africa_3"/>
         </attachment>
-        <attachment name="triggerAttachment_British-India_1942" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_British-India_Early_1943" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_British-India_3"/>
         </attachment>
-        <attachment name="triggerAttachment_ANZAC_1942" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_ANZAC_Early_1943" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_ANZAC_3"/>
         </attachment>
-        <attachment name="triggerAttachment_KNIL_1942" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_KNIL_Early_1943" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_KNIL_3"/>
         </attachment>
-        <attachment name="triggerAttachment_Japan_1942" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_Japan_Early_1943" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_Japan_3"/>
         </attachment>
-        <attachment name="triggerAttachment_USA_1942" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1942"/>
+        <attachment name="triggerAttachment_USA_Early_1943" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1943"/>
             <option name="frontier" value="production_USA_3"/>
         </attachment>
 
-        <attachment name="conditionAttachmentFrontier_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="5"/>
+        <attachment name="conditionAttachmentFrontier_Late_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="8"/>
         </attachment>
-        <attachment name="triggerAttachment_Germany_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1943"/>
+        <attachment name="triggerAttachment_Germany_Late_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1943"/>
             <option name="frontier" value="production_Germany_4"/>
         </attachment>
-        <attachment name="triggerAttachment_Kamikaze_pilots_are_now_being_recruited " attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1943"/>
+        <attachment name="triggerAttachment_Japan_Late_1943" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1943"/>
             <option name="placement" value="Japan:Kamikaze-Potential" count="1"/>
             <option name="when" value="before:JapanEndTurn"/>
         </attachment>
 
-        <attachment name="conditionAttachmentFrontier_1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="6"/>
+        <attachment name="conditionAttachmentFrontier_Early_1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="9"/>
         </attachment>
-        <attachment name="triggerAttachment_Japan_1944" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1944"/>
+        <attachment name="triggerAttachment_Japan_Early_1944" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1944"/>
             <option name="frontier" value="production_Japan_4"/>
         </attachment>
         
-        <attachment name="conditionAttachmentFrontier_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="7"/>
+        <attachment name="conditionAttachmentFrontier_Late_1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="10"/>
         </attachment>
-        <attachment name="triggerAttachment_Germany_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1945"/>
+        <attachment name="triggerAttachment_Germany_Late_1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1944"/>
             <option name="frontier" value="production_Germany_5"/>
         </attachment>
-        <attachment name="triggerAttachment_USA_1945" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1945"/>
+        
+        <attachment name="conditionAttachmentFrontier_Early_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="11"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_Early_1945" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1945"/>
             <option name="frontier" value="production_USA_4"/>
         </attachment>
         
-        <attachment name="conditionAttachmentFrontier_1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="8"/>
+        <attachment name="conditionAttachmentFrontier_Late_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="12"/>
         </attachment>
-        <attachment name="triggerAttachment_Germany_1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1946"/>
+        <attachment name="triggerAttachment_Germany_Late_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1945"/>
             <option name="frontier" value="production_Germany_6"/>
         </attachment>
         
-        <attachment name="conditionAttachmentFrontier_1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="rounds" value="9"/>
+        <attachment name="conditionAttachmentFrontier_Early_1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="13"/>
         </attachment>
-        <attachment name="triggerAttachment_USSR_1947" attachTo="USSR" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1947"/>
+        <attachment name="triggerAttachment_USSR_Early_1946" attachTo="USSR" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1946"/>
             <option name="frontier" value="production_USSR_4"/>
         </attachment>
-        <attachment name="triggerAttachment_Britain_1947" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1947"/>
-            <option name="frontier" value="production_Britain_4"/>
+        
+        <attachment name="conditionAttachmentFrontier_Late_1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="14"/>
         </attachment>
-        <attachment name="triggerAttachment_Japan_1947" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentFrontier_1947"/>
+        <attachment name="triggerAttachment_Japan_Early_Late_1946" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Late_1946"/>
             <option name="frontier" value="production_Japan_5"/>
         </attachment>
-<!-- Start - German client states, Finland, China and Brazil gets access to stuff in round 2. All players Heavy-Tank in round 3 and Jet-Fighter in round 4. V1-Rocket, Kamikaze and V2-Rocket in rounds 5-7 -->
+        
+        <attachment name="conditionAttachmentFrontier_Early_1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="15"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_Early_1947" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentFrontier_Early_1947"/>
+            <option name="frontier" value="production_Britain_4"/>
+        </attachment>
+<!-- Start - The timeline tech development stuff -->
 
 <!-- Start Year intro and video -->
-        <attachment name="conditionAttachmentYear1939" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentEarly1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="1"/>
         </attachment>
-        <attachment name="triggerAttachment1939_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1939"/>
-            <option name="notification" value="1939Intro"/>
+        <attachment name="triggerAttachmentEarly_1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1940"/>
+            <option name="notification" value="Early1940Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentLate1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="2"/>
         </attachment>
-        <attachment name="triggerAttachment1940_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1940"/>
-            <option name="notification" value="1940Intro"/>
+        <attachment name="triggerAttachmentLate_1940" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1940"/>
+            <option name="notification" value="Late1940Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        
+        <attachment name="conditionAttachmentEarly1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="3"/>
         </attachment>
-        <attachment name="triggerAttachment1941_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1941"/>
-            <option name="notification" value="1941Intro"/>
+        <attachment name="triggerAttachmentEarly_1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1941"/>
+            <option name="notification" value="Early1941Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentLate1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="4"/>
         </attachment>
-        <attachment name="triggerAttachment1942_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1942"/>
-            <option name="notification" value="1942Intro"/>
+        <attachment name="triggerAttachmentLate_1941" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1941"/>
+            <option name="notification" value="Late1941Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        
+        <attachment name="conditionAttachmentEarly1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="5"/>
         </attachment>
-        <attachment name="triggerAttachment1943_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1943"/>
-            <option name="notification" value="1943Intro"/>
+        <attachment name="triggerAttachmentEarly_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1942"/>
+            <option name="notification" value="Early1942Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentLate1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="6"/>
         </attachment>
-        <attachment name="triggerAttachment1944_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1944"/>
-            <option name="notification" value="1944Intro"/>
+        <attachment name="triggerAttachmentLate_1942" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1942"/>
+            <option name="notification" value="Late1942Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        
+        <attachment name="conditionAttachmentEarly1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="7"/>
         </attachment>
-        <attachment name="triggerAttachment1945_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1945"/>
-            <option name="notification" value="1945Intro"/>
+        <attachment name="triggerAttachmentEarly_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1943"/>
+            <option name="notification" value="Early1943Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentLate1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="8"/>
         </attachment>
-        <attachment name="triggerAttachment1946_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1946"/>
-            <option name="notification" value="1946Intro"/>
+        <attachment name="triggerAttachmentLate_1943" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1943"/>
+            <option name="notification" value="Late1943Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        
+        <attachment name="conditionAttachmentEarly1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="9"/>
         </attachment>
-        <attachment name="triggerAttachment1947_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1947"/>
-            <option name="notification" value="1947Intro"/>
+        <attachment name="triggerAttachmentEarly_1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1944"/>
+            <option name="notification" value="Early1944Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1948" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentLate1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="10"/>
         </attachment>
-        <attachment name="triggerAttachment1948_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1948"/>
-            <option name="notification" value="1948Intro"/>
+        <attachment name="triggerAttachmentLate_1944" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1944"/>
+            <option name="notification" value="Late1944Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1949" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        
+        <attachment name="conditionAttachmentEarly1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="11"/>
         </attachment>
-        <attachment name="triggerAttachment1949_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1949"/>
-            <option name="notification" value="1949Intro"/>
+        <attachment name="triggerAttachmentEarly_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1945"/>
+            <option name="notification" value="Early1945Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
-        <attachment name="conditionAttachmentYear1950" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachmentLate1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="rounds" value="12"/>
         </attachment>
-        <attachment name="triggerAttachment1950_Intro" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentYear1950"/>
-            <option name="notification" value="1950Intro"/>
+        <attachment name="triggerAttachmentLate_1945" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1945"/>
+            <option name="notification" value="Late1945Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        
+        <attachment name="conditionAttachmentEarly1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="13"/>
+        </attachment>
+        <attachment name="triggerAttachmentEarly_1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1946"/>
+            <option name="notification" value="Early1946Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        <attachment name="conditionAttachmentLate1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="14"/>
+        </attachment>
+        <attachment name="triggerAttachmentLate_1946" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1946"/>
+            <option name="notification" value="Late1946Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        
+        <attachment name="conditionAttachmentEarly1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="15"/>
+        </attachment>
+        <attachment name="triggerAttachmentEarly_1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1947"/>
+            <option name="notification" value="Early1947Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        <attachment name="conditionAttachmentLate1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="16"/>
+        </attachment>
+        <attachment name="triggerAttachmentLate_1947" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1947"/>
+            <option name="notification" value="Late1947Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        
+        <attachment name="conditionAttachmentEarly1948" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="17"/>
+        </attachment>
+        <attachment name="triggerAttachmentEarly_1948" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1948"/>
+            <option name="notification" value="Early1948Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        <attachment name="conditionAttachmentLate1948" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="18"/>
+        </attachment>
+        <attachment name="triggerAttachmentLate_1948" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1948"/>
+            <option name="notification" value="Late1948Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        
+        <attachment name="conditionAttachmentEarly1949" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="19"/>
+        </attachment>
+        <attachment name="triggerAttachmentEarly_1949" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentEarly1949"/>
+            <option name="notification" value="Early1949Intro"/>
+            <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
+        </attachment>
+        <attachment name="conditionAttachmentLate1949" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="rounds" value="20"/>
+        </attachment>
+        <attachment name="triggerAttachmentLate_1949" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentLate1949"/>
+            <option name="notification" value="Late1949Intro"/>
             <option name="players" value="Germany:Slovakia:Hungary:Romania:Bulgaria:Croatia:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil"/>
         </attachment>
 <!-- End Year intro and video -->
@@ -15742,12 +15844,12 @@
             <territoryOwner territory="Leningrad" owner="USSR"/>
             <territoryOwner territory="Lensk" owner="USSR"/>
             <territoryOwner territory="Lhasa" owner="AI-Neutral"/>
-            <territoryOwner territory="Sierra Leone" owner="British-Colonies"/>
+            <territoryOwner territory="Liberia" owner="USA"/>
             <territoryOwner territory="Libya" owner="Italy"/>
             <territoryOwner territory="Libyan Desert" owner="Italy"/>
             <territoryOwner territory="Lindi" owner="British-Colonies"/>
             <territoryOwner territory="Lower Burma" owner="British-India"/>
-            <territoryOwner territory="Luzon" owner="AI-Pro-Allies-Neutral"/>
+            <territoryOwner territory="Luzon" owner="USA"/>
             <territoryOwner territory="Madagascar" owner="French-Colonies"/>
             <territoryOwner territory="Magadan" owner="USSR"/>
             <territoryOwner territory="Malaya" owner="British-India"/>
@@ -15762,9 +15864,9 @@
             <territoryOwner territory="Mexico City" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="Mid-West-Gascoyne" owner="ANZAC"/>
             <territoryOwner territory="Midway" owner="USA"/>
-            <territoryOwner territory="Mindanao" owner="AI-Pro-Allies-Neutral"/>
+            <territoryOwner territory="Mindanao" owner="USA"/>
             <territoryOwner territory="Montana" owner="USA"/>
-            <territoryOwner territory="Morocco" owner="France"/>
+            <territoryOwner territory="Morocco" owner="AI-Pro-Axis-Neutral"/>
             <territoryOwner territory="Moscow" owner="USSR"/>
             <territoryOwner territory="Siberia" owner="USSR"/>
             <territoryOwner territory="Mozambique" owner="AI-Neutral"/>
@@ -15791,7 +15893,7 @@
             <territoryOwner territory="North Pacific 1 Sea Zone" owner="USSR"/>
             <territoryOwner territory="North Queensland" owner="ANZAC"/>
             <territoryOwner territory="North Sudan" owner="British-Colonies"/>
-            <territoryOwner territory="Northern Congo" owner="France"/>
+            <territoryOwner territory="Northern Congo" owner="AI-Neutral"/>
             <territoryOwner territory="Northern Ireland" owner="Britain"/>
             <territoryOwner territory="Northern Mexico" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="Northern Spain" owner="AI-Pro-Axis-Neutral"/>
@@ -15807,7 +15909,7 @@
             <territoryOwner territory="Orkney" owner="Britain"/>
             <territoryOwner territory="Oskemen" owner="USSR"/>
             <territoryOwner territory="Palau" owner="Japan"/>
-            <territoryOwner territory="Palawan" owner="AI-Pro-Allies-Neutral"/>
+            <territoryOwner territory="Palawan" owner="USA"/>
             <territoryOwner territory="Panama Canal" owner="USA"/>
             <territoryOwner territory="Panama City" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="Papua New Guinea" owner="ANZAC"/>
@@ -15852,7 +15954,7 @@
             <territoryOwner territory="South Queensland" owner="ANZAC"/>
             <territoryOwner territory="South Sudan" owner="British-Colonies"/>
             <territoryOwner territory="Southern Alaska" owner="USA"/>
-            <territoryOwner territory="Southern Congo" owner="France"/>
+            <territoryOwner territory="Southern Congo" owner="AI-Neutral"/>
             <territoryOwner territory="Southern Greenland" owner="AI-Neutral"/>
             <territoryOwner territory="Southern Mongolia" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="Southern Thailand" owner="Thailand"/>
@@ -15876,7 +15978,7 @@
             <territoryOwner territory="Taymyria" owner="USSR"/>
             <territoryOwner territory="Texas" owner="USA"/>
             <territoryOwner territory="Thailand" owner="Thailand"/>
-            <territoryOwner territory="Timor" owner="KNIL"/>
+            <territoryOwner territory="Timor" owner="AI-Neutral"/>
             <territoryOwner territory="Tobruk" owner="Italy"/>
             <territoryOwner territory="Toronto" owner="Britain"/>
             <territoryOwner territory="Transjordan" owner="British-Colonies"/>
@@ -15907,7 +16009,7 @@
             <territoryOwner territory="Venezuela" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="Vichy" owner="France"/>
             <territoryOwner territory="Victoria" owner="Britain"/>
-            <territoryOwner territory="Visayas" owner="AI-Pro-Allies-Neutral"/>
+            <territoryOwner territory="Philippines" owner="USA"/>
             <territoryOwner territory="Amur" owner="USSR"/>
             <territoryOwner territory="Volga" owner="USSR"/>
             <territoryOwner territory="Wabakimi" owner="Britain"/>
@@ -16152,6 +16254,7 @@
             <unitPlacement unitType="Infantry" territory="Central Turkey" quantity="4" owner="AI-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Central Turkey" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Flag" territory="Central Turkey" quantity="1" owner="AI-Neutral"/>
+            <unitPlacement unitType="Colony" territory="Chad" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Chad" quantity="1" owner="France"/>
             <unitPlacement unitType="Infantry" territory="Changsha" quantity="2" owner="China"/>
             <unitPlacement unitType="Iron" territory="Changsha" quantity="1" owner="China"/>
@@ -16297,6 +16400,7 @@
             <unitPlacement unitType="Flag" territory="French India" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Oil" territory="Gabon" quantity="3" owner="France"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Factory" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Colony" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Iron" territory="Gabon" quantity="1" owner="France"/>
@@ -16521,9 +16625,7 @@
             <unitPlacement unitType="Iron" territory="Lhasa" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Lhasa" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Flag" territory="Lhasa" quantity="1" owner="AI-Neutral"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Sierra Leone" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Colony" territory="Sierra Leone" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Flag" territory="Sierra Leone" quantity="1" owner="British-Colonies"/>
+            <unitPlacement unitType="Flag" territory="Liberia" quantity="1" owner="USA"/>
             <unitPlacement unitType="Fighter" territory="Libya" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Infantry" territory="Libya" quantity="10" owner="Italy"/>
             <unitPlacement unitType="Oil" territory="Libya" quantity="3" owner="Italy"/>
@@ -16539,16 +16641,14 @@
             <unitPlacement unitType="Infantry" territory="Libyan Desert" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Flag" territory="Libyan Desert" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Mech-Inf" territory="Libyan Desert" quantity="1" owner="Italy"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Lindi" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Lindi" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Lower Burma" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Oil" territory="Lower Burma" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Colony" territory="Lower Burma" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Artillery" territory="Lower Burma" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Lower Burma" quantity="1" owner="British-India"/>
-            <unitPlacement unitType="Fighter" territory="Luzon" quantity="1" owner="AI-Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Infantry" territory="Luzon" quantity="1" owner="AI-Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Luzon" quantity="1" owner="AI-Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Luzon" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Flag" territory="Luzon" quantity="1" owner="USA"/>
             <unitPlacement unitType="Oil" territory="Madagascar" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Madagascar" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colony" territory="Madagascar" quantity="1" owner="French-Colonies"/>
@@ -16579,12 +16679,11 @@
             <unitPlacement unitType="Artillery" territory="Mid-West-Gascoyne" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Mid-West-Gascoyne" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Midway" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Infantry" territory="Mindanao" quantity="1" owner="AI-Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Mindanao" quantity="1" owner="AI-Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Mindanao" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Flag" territory="Mindanao" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Montana" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Infantry" territory="Morocco" quantity="1" owner="France"/>
-            <unitPlacement unitType="Colony" territory="Morocco" quantity="1" owner="France"/>
-            <unitPlacement unitType="Flag" territory="Morocco" quantity="1" owner="France"/>
+            <unitPlacement unitType="Infantry" territory="Morocco" quantity="6" owner="AI-Pro-Axis-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Morocco" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Moscow" quantity="10" owner="USSR"/>
             <unitPlacement unitType="Anti-Air" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Moscow" quantity="1" owner="USSR"/>
@@ -16616,10 +16715,8 @@
             <unitPlacement unitType="Flag" territory="Newfoundland" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Oil" territory="Nigeria" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Factory" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Colony" territory="Nigeria" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Artillery" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Nikolaevsk" quantity="2" owner="USSR"/>
             <unitPlacement unitType="Iron" territory="Nikolaevsk" quantity="1" owner="USSR"/>
@@ -16653,14 +16750,13 @@
             <unitPlacement unitType="Cruiser" territory="North Sea Zone" quantity="2" owner="Germany"/>
             <unitPlacement unitType="Destroyer" territory="North Sea Zone" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Submarine" territory="North Sea Zone" quantity="2" owner="Germany"/>
-            <unitPlacement unitType="Transport" territory="North Sea Zone" quantity="4" owner="Germany"/>
+            <unitPlacement unitType="Transport" territory="North Sea Zone" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Battleship" territory="North Sea Zone" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Patrol-Boat" territory="North Sea Zone" quantity="2" owner="Germany"/>
             <unitPlacement unitType="Colonial-Infantry" territory="North Sudan" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="North Sudan" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Northern Congo" quantity="1" owner="France"/>
-            <unitPlacement unitType="Colony" territory="Northern Congo" quantity="1" owner="France"/>
-            <unitPlacement unitType="Flag" territory="Northern Congo" quantity="1" owner="France"/>
+            <unitPlacement unitType="Colony" territory="Northern Congo" quantity="1" owner="AI-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Northern Congo" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Northern Ireland" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Northern Ireland" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Northern Mexico" quantity="1" owner="AI-Pro-Allies-Neutral"/>
@@ -16697,8 +16793,8 @@
             <unitPlacement unitType="Flag" territory="Oskemen" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Infantry" territory="Palau" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Palau" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Palawan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Palawan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Palawan" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Flag" territory="Palawan" quantity="1" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Panama Canal" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Panama Canal" quantity="1" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Panama City" quantity="1" owner="AI-Pro-Allies-Neutral"/>
@@ -16731,7 +16827,6 @@
             <unitPlacement unitType="Flag" territory="Portugal" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Pretoria" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Flag" territory="Pretoria" quantity="1" owner="South-Africa"/>
-            <unitPlacement unitType="Infantry" territory="Puerto Rico" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Puerto Rico" quantity="1" owner="USA"/>
             <unitPlacement unitType="Oil" territory="Punjab" quantity="2" owner="British-India"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Punjab" quantity="1" owner="British-India"/>
@@ -16747,7 +16842,7 @@
             <unitPlacement unitType="Cruiser" territory="Rio de Janeiro Sea Zone" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Transport" territory="Rio de Janeiro Sea Zone" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Patrol-Boat" territory="Rio de Janeiro Sea Zone" quantity="1" owner="Brazil"/>
-            <unitPlacement unitType="Infantry" territory="Riyadh" quantity="2" owner="AI-Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Riyadh" quantity="3" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Riyadh" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Oil" territory="Riyadh" quantity="2" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Romania" quantity="4" owner="Romania"/>
@@ -16838,10 +16933,9 @@
             <unitPlacement unitType="Flag" territory="South Sudan" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Southern Alaska" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Southern Alaska" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Oil" territory="Southern Congo" quantity="1" owner="France"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Southern Congo" quantity="1" owner="France"/>
-            <unitPlacement unitType="Colony" territory="Southern Congo" quantity="1" owner="France"/>
-            <unitPlacement unitType="Flag" territory="Southern Congo" quantity="1" owner="France"/>
+            <unitPlacement unitType="Oil" territory="Southern Congo" quantity="1" owner="AI-Neutral"/>
+            <unitPlacement unitType="Colony" territory="Southern Congo" quantity="1" owner="AI-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Southern Congo" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Flag" territory="Southern Greenland" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Southern Mongolia" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Southern Mongolia" quantity="1" owner="AI-Pro-Allies-Neutral"/>
@@ -16930,8 +17024,8 @@
             <unitPlacement unitType="Artillery" territory="Thailand" quantity="1" owner="Thailand"/>
             <unitPlacement unitType="Flag" territory="Thailand" quantity="1" owner="Thailand"/>
             <unitPlacement unitType="Mech-Inf" territory="Thailand" quantity="1" owner="Thailand"/>
-            <unitPlacement unitType="Infantry" territory="Timor" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Flag" territory="Timor" quantity="1" owner="KNIL"/>
+            <unitPlacement unitType="Infantry" territory="Timor" quantity="1" owner="AI-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Timor" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Tobruk" quantity="3" owner="Italy"/>
             <unitPlacement unitType="Oil" territory="Tobruk" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Tobruk" quantity="1" owner="Italy"/>
@@ -16978,6 +17072,7 @@
             <unitPlacement unitType="Marines" territory="USA South Atlantic" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="USA South Atlantic" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="USA Southwest" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Ubangi-Shari" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Ubangi-Shari" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Uelen" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Uganda" quantity="1" owner="British-Colonies"/>
@@ -17018,8 +17113,8 @@
             <unitPlacement unitType="Oil" territory="Victoria" quantity="3" owner="Britain"/>
             <unitPlacement unitType="Factory" territory="Victoria" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Artillery" territory="Victoria" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Infantry" territory="Visayas" quantity="1" owner="AI-Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Visayas" quantity="1" owner="AI-Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Philippines" quantity="3" owner="USA"/>
+            <unitPlacement unitType="Flag" territory="Philippines" quantity="1" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Amur" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Amur" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Volga" quantity="1" owner="USSR"/>
@@ -17079,75 +17174,75 @@
             <unitPlacement unitType="Flag" territory="Yucatan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
         </unitInitialize>
         <resourceInitialize>
-            <resourceGiven player="Germany" resource="Steel" quantity="5"/>
-            <resourceGiven player="Germany" resource="PUs" quantity="100"/>
             <resourceGiven player="Germany" resource="SS" quantity="20"/>
             <resourceGiven player="Germany" resource="Fuel" quantity="70"/>
-            <resourceGiven player="Slovakia" resource="PUs" quantity="15"/>
-            <resourceGiven player="Hungary" resource="PUs" quantity="16"/>
-            <resourceGiven player="Romania" resource="PUs" quantity="17"/>
-            <resourceGiven player="Bulgaria" resource="PUs" quantity="16"/>
-            <resourceGiven player="Croatia" resource="PUs" quantity="15"/>
-            <resourceGiven player="Finland" resource="Steel" quantity="2"/>
-            <resourceGiven player="Finland" resource="PUs" quantity="40"/>
-            <resourceGiven player="Finland" resource="Fuel" quantity="5"/>
+            <resourceGiven player="Germany" resource="Steel" quantity="5"/>
+            <resourceGiven player="Germany" resource="PUs" quantity="100"/>
+            <resourceGiven player="Italy" resource="Fuel" quantity="30"/>
             <resourceGiven player="Italy" resource="Steel" quantity="4"/>
             <resourceGiven player="Italy" resource="PUs" quantity="80"/>
             <resourceGiven player="Italy" resource="CR" quantity="5"/>
-            <resourceGiven player="Italy" resource="Fuel" quantity="30"/>
-            <resourceGiven player="Iraq" resource="Steel" quantity="1"/>
-            <resourceGiven player="Iraq" resource="PUs" quantity="40"/>
-            <resourceGiven player="Iraq" resource="Fuel" quantity="5"/>
-            <resourceGiven player="Iran" resource="Steel" quantity="1"/>
-            <resourceGiven player="Iran" resource="PUs" quantity="40"/>
-            <resourceGiven player="Iran" resource="Fuel" quantity="10"/>
+            <resourceGiven player="Japan" resource="Fuel" quantity="55"/>
             <resourceGiven player="Japan" resource="Steel" quantity="4"/>
             <resourceGiven player="Japan" resource="PUs" quantity="80"/>
-            <resourceGiven player="Japan" resource="Fuel" quantity="55"/>
-            <resourceGiven player="Thailand" resource="Steel" quantity="2"/>
-            <resourceGiven player="Thailand" resource="PUs" quantity="40"/>
-            <resourceGiven player="Thailand" resource="Fuel" quantity="5"/>
-            <resourceGiven player="USSR" resource="Steel" quantity="6"/>
-            <resourceGiven player="USSR" resource="PUs" quantity="120"/>
-            <resourceGiven player="USSR" resource="Fuel" quantity="60"/>
+            <resourceGiven player="France" resource="Fuel" quantity="15"/>
             <resourceGiven player="France" resource="Steel" quantity="1"/>
             <resourceGiven player="France" resource="PUs" quantity="60"/>
             <resourceGiven player="France" resource="CR" quantity="10"/>
-            <resourceGiven player="France" resource="Fuel" quantity="15"/>
-            <resourceGiven player="French-Colonies" resource="Steel" quantity="1"/>
-            <resourceGiven player="French-Colonies" resource="PUs" quantity="40"/>
-            <resourceGiven player="French-Colonies" resource="CR" quantity="5"/>
-            <resourceGiven player="French-Colonies" resource="Fuel" quantity="10"/>
+            <resourceGiven player="USSR" resource="Fuel" quantity="60"/>
+            <resourceGiven player="USSR" resource="Steel" quantity="6"/>
+            <resourceGiven player="USSR" resource="PUs" quantity="120"/>
+            <resourceGiven player="Britain" resource="Fuel" quantity="35"/>
             <resourceGiven player="Britain" resource="Steel" quantity="5"/>
             <resourceGiven player="Britain" resource="PUs" quantity="100"/>
-            <resourceGiven player="Britain" resource="Fuel" quantity="35"/>
-            <resourceGiven player="British-Colonies" resource="Steel" quantity="1"/>
-            <resourceGiven player="British-Colonies" resource="PUs" quantity="40"/>
-            <resourceGiven player="British-Colonies" resource="CR" quantity="10"/>
-            <resourceGiven player="British-Colonies" resource="Fuel" quantity="10"/>
-            <resourceGiven player="South-Africa" resource="Steel" quantity="2"/>
-            <resourceGiven player="South-Africa" resource="PUs" quantity="40"/>
-            <resourceGiven player="South-Africa" resource="Fuel" quantity="15"/>
+            <resourceGiven player="British-India" resource="Fuel" quantity="10"/>
             <resourceGiven player="British-India" resource="Steel" quantity="4"/>
             <resourceGiven player="British-India" resource="PUs" quantity="80"/>
             <resourceGiven player="British-India" resource="CR" quantity="10"/>
-            <resourceGiven player="British-India" resource="Fuel" quantity="10"/>
+            <resourceGiven player="ANZAC" resource="Fuel" quantity="15"/>
             <resourceGiven player="ANZAC" resource="Steel" quantity="4"/>
             <resourceGiven player="ANZAC" resource="PUs" quantity="80"/>
-            <resourceGiven player="ANZAC" resource="Fuel" quantity="15"/>
-            <resourceGiven player="KNIL" resource="Steel" quantity="2"/>
-            <resourceGiven player="KNIL" resource="PUs" quantity="40"/>
-            <resourceGiven player="KNIL" resource="CR" quantity="5"/>
-            <resourceGiven player="KNIL" resource="Fuel" quantity="15"/>
-            <resourceGiven player="China" resource="Steel" quantity="1"/>
-            <resourceGiven player="China" resource="PUs" quantity="40"/>
-            <resourceGiven player="China" resource="Fuel" quantity="5"/>
+            <resourceGiven player="USA" resource="Fuel" quantity="35"/>
             <resourceGiven player="USA" resource="Steel" quantity="10"/>
             <resourceGiven player="USA" resource="PUs" quantity="200"/>
-            <resourceGiven player="USA" resource="Fuel" quantity="35"/>
+            <resourceGiven player="Slovakia" resource="PUs" quantity="15"/>
+            <resourceGiven player="Croatia" resource="PUs" quantity="15"/>
+            <resourceGiven player="Hungary" resource="PUs" quantity="16"/>
+            <resourceGiven player="Bulgaria" resource="PUs" quantity="16"/>
+            <resourceGiven player="Romania" resource="PUs" quantity="17"/>
+            <resourceGiven player="Finland" resource="Fuel" quantity="5"/>
+            <resourceGiven player="Finland" resource="Steel" quantity="2"/>
+            <resourceGiven player="Finland" resource="PUs" quantity="40"/>
+            <resourceGiven player="Iraq" resource="Fuel" quantity="5"/>
+            <resourceGiven player="Iraq" resource="Steel" quantity="1"/>
+            <resourceGiven player="Iraq" resource="PUs" quantity="40"/>
+            <resourceGiven player="Iran" resource="Fuel" quantity="10"/>
+            <resourceGiven player="Iran" resource="Steel" quantity="1"/>
+            <resourceGiven player="Iran" resource="PUs" quantity="40"/>
+            <resourceGiven player="Thailand" resource="Fuel" quantity="5"/>
+            <resourceGiven player="Thailand" resource="Steel" quantity="2"/>
+            <resourceGiven player="Thailand" resource="PUs" quantity="40"/>
+            <resourceGiven player="French-Colonies" resource="Fuel" quantity="10"/>
+            <resourceGiven player="French-Colonies" resource="Steel" quantity="0"/>
+            <resourceGiven player="French-Colonies" resource="PUs" quantity="30"/>
+            <resourceGiven player="French-Colonies" resource="CR" quantity="5"/>
+            <resourceGiven player="British-Colonies" resource="Fuel" quantity="10"/>
+            <resourceGiven player="British-Colonies" resource="Steel" quantity="0"/>
+            <resourceGiven player="British-Colonies" resource="PUs" quantity="30"/>
+            <resourceGiven player="British-Colonies" resource="CR" quantity="10"/>
+            <resourceGiven player="South-Africa" resource="Fuel" quantity="15"/>
+            <resourceGiven player="South-Africa" resource="Steel" quantity="2"/>
+            <resourceGiven player="South-Africa" resource="PUs" quantity="40"/>
+            <resourceGiven player="KNIL" resource="Fuel" quantity="15"/>
+            <resourceGiven player="KNIL" resource="Steel" quantity="1"/>
+            <resourceGiven player="KNIL" resource="PUs" quantity="30"/>
+            <resourceGiven player="KNIL" resource="CR" quantity="5"/>
+            <resourceGiven player="China" resource="Fuel" quantity="5"/>
+            <resourceGiven player="China" resource="Steel" quantity="1"/>
+            <resourceGiven player="China" resource="PUs" quantity="40"/>
+            <resourceGiven player="Brazil" resource="Fuel" quantity="5"/>
             <resourceGiven player="Brazil" resource="Steel" quantity="1"/>
             <resourceGiven player="Brazil" resource="PUs" quantity="40"/>
-            <resourceGiven player="Brazil" resource="Fuel" quantity="5"/>
         </resourceInitialize>
         <relationshipInitialize>
             <relationship type="Allied" player1="Germany" player2="Italy" roundValue="1"/>
@@ -17169,8 +17264,8 @@
             <relationship type="Allied" player1="Germany" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Germany" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Germany" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Germany" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Germany" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Germany" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Germany" player2="China" roundValue="1"/>
             <relationship type="War" player1="Germany" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Germany" player2="AI-Neutral" roundValue="1"/>
@@ -17194,8 +17289,8 @@
             <relationship type="Allied" player1="Italy" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Italy" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Italy" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Italy" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Italy" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Italy" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Italy" player2="China" roundValue="1"/>
             <relationship type="War" player1="Italy" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Italy" player2="AI-Neutral" roundValue="1"/>
@@ -17218,8 +17313,8 @@
             <relationship type="Allied" player1="Japan" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Japan" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Japan" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Japan" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Japan" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Japan" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Japan" player2="China" roundValue="1"/>
             <relationship type="War" player1="Japan" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Japan" player2="AI-Neutral" roundValue="1"/>
@@ -17241,8 +17336,8 @@
             <relationship type="War" player1="France" player2="Thailand" roundValue="1"/>
             <relationship type="Allied" player1="France" player2="French-Colonies" roundValue="1"/>
             <relationship type="Allied" player1="France" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="France" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="France" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="France" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="France" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="France" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="France" player2="AI-Neutral" roundValue="1"/>
@@ -17263,8 +17358,8 @@
             <relationship type="War" player1="USSR" player2="Thailand" roundValue="1"/>
             <relationship type="Allied" player1="USSR" player2="French-Colonies" roundValue="1"/>
             <relationship type="Allied" player1="USSR" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="USSR" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="USSR" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="USSR" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="USSR" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="USSR" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="USSR" player2="AI-Neutral" roundValue="1"/>
@@ -17284,8 +17379,8 @@
             <relationship type="War" player1="Britain" player2="Thailand" roundValue="1"/>
             <relationship type="Allied" player1="Britain" player2="French-Colonies" roundValue="1"/>
             <relationship type="Allied" player1="Britain" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="Britain" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="Britain" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="Britain" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="Britain" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="Britain" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Britain" player2="AI-Neutral" roundValue="1"/>
@@ -17304,8 +17399,8 @@
             <relationship type="War" player1="British-India" player2="Thailand" roundValue="1"/>
             <relationship type="Allied" player1="British-India" player2="French-Colonies" roundValue="1"/>
             <relationship type="Allied" player1="British-India" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="British-India" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="British-India" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="British-India" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="British-India" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="British-India" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="British-India" player2="AI-Neutral" roundValue="1"/>
@@ -17323,8 +17418,8 @@
             <relationship type="War" player1="ANZAC" player2="Thailand" roundValue="1"/>
             <relationship type="Allied" player1="ANZAC" player2="French-Colonies" roundValue="1"/>
             <relationship type="Allied" player1="ANZAC" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="ANZAC" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="ANZAC" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="ANZAC" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="ANZAC" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="ANZAC" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="ANZAC" player2="AI-Neutral" roundValue="1"/>
@@ -17341,8 +17436,8 @@
             <relationship type="War" player1="USA" player2="Thailand" roundValue="1"/>
             <relationship type="Allied" player1="USA" player2="French-Colonies" roundValue="1"/>
             <relationship type="Allied" player1="USA" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="USA" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="USA" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="USA" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="USA" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="USA" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="USA" player2="AI-Neutral" roundValue="1"/>
@@ -17358,8 +17453,8 @@
             <relationship type="Allied" player1="Slovakia" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Slovakia" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Slovakia" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Slovakia" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Slovakia" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Slovakia" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Slovakia" player2="China" roundValue="1"/>
             <relationship type="War" player1="Slovakia" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Slovakia" player2="AI-Neutral" roundValue="1"/>
@@ -17374,8 +17469,8 @@
             <relationship type="Allied" player1="Croatia" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Croatia" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Croatia" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Croatia" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Croatia" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Croatia" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Croatia" player2="China" roundValue="1"/>
             <relationship type="War" player1="Croatia" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Croatia" player2="AI-Neutral" roundValue="1"/>
@@ -17389,8 +17484,8 @@
             <relationship type="Allied" player1="Hungary" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Hungary" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Hungary" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Hungary" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Hungary" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Hungary" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Hungary" player2="China" roundValue="1"/>
             <relationship type="War" player1="Hungary" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Hungary" player2="AI-Neutral" roundValue="1"/>
@@ -17403,8 +17498,8 @@
             <relationship type="Allied" player1="Bulgaria" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Bulgaria" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Bulgaria" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Bulgaria" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Bulgaria" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Bulgaria" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Bulgaria" player2="China" roundValue="1"/>
             <relationship type="War" player1="Bulgaria" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Bulgaria" player2="AI-Neutral" roundValue="1"/>
@@ -17416,8 +17511,8 @@
             <relationship type="Allied" player1="Romania" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Romania" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Romania" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Romania" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Romania" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Romania" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Romania" player2="China" roundValue="1"/>
             <relationship type="War" player1="Romania" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Romania" player2="AI-Neutral" roundValue="1"/>
@@ -17428,8 +17523,8 @@
             <relationship type="Allied" player1="Finland" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Finland" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Finland" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Finland" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Finland" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Finland" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Finland" player2="China" roundValue="1"/>
             <relationship type="War" player1="Finland" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Finland" player2="AI-Neutral" roundValue="1"/>
@@ -17439,8 +17534,8 @@
             <relationship type="Allied" player1="Iraq" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Iraq" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Iraq" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Iraq" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Iraq" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Iraq" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Iraq" player2="China" roundValue="1"/>
             <relationship type="War" player1="Iraq" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Iraq" player2="AI-Neutral" roundValue="1"/>
@@ -17449,8 +17544,8 @@
             <relationship type="Allied" player1="Iran" player2="Thailand" roundValue="1"/>
             <relationship type="War" player1="Iran" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Iran" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Iran" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Iran" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Iran" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Iran" player2="China" roundValue="1"/>
             <relationship type="War" player1="Iran" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Iran" player2="AI-Neutral" roundValue="1"/>
@@ -17458,39 +17553,39 @@
             <relationship type="Closed-Borders" player1="Iran" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
             <relationship type="War" player1="Thailand" player2="French-Colonies" roundValue="1"/>
             <relationship type="War" player1="Thailand" player2="British-Colonies" roundValue="1"/>
-            <relationship type="War" player1="Thailand" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Thailand" player2="KNIL" roundValue="1"/>
+            <relationship type="War" player1="Thailand" player2="South-Africa" roundValue="1"/>
             <relationship type="War" player1="Thailand" player2="China" roundValue="1"/>
             <relationship type="War" player1="Thailand" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Thailand" player2="AI-Neutral" roundValue="1"/>
             <relationship type="Open-Borders" player1="Thailand" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
             <relationship type="Closed-Borders" player1="Thailand" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
             <relationship type="Allied" player1="French-Colonies" player2="British-Colonies" roundValue="1"/>
-            <relationship type="Allied" player1="French-Colonies" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="French-Colonies" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="French-Colonies" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="French-Colonies" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="French-Colonies" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="French-Colonies" player2="AI-Neutral" roundValue="1"/>
             <relationship type="Closed-Borders" player1="French-Colonies" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
             <relationship type="Open-Borders" player1="French-Colonies" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
-            <relationship type="Allied" player1="British-Colonies" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="British-Colonies" player2="KNIL" roundValue="1"/>
+            <relationship type="Allied" player1="British-Colonies" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="British-Colonies" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="British-Colonies" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="British-Colonies" player2="AI-Neutral" roundValue="1"/>
             <relationship type="Closed-Borders" player1="British-Colonies" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
             <relationship type="Open-Borders" player1="British-Colonies" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
-            <relationship type="Allied" player1="South-Africa" player2="KNIL" roundValue="1"/>
-            <relationship type="Allied" player1="South-Africa" player2="China" roundValue="1"/>
-            <relationship type="Allied" player1="South-Africa" player2="Brazil" roundValue="1"/>
-            <relationship type="Closed-Borders" player1="South-Africa" player2="AI-Neutral" roundValue="1"/>
-            <relationship type="Closed-Borders" player1="South-Africa" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
-            <relationship type="Open-Borders" player1="South-Africa" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
+            <relationship type="Allied" player1="KNIL" player2="South-Africa" roundValue="1"/>
             <relationship type="Allied" player1="KNIL" player2="China" roundValue="1"/>
             <relationship type="Allied" player1="KNIL" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="KNIL" player2="AI-Neutral" roundValue="1"/>
             <relationship type="Closed-Borders" player1="KNIL" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
             <relationship type="Open-Borders" player1="KNIL" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
+            <relationship type="Allied" player1="South-Africa" player2="China" roundValue="1"/>
+            <relationship type="Allied" player1="South-Africa" player2="Brazil" roundValue="1"/>
+            <relationship type="Closed-Borders" player1="South-Africa" player2="AI-Neutral" roundValue="1"/>
+            <relationship type="Closed-Borders" player1="South-Africa" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
+            <relationship type="Open-Borders" player1="South-Africa" player2="AI-Pro-Allies-Neutral" roundValue="1"/>
             <relationship type="Allied" player1="China" player2="Brazil" roundValue="1"/>
             <relationship type="Closed-Borders" player1="China" player2="AI-Neutral" roundValue="1"/>
             <relationship type="Closed-Borders" player1="China" player2="AI-Pro-Axis-Neutral" roundValue="1"/>
@@ -17509,13 +17604,13 @@
         </property>
         <property name="Slovakia bid" value="0" editable="false">
         </property>
-        <property name="Hungary bid" value="0" editable="false">
+        <property name="Croatia bid" value="0" editable="false">
         </property>
-        <property name="Romania bid" value="0" editable="false">
+        <property name="Hungary bid" value="0" editable="false">
         </property>
         <property name="Bulgaria bid" value="0" editable="false">
         </property>
-        <property name="Croatia bid" value="0" editable="false">
+        <property name="Romania bid" value="0" editable="false">
         </property>
         <property name="Finland bid" value="0" editable="false">
         </property>
@@ -17877,23 +17972,36 @@
 <br><span style="font-size:13px;color:000000">Some resource deposits around the world are claimed by specific nations from game start. Friendly nations will automatically hand over these resources if captured from enemy forces.</span><br>
 <br><center><img src="Bar6.png"/></center>
 <br><b><span style="font-size:16px;color:151515">Timeline and Events:</span></b>
-<br><span style="font-size:13px;color:000000"><b>1939 (Round 1)</b> - Poland has just been invaded and Germany is still on the offensive.</span><br>
+<br><span style="font-size:13px;color:000000"><b>Early 1940 (Round 1)</b> - Poland has just been invaded and Germany is still on the offensive.</span><br>
 <center><img src="Round1.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1940 (Round 2)</b> - Eastern Europe and Finland gain access to German technology. China and Brazil gain access to USA technology.</span><br>
-<center><img src="GerTech.png"/><img src="USATech.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1941 (Round 3)</b> - Several nations develop Heavy-Tanks.</span><br>
+<br><span style="font-size:13px;color:000000"><b>Late 1940 (Round 2)</b> - Finland gains access to German technology.</span><br>
+<center><img src="FinlandTech.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Early 1941 (Round 3)</b> - Balkan states gain access to German technology.</span><br>
+<center><img src="BalkanTech.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Late 1941 (Round 4)</b> - China gains access to USA technology.</span><br>
+<center><img src="ChinaTech.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Early 1942 (Round 5)</b> - Brazil gains access to USA technology.</span><br>
+<center><img src="BrazilTech.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Late 1942 (Round 6)</b> - Several nations develop the Heavy-Tank.</span><br>
 <center><img src="HvyTank.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1942 (Round 4)</b> - Several nations develop Jet-Fighters.</span><br>
+<br><span style="font-size:13px;color:000000"><b>Early 1943 (Round 7)</b> - Several nations develop the Jet-Fighter.</span><br>
 <center><img src="JetFighter.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1943 (Round 5)</b> - Germany develops the V1-Rocket.</span><br>
-<center><img src="V1.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1944 (Round 6)</b> - Japan can make use of Kamikaze-Planes.</span><br>
-<center><img src="KamiPilot.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1945 (Round 7)</b> - Germany develops the V2-Rocket. USA develops the Nuclear-Bomb.</span><br>
-<center><img src="V2.png"/><img src="USANuke.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1946 (Round 8)</b> - Germany develops the Nuclear-Bomb.</span><br>
+<br><span style="font-size:13px;color:000000"><b>Late 1943 (Round 8)</b> - Germany develops the V1-Rocket.</span><br>
+<center><img src="V1Rocket.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Early 1944 (Round 9)</b> - Japan can make use of Kamikaze-Planes.</span><br>
+<center><img src="KamikazePlane.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Late 1944 (Round 10)</b> - Germany develops the V2-Rocket.</span><br>
+<center><img src="V2Rocket.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Early 1945 (Round 11)</b> - USA develops the Nuclear-Bomb.</span><br>
+<center><img src="USANuke.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Late 1945 (Round 12)</b> - Germany develops the Nuclear-Bomb.</span><br>
 <center><img src="GerNuke.png"/></center>
-<br><span style="font-size:13px;color:000000"><b>1947 (Round 9)</b> - USSR, Britain and Japan develops the Nuclear-Bomb.</span><br>
+<br><span style="font-size:13px;color:000000"><b>Early 1946 (Round 13)</b> - USSR develops the Nuclear-Bomb.</span><br>
+<center><img src="USSRNuke.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Late 1946 (Round 14)</b> - Japan develops the Nuclear-Bomb.</span><br>
+<center><img src="JapNuke.png"/></center>
+<br><span style="font-size:13px;color:000000"><b>Early 1947 (Round 15)</b> - Britain develops the Nuclear-Bomb.</span><br>
+<center><img src="UKNuke.png"/></center>
 <br><center><img src="Bar7.png"/></center>
 <br><b><span style="font-size:16px;color:151515">Credits:</span></b>
 <br><span style="font-size:13px;color:000000">Map design and idea by Frostion. Thanks to all the developers, map makers and players of TripleA for any contributions.</span><br>
