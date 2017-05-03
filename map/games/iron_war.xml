@@ -6317,7 +6317,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="West Germany" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="40"/>
+            <option name="production" value="30"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Western Alaska" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
