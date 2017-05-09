@@ -15738,7 +15738,7 @@
             <option name="placement" value="Romania:Factory" count="1"/>
             <option name="placement" value="Black Sea Zone:Submarine" count="1"/>
             <option name="placement" value="Black Sea Zone:Destroyer" count="1"/>
-            <option name="placement" value="Black Sea Zone:Patrol-Boat" count="1"/>
+            <option name="placement" value="Black Sea Zone:Patrol-Boat" count="2"/>
             <option name="when" value="before:GermanyUserActions"/>
         </attachment>
         <attachment name="triggerAttachment_Balkan_states_have_a_lower_PU_value_1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
