@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War (BETA)" version="0.1.3"/>
+  <info name="Iron War (BETA)" version="0.1.4"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -2345,7 +2345,7 @@
             <result resourceOrUnit="SS-Infantry" quantity="1"/>
         </productionRule>
         <productionRule name="buyColonial-Infantry">
-            <cost resource="PUs" quantity="7"/>
+            <cost resource="PUs" quantity="6"/>
             <cost resource="CR" quantity="10"/>
             <result resourceOrUnit="Colonial-Infantry" quantity="1"/>
         </productionRule>
@@ -2442,7 +2442,7 @@
             <result resourceOrUnit="Dive-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyJet-Fighter">
-            <cost resource="PUs" quantity="19"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Jet-Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyBomber">
@@ -5440,7 +5440,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Darwin" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Denmark" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -5979,7 +5979,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Papua New Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Para" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6333,8 +6333,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Western New Guinea" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="5"/>
-            <option name="capital" value="KNIL"/>
+            <option name="production" value="2"/>
             <option name="originalOwner" value="AI-Neutral"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Western Tibet" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -15735,7 +15734,6 @@
             <option name="placement" value="Hungary:Flag" count="1"/>
             <option name="placement" value="Bulgaria:Flag" count="1"/>
             <option name="placement" value="Romania:Flag" count="1"/>
-            <option name="placement" value="Romania:Factory" count="1"/>
             <option name="placement" value="Black Sea Zone:Submarine" count="1"/>
             <option name="placement" value="Black Sea Zone:Destroyer" count="1"/>
             <option name="placement" value="Black Sea Zone:Patrol-Boat" count="2"/>
@@ -15744,14 +15742,14 @@
         <attachment name="triggerAttachment_Balkan_states_have_a_lower_PU_value_1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment_BalkansAreGerman"/>
             <option name="territories" value="Slovakia:Croatia"/>
-            <option name="territoryProperty" value="production" count="3"/>
+            <option name="territoryProperty" value="production" count="1"/>
             <option name="territoryProperty" value="originalOwner" count="Germany"/>
             <option name="when" value="before:GermanyUserActions"/>
         </attachment>
         <attachment name="triggerAttachment_Balkan_states_have_a_lower_PU_value_2" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment_BalkansAreGerman"/>
             <option name="territories" value="Hungary:Bulgaria"/>
-            <option name="territoryProperty" value="production" count="4"/>
+            <option name="territoryProperty" value="production" count="3"/>
             <option name="territoryProperty" value="originalOwner" count="Germany"/>
             <option name="when" value="before:GermanyUserActions"/>
         </attachment>
@@ -16173,7 +16171,7 @@
             <unitPlacement unitType="Flag" territory="Algerian Desert" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Alice Springs" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Altai" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Ambon" quantity="1" owner="KNIL"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Ambon" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Ambon" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Amoy" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Amoy" quantity="1" owner="Japan"/>
@@ -16197,7 +16195,7 @@
             <unitPlacement unitType="Oil" territory="Archangel" quantity="2" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Archangel" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Archangel" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Argentina" quantity="4" owner="AI-Pro-Axis-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Argentina" quantity="5" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Argentina" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Argentina" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Oil" territory="Argentina" quantity="1" owner="Germany"/>
@@ -16252,7 +16250,7 @@
             <unitPlacement unitType="Patrol-Boat" territory="Black Sea Zone" quantity="1" owner="Romania"/>
             <unitPlacement unitType="Patrol-Boat" territory="Black Sea Zone" quantity="1" owner="Bulgaria"/>
             <unitPlacement unitType="Submarine" territory="Black Sea Zone" quantity="1" owner="Germany"/>
-            <unitPlacement unitType="Infantry" territory="Bolivia" quantity="3" owner="AI-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Bolivia" quantity="4" owner="AI-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Bolivia" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Flag" territory="Bolivia" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Mech-Inf" territory="Bolivia" quantity="1" owner="AI-Neutral"/>
@@ -16277,7 +16275,7 @@
             <unitPlacement unitType="Colony" territory="British Guiana" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Iron" territory="British Guiana" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="British Guiana" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Infantry" territory="Buenos Aires" quantity="4" owner="AI-Pro-Axis-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Buenos Aires" quantity="5" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Light-Tank" territory="Buenos Aires" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Buenos Aires" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Oil" territory="Buenos Aires" quantity="1" owner="Japan"/>
@@ -16469,7 +16467,7 @@
             <unitPlacement unitType="Flag" territory="Faroe" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Fiji" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Fiji" quantity="1" owner="ANZAC"/>
-            <unitPlacement unitType="Infantry" territory="Finland" quantity="4" owner="Finland"/>
+            <unitPlacement unitType="Infantry" territory="Finland" quantity="5" owner="Finland"/>
             <unitPlacement unitType="Oil" territory="Finland" quantity="3" owner="Finland"/>
             <unitPlacement unitType="Light-Tank" territory="Finland" quantity="1" owner="Finland"/>
             <unitPlacement unitType="Anti-Air" territory="Finland" quantity="1" owner="Finland"/>
@@ -16477,10 +16475,10 @@
             <unitPlacement unitType="Flag" territory="Finland" quantity="1" owner="Finland"/>
             <unitPlacement unitType="Mech-Inf" territory="Finland" quantity="1" owner="Finland"/>
             <unitPlacement unitType="SS-Potential" territory="Finland" quantity="1" owner="Germany"/>
-            <unitPlacement unitType="Infantry" territory="Flores" quantity="1" owner="KNIL"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Flores" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Flores" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="France" quantity="2" owner="France"/>
-            <unitPlacement unitType="Light-Tank" territory="France" quantity="1" owner="France"/>
+            <unitPlacement unitType="SP-Artillery" territory="France" quantity="1" owner="France"/>
             <unitPlacement unitType="Artillery" territory="France" quantity="1" owner="France"/>
             <unitPlacement unitType="SS-Potential" territory="France" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="France" quantity="1" owner="France"/>
@@ -16559,7 +16557,7 @@
             <unitPlacement unitType="Factory" territory="Halifax" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Artillery" territory="Halifax" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Halifax" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Infantry" territory="Halmahera" quantity="1" owner="KNIL"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Halmahera" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Halmahera" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colony" territory="Hanoi" quantity="1" owner="French-Colonies"/>
@@ -16625,7 +16623,8 @@
             <unitPlacement unitType="Factory" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Mech-Inf" territory="Irkutsk" quantity="4" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Italy" quantity="1" owner="Italy"/>
+            <unitPlacement unitType="Infantry" territory="Italy" quantity="2" owner="Italy"/>
+            <unitPlacement unitType="Fighter" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Oil" territory="Italy" quantity="5" owner="Italy"/>
             <unitPlacement unitType="Anti-Air" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Factory" territory="Italy" quantity="1" owner="Italy"/>
@@ -16655,8 +16654,8 @@
             <unitPlacement unitType="Carrier" territory="Japan Sea Zone" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Transport" territory="Japan Sea Zone" quantity="6" owner="Japan"/>
             <unitPlacement unitType="Battleship" territory="Japan Sea Zone" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Java" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Oil" territory="Java" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Java" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Java" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Java" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Destroyer" territory="Java Sea Zone" quantity="1" owner="KNIL"/>
@@ -16910,7 +16909,7 @@
             <unitPlacement unitType="Flag" territory="Papua New Guinea" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="Para" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Flag" territory="Para" quantity="1" owner="Brazil"/>
-            <unitPlacement unitType="Infantry" territory="Paraguay" quantity="4" owner="AI-Pro-Axis-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Paraguay" quantity="5" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Paraguay" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Mech-Inf" territory="Paraguay" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Iron" territory="Paraguay" quantity="1" owner="Germany"/>
@@ -16922,10 +16921,9 @@
             <unitPlacement unitType="Light-Tank" territory="Peking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Peking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Peking" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Peru" quantity="2" owner="AI-Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Peru" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Peru" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Peru" quantity="1" owner="AI-Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Mech-Inf" territory="Peru" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Oil" territory="Peru" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="Portugal" quantity="10" owner="AI-Neutral"/>
             <unitPlacement unitType="SP-Artillery" territory="Portugal" quantity="1" owner="AI-Neutral"/>
@@ -17063,14 +17061,13 @@
             <unitPlacement unitType="Fighter" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Oil" territory="Sumatra" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Colonial-Infantry" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Light-Tank" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Anti-Air" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Factory" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Artillery" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Sumatra" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Infantry" territory="Sumbawa" quantity="1" owner="KNIL"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Sumbawa" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Sumbawa" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Svealand" quantity="1" owner="AI-Pro-Axis-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Svealand" quantity="1" owner="AI-Pro-Axis-Neutral"/>
@@ -17249,10 +17246,8 @@
             <unitPlacement unitType="Flag" territory="Western Mongolia" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Oil" territory="Western New Guinea" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Light-Tank" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Western New Guinea" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Factory" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Artillery" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Western Tibet" quantity="1" owner="AI-Neutral"/>
@@ -17329,18 +17324,18 @@
             <resourceGiven player="Thailand" resource="PUs" quantity="40"/>
             <resourceGiven player="French-Colonies" resource="Fuel" quantity="10"/>
             <resourceGiven player="French-Colonies" resource="Steel" quantity="0"/>
-            <resourceGiven player="French-Colonies" resource="PUs" quantity="30"/>
+            <resourceGiven player="French-Colonies" resource="PUs" quantity="25"/>
             <resourceGiven player="French-Colonies" resource="CR" quantity="5"/>
             <resourceGiven player="British-Colonies" resource="Fuel" quantity="10"/>
             <resourceGiven player="British-Colonies" resource="Steel" quantity="0"/>
-            <resourceGiven player="British-Colonies" resource="PUs" quantity="30"/>
+            <resourceGiven player="British-Colonies" resource="PUs" quantity="25"/>
             <resourceGiven player="British-Colonies" resource="CR" quantity="10"/>
             <resourceGiven player="South-Africa" resource="Fuel" quantity="15"/>
             <resourceGiven player="South-Africa" resource="Steel" quantity="2"/>
             <resourceGiven player="South-Africa" resource="PUs" quantity="40"/>
-            <resourceGiven player="KNIL" resource="Fuel" quantity="15"/>
+            <resourceGiven player="KNIL" resource="Fuel" quantity="10"/>
             <resourceGiven player="KNIL" resource="Steel" quantity="0"/>
-            <resourceGiven player="KNIL" resource="PUs" quantity="30"/>
+            <resourceGiven player="KNIL" resource="PUs" quantity="25"/>
             <resourceGiven player="KNIL" resource="CR" quantity="5"/>
             <resourceGiven player="China" resource="Fuel" quantity="5"/>
             <resourceGiven player="China" resource="Steel" quantity="1"/>
