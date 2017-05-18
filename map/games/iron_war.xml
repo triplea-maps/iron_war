@@ -5817,6 +5817,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Melbourne" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
+            <option name="capital" value="ANZAC"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Melville" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -6158,7 +6159,6 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="North Island" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
-            <option name="capital" value="ANZAC"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Syria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -16665,7 +16665,7 @@
             <unitPlacement unitType="Fighter" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Bomber" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Japan" quantity="10" owner="Japan"/>
-            <unitPlacement unitType="Oil" territory="Japan" quantity="15" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Japan" quantity="20" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Anti-Air" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Japan" quantity="1" owner="Japan"/>
@@ -17185,7 +17185,7 @@
             <unitPlacement unitType="Flag" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Fighter" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Truk" quantity="3" owner="Japan"/>
-            <unitPlacement unitType="Oil" territory="Truk" quantity="3" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Truk" quantity="5" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Tuvan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
