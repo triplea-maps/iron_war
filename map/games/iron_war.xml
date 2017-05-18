@@ -16368,7 +16368,7 @@
             <unitPlacement unitType="Flag" territory="Central America" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Fighter" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Infantry" territory="India" quantity="1" owner="British-India"/>
-            <unitPlacement unitType="Oil" territory="India" quantity="4" owner="British-India"/>
+            <unitPlacement unitType="Oil" territory="India" quantity="3" owner="British-India"/>
             <unitPlacement unitType="Colonial-Infantry" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Light-Tank" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Anti-Air" territory="India" quantity="1" owner="British-India"/>
@@ -16525,7 +16525,7 @@
             <unitPlacement unitType="Colony" territory="French India" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="French India" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Gabon" quantity="1" owner="France"/>
-            <unitPlacement unitType="Oil" territory="Gabon" quantity="3" owner="France"/>
+            <unitPlacement unitType="Oil" territory="Gabon" quantity="2" owner="France"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Factory" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Colony" territory="Gabon" quantity="1" owner="France"/>
@@ -16605,10 +16605,11 @@
             <unitPlacement unitType="Artillery" territory="Hokkaido" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Hokkaido" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Hong Kong" quantity="4" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Hong Kong" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Hong Kong" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Hong Kong" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Hsinking" quantity="2" owner="Japan"/>
-            <unitPlacement unitType="Oil" territory="Hsinking" quantity="15" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Hsinking" quantity="10" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Hsinking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Hsinking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Mech-Inf" territory="Hsinking" quantity="1" owner="Japan"/>
@@ -16757,7 +16758,7 @@
             <unitPlacement unitType="Flag" territory="Liberia" quantity="1" owner="USA"/>
             <unitPlacement unitType="Fighter" territory="Libya" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Infantry" territory="Libya" quantity="10" owner="Italy"/>
-            <unitPlacement unitType="Oil" territory="Libya" quantity="3" owner="Italy"/>
+            <unitPlacement unitType="Oil" territory="Libya" quantity="5" owner="Italy"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Libya" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Light-Tank" territory="Libya" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Medium-Tank" territory="Libya" quantity="1" owner="Italy"/>
@@ -16962,7 +16963,7 @@
             <unitPlacement unitType="Infantry" territory="Pretoria" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Flag" territory="Pretoria" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Flag" territory="Puerto Rico" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Oil" territory="Punjab" quantity="2" owner="British-India"/>
+            <unitPlacement unitType="Oil" territory="Punjab" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Punjab" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Colony" territory="Punjab" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Punjab" quantity="1" owner="British-India"/>
@@ -16986,6 +16987,7 @@
             <unitPlacement unitType="SS-Potential" territory="Romania" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Fighter" territory="Ryojun" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Ryojun" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Ryojun" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Ryojun" quantity="1" owner="Japan"/>
             <unitPlacement unitType="SP-Artillery" territory="Ryojun" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Ryojun" quantity="1" owner="Japan"/>
@@ -17011,6 +17013,7 @@
             <unitPlacement unitType="Colony" territory="Senegal" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Senegal" quantity="1" owner="France"/>
             <unitPlacement unitType="Infantry" territory="Shanghai" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Shanghai" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Shanghai" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Shanghai" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Shetland" quantity="1" owner="Britain"/>
@@ -17031,7 +17034,7 @@
             <unitPlacement unitType="Flag" territory="Solomon" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Fighter" territory="Somalia" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Infantry" territory="Somalia" quantity="5" owner="Italy"/>
-            <unitPlacement unitType="Oil" territory="Somalia" quantity="4" owner="Italy"/>
+            <unitPlacement unitType="Oil" territory="Somalia" quantity="5" owner="Italy"/>
             <unitPlacement unitType="Light-Tank" territory="Somalia" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Somalia" quantity="3" owner="Italy"/>
             <unitPlacement unitType="Factory" territory="Somalia" quantity="1" owner="Italy"/>
@@ -17045,7 +17048,7 @@
             <unitPlacement unitType="Flag" territory="Somaliland" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Fighter" territory="South Africa" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Infantry" territory="South Africa" quantity="1" owner="South-Africa"/>
-            <unitPlacement unitType="Oil" territory="South Africa" quantity="3" owner="South-Africa"/>
+            <unitPlacement unitType="Oil" territory="South Africa" quantity="2" owner="South-Africa"/>
             <unitPlacement unitType="Factory" territory="South Africa" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Iron" territory="South Africa" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Artillery" territory="South Africa" quantity="1" owner="South-Africa"/>
@@ -17060,7 +17063,7 @@
             <unitPlacement unitType="Artillery" territory="South Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="South Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="South Queensland" quantity="1" owner="ANZAC"/>
-            <unitPlacement unitType="Oil" territory="South Queensland" quantity="3" owner="ANZAC"/>
+            <unitPlacement unitType="Oil" territory="South Queensland" quantity="2" owner="ANZAC"/>
             <unitPlacement unitType="Artillery" territory="South Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="South Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Colonial-Infantry" territory="South Sudan" quantity="1" owner="British-Colonies"/>
