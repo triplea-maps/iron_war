@@ -17185,7 +17185,7 @@
             <unitPlacement unitType="Flag" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Fighter" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Truk" quantity="3" owner="Japan"/>
-            <unitPlacement unitType="Oil" territory="Truk" quantity="5" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Truk" quantity="3" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Tuvan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
