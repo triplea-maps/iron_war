@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War (BETA)" version="0.1.4"/>
+  <info name="Iron War (BETA)" version="0.1.5"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -371,11 +371,11 @@
       <territory name="Orkney"/>
       <territory name="Oskemen"/>
       <territory name="Pacific 4 Sea Zone" water="true"/>
+      <territory name="Truk Lagoon Sea Zone" water="true"/>
       <territory name="Pacific 5 Sea Zone" water="true"/>
       <territory name="Pacific 6 Sea Zone" water="true"/>
       <territory name="Pacific 7 Sea Zone" water="true"/>
       <territory name="Pacific 8 Sea Zone" water="true"/>
-      <territory name="Pacific 9 Sea Zone" water="true"/>
       <territory name="Pacific Coast Sea Zone" water="true"/>
       <territory name="Palau"/>
       <territory name="Palawan"/>
@@ -445,12 +445,12 @@
       <territory name="South Indian Ocean 15 Sea Zone" water="true"/>
       <territory name="South Indian Ocean 16 Sea Zone" water="true"/>
       <territory name="South Island"/>
+      <territory name="South Pacific 9 Sea Zone" water="true"/>
       <territory name="South Pacific 10 Sea Zone" water="true"/>
       <territory name="South Pacific 11 Sea Zone" water="true"/>
       <territory name="South Pacific 12 Sea Zone" water="true"/>
       <territory name="South Pacific 13 Sea Zone" water="true"/>
       <territory name="South Pacific 14 Sea Zone" water="true"/>
-      <territory name="South Pacific 15 Sea Zone" water="true"/>
       <territory name="South Queensland"/>
       <territory name="South Sudan"/>
       <territory name="Southern Alaska"/>
@@ -492,6 +492,7 @@
       <territory name="Trondheim-Narvik"/>
       <territory name="Tsitsihar"/>
       <territory name="Tunesia"/>
+      <territory name="Truk"/>
       <territory name="Tuvan"/>
       <territory name="Tyrrhenian Sea Zone" water="true"/>
       <territory name="USA Central"/>
@@ -687,13 +688,13 @@
       <connection t1="Ankara" t2="Black Sea Zone"/>
       <connection t1="Ankara" t2="Central Turkey"/>
       <connection t1="Antarctic 1 Sea Zone" t2="Antarctic 2 Sea Zone"/>
+      <connection t1="Antarctic 1 Sea Zone" t2="South Pacific 12 Sea Zone"/>
       <connection t1="Antarctic 1 Sea Zone" t2="South Pacific 13 Sea Zone"/>
-      <connection t1="Antarctic 1 Sea Zone" t2="South Pacific 14 Sea Zone"/>
       <connection t1="Antarctic 2 Sea Zone" t2="Antarctic 3 Sea Zone"/>
+      <connection t1="Antarctic 2 Sea Zone" t2="South Pacific 13 Sea Zone"/>
       <connection t1="Antarctic 2 Sea Zone" t2="South Pacific 14 Sea Zone"/>
-      <connection t1="Antarctic 2 Sea Zone" t2="South Pacific 15 Sea Zone"/>
       <connection t1="Antarctic 3 Sea Zone" t2="Antarctic 4 Sea Zone"/>
-      <connection t1="Antarctic 3 Sea Zone" t2="South Pacific 15 Sea Zone"/>
+      <connection t1="Antarctic 3 Sea Zone" t2="South Pacific 14 Sea Zone"/>
       <connection t1="Antarctic 3 Sea Zone" t2="Talcahuano Sea Zone"/>
       <connection t1="Antarctic 4 Sea Zone" t2="Antarctic 5 Sea Zone"/>
       <connection t1="Antarctic 4 Sea Zone" t2="Cape Horn"/>
@@ -797,8 +798,8 @@
       <connection t1="Arica Sea Zone" t2="Callao Sea Zone"/>
       <connection t1="Arica Sea Zone" t2="Chile"/>
       <connection t1="Arica Sea Zone" t2="Peru"/>
-      <connection t1="Arica Sea Zone" t2="South Pacific 12 Sea Zone"/>
-      <connection t1="Arica Sea Zone" t2="South Pacific 15 Sea Zone"/>
+      <connection t1="Arica Sea Zone" t2="South Pacific 11 Sea Zone"/>
+      <connection t1="Arica Sea Zone" t2="South Pacific 14 Sea Zone"/>
       <connection t1="Arica Sea Zone" t2="Talcahuano Sea Zone"/>
       <connection t1="Astana" t2="Jezkazgan"/>
       <connection t1="Astana" t2="Karagandy"/>
@@ -1023,7 +1024,7 @@
       <connection t1="Callao Sea Zone" t2="Galapagos Sea Zone"/>
       <connection t1="Callao Sea Zone" t2="Gulf of Panama Sea Zone"/>
       <connection t1="Callao Sea Zone" t2="Peru"/>
-      <connection t1="Callao Sea Zone" t2="South Pacific 12 Sea Zone"/>
+      <connection t1="Callao Sea Zone" t2="South Pacific 11 Sea Zone"/>
       <connection t1="Cameroon" t2="Chad"/>
       <connection t1="Cameroon" t2="Equatorial Africa"/>
       <connection t1="Cameroon" t2="Gabon"/>
@@ -1268,8 +1269,8 @@
       <connection t1="Fiji Sea Zone" t2="New Hebrides Sea Zone"/>
       <connection t1="Fiji Sea Zone" t2="New Zealand Sea Zone"/>
       <connection t1="Fiji Sea Zone" t2="Sydney Sea Zone"/>
-      <connection t1="Fiji Sea Zone" t2="South Pacific 10 Sea Zone"/>
-      <connection t1="Fiji Sea Zone" t2="South Pacific 13 Sea Zone"/>
+      <connection t1="Fiji Sea Zone" t2="South Pacific 9 Sea Zone"/>
+      <connection t1="Fiji Sea Zone" t2="South Pacific 12 Sea Zone"/>
       <connection t1="Finland" t2="Gulf of Bothnia Sea Zone"/>
       <connection t1="Flores" t2="Java Sea Zone"/>
       <connection t1="Flores" t2="Port Hedland Sea Zone"/>
@@ -1303,8 +1304,8 @@
       <connection t1="Galapagos Sea Zone" t2="Gulf of California Sea Zone"/>
       <connection t1="Galapagos Sea Zone" t2="Gulf of Fonseca Sea Zone"/>
       <connection t1="Galapagos Sea Zone" t2="Gulf of Panama Sea Zone"/>
-      <connection t1="Galapagos Sea Zone" t2="Pacific 9 Sea Zone"/>
-      <connection t1="Galapagos Sea Zone" t2="South Pacific 12 Sea Zone"/>
+      <connection t1="Galapagos Sea Zone" t2="Pacific 8 Sea Zone"/>
+      <connection t1="Galapagos Sea Zone" t2="South Pacific 11 Sea Zone"/>
       <connection t1="Istanbul" t2="Greece"/>
       <connection t1="Gibraltar" t2="Mediterranean Sea Zone"/>
       <connection t1="Gibraltar" t2="Spain"/>
@@ -1371,8 +1372,8 @@
       <connection t1="Gulf of California Sea Zone" t2="Gulf of Fonseca Sea Zone"/>
       <connection t1="Gulf of California Sea Zone" t2="Mexico City"/>
       <connection t1="Gulf of California Sea Zone" t2="Northern Mexico"/>
+      <connection t1="Gulf of California Sea Zone" t2="Pacific 7 Sea Zone"/>
       <connection t1="Gulf of California Sea Zone" t2="Pacific 8 Sea Zone"/>
-      <connection t1="Gulf of California Sea Zone" t2="Pacific 9 Sea Zone"/>
       <connection t1="Gulf of California Sea Zone" t2="San Diego Sea Zone"/>
       <connection t1="Gulf of Fonseca Sea Zone" t2="Gulf of Panama Sea Zone"/>
       <connection t1="Gulf of Fonseca Sea Zone" t2="Mexico City"/>
@@ -1419,8 +1420,8 @@
       <connection t1="Hanoi" t2="Thailand"/>
       <connection t1="Hawaii" t2="Hawaiian Sea Zone"/>
       <connection t1="Hawaiian Sea Zone" t2="North Pacific 3 Sea Zone"/>
+      <connection t1="Hawaiian Sea Zone" t2="Pacific 6 Sea Zone"/>
       <connection t1="Hawaiian Sea Zone" t2="Pacific 7 Sea Zone"/>
-      <connection t1="Hawaiian Sea Zone" t2="Pacific 8 Sea Zone"/>
       <connection t1="Hawaiian Sea Zone" t2="San Diego Sea Zone"/>
       <connection t1="Hebrides" t2="Scotland"/>
       <connection t1="Himalayas" t2="Nepal"/>
@@ -1709,7 +1710,7 @@
       <connection t1="Midway" t2="Midway Island Sea Zone"/>
       <connection t1="Midway Island Sea Zone" t2="North Pacific 1 Sea Zone"/>
       <connection t1="Midway Island Sea Zone" t2="North Pacific 2 Sea Zone"/>
-      <connection t1="Midway Island Sea Zone" t2="Pacific 6 Sea Zone"/>
+      <connection t1="Midway Island Sea Zone" t2="Pacific 5 Sea Zone"/>
       <connection t1="Midway Island Sea Zone" t2="Wake Island Sea Zone"/>
       <connection t1="Midway Island Sea Zone" t2="North Pacific 3 Sea Zone"/>
       <connection t1="Midway Island Sea Zone" t2="Hawaiian Sea Zone"/>
@@ -1750,16 +1751,16 @@
       <connection t1="Nepal" t2="United Provinces"/>
       <connection t1="New Britain" t2="Solomon Sea Zone"/>
       <connection t1="New Hebrides" t2="New Hebrides Sea Zone"/>
+      <connection t1="New Hebrides Sea Zone" t2="Truk Lagoon Sea Zone"/>
       <connection t1="New Hebrides Sea Zone" t2="Pacific 5 Sea Zone"/>
-      <connection t1="New Hebrides Sea Zone" t2="Pacific 6 Sea Zone"/>
       <connection t1="New Hebrides Sea Zone" t2="Solomon Sea Zone"/>
-      <connection t1="New Hebrides Sea Zone" t2="Pacific 7 Sea Zone"/>
-      <connection t1="New Hebrides Sea Zone" t2="South Pacific 10 Sea Zone"/>
+      <connection t1="New Hebrides Sea Zone" t2="Pacific 6 Sea Zone"/>
+      <connection t1="New Hebrides Sea Zone" t2="South Pacific 9 Sea Zone"/>
       <connection t1="New Zealand Sea Zone" t2="North Island"/>
       <connection t1="New Zealand Sea Zone" t2="South Island"/>
       <connection t1="New Zealand Sea Zone" t2="Sydney Sea Zone"/>
       <connection t1="New Zealand Sea Zone" t2="Tasman Sea Zone"/>
-      <connection t1="New Zealand Sea Zone" t2="South Pacific 13 Sea Zone"/>
+      <connection t1="New Zealand Sea Zone" t2="South Pacific 12 Sea Zone"/>
       <connection t1="New Zealand Sea Zone" t2="Antarctic 1 Sea Zone"/>
       <connection t1="Nigeria" t2="Sahara Desert"/>
       <connection t1="Nikolaevsk" t2="Okhotsk Sea Zone"/>
@@ -1841,24 +1842,25 @@
       <connection t1="Oskemen" t2="Pavlodar"/>
       <connection t1="Oskemen" t2="Urimchi"/>
       <connection t1="Oskemen" t2="Western Mongolia"/>
-      <connection t1="Pacific 4 Sea Zone" t2="Pacific 5 Sea Zone"/>
+      <connection t1="Pacific 4 Sea Zone" t2="Truk Lagoon Sea Zone"/>
       <connection t1="Pacific 4 Sea Zone" t2="Philippines Sea Zone"/>
       <connection t1="Pacific 4 Sea Zone" t2="Solomon Sea Zone"/>
       <connection t1="Pacific 4 Sea Zone" t2="Wake Island Sea Zone"/>
-      <connection t1="Pacific 5 Sea Zone" t2="Pacific 6 Sea Zone"/>
-      <connection t1="Pacific 5 Sea Zone" t2="Solomon Sea Zone"/>
+      <connection t1="Truk Lagoon Sea Zone" t2="Pacific 5 Sea Zone"/>
+      <connection t1="Truk Lagoon Sea Zone" t2="Solomon Sea Zone"/>
+      <connection t1="Truk Lagoon Sea Zone" t2="Wake Island Sea Zone"/>
+      <connection t1="Truk Lagoon Sea Zone" t2="Truk"/>
       <connection t1="Pacific 5 Sea Zone" t2="Wake Island Sea Zone"/>
-      <connection t1="Pacific 6 Sea Zone" t2="Wake Island Sea Zone"/>
-      <connection t1="Pacific 6 Sea Zone" t2="Hawaiian Sea Zone"/>
+      <connection t1="Pacific 5 Sea Zone" t2="Hawaiian Sea Zone"/>
+      <connection t1="Pacific 5 Sea Zone" t2="Pacific 6 Sea Zone"/>
       <connection t1="Pacific 6 Sea Zone" t2="Pacific 7 Sea Zone"/>
+      <connection t1="Pacific 6 Sea Zone" t2="Pacific 8 Sea Zone"/>
+      <connection t1="Pacific 6 Sea Zone" t2="South Pacific 9 Sea Zone"/>
       <connection t1="Pacific 7 Sea Zone" t2="Pacific 8 Sea Zone"/>
-      <connection t1="Pacific 7 Sea Zone" t2="Pacific 9 Sea Zone"/>
-      <connection t1="Pacific 7 Sea Zone" t2="South Pacific 10 Sea Zone"/>
-      <connection t1="Pacific 8 Sea Zone" t2="Pacific 9 Sea Zone"/>
-      <connection t1="Pacific 8 Sea Zone" t2="San Diego Sea Zone"/>
-      <connection t1="Pacific 9 Sea Zone" t2="South Pacific 10 Sea Zone"/>
-      <connection t1="Pacific 9 Sea Zone" t2="South Pacific 11 Sea Zone"/>
-      <connection t1="Pacific 9 Sea Zone" t2="South Pacific 12 Sea Zone"/>
+      <connection t1="Pacific 7 Sea Zone" t2="San Diego Sea Zone"/>
+      <connection t1="Pacific 8 Sea Zone" t2="South Pacific 9 Sea Zone"/>
+      <connection t1="Pacific 8 Sea Zone" t2="South Pacific 10 Sea Zone"/>
+      <connection t1="Pacific 8 Sea Zone" t2="South Pacific 11 Sea Zone"/>
       <connection t1="Pacific Coast Sea Zone" t2="San Diego Sea Zone"/>
       <connection t1="Pacific Coast Sea Zone" t2="USA Northwest"/>
       <connection t1="Palawan" t2="South China Sea Zone"/>
@@ -1948,16 +1950,16 @@
       <connection t1="South Indian Ocean 13 Sea Zone" t2="South Indian Ocean 16 Sea Zone"/>
       <connection t1="South Indian Ocean 14 Sea Zone" t2="South Indian Ocean 15 Sea Zone"/>
       <connection t1="South Indian Ocean 15 Sea Zone" t2="South Indian Ocean 16 Sea Zone"/>
+      <connection t1="South Pacific 9 Sea Zone" t2="South Pacific 10 Sea Zone"/>
+      <connection t1="South Pacific 9 Sea Zone" t2="South Pacific 12 Sea Zone"/>
       <connection t1="South Pacific 10 Sea Zone" t2="South Pacific 11 Sea Zone"/>
+      <connection t1="South Pacific 10 Sea Zone" t2="South Pacific 12 Sea Zone"/>
       <connection t1="South Pacific 10 Sea Zone" t2="South Pacific 13 Sea Zone"/>
-      <connection t1="South Pacific 11 Sea Zone" t2="South Pacific 12 Sea Zone"/>
       <connection t1="South Pacific 11 Sea Zone" t2="South Pacific 13 Sea Zone"/>
       <connection t1="South Pacific 11 Sea Zone" t2="South Pacific 14 Sea Zone"/>
-      <connection t1="South Pacific 12 Sea Zone" t2="South Pacific 14 Sea Zone"/>
-      <connection t1="South Pacific 12 Sea Zone" t2="South Pacific 15 Sea Zone"/>
+      <connection t1="South Pacific 12 Sea Zone" t2="South Pacific 13 Sea Zone"/>
       <connection t1="South Pacific 13 Sea Zone" t2="South Pacific 14 Sea Zone"/>
-      <connection t1="South Pacific 14 Sea Zone" t2="South Pacific 15 Sea Zone"/>
-      <connection t1="South Pacific 15 Sea Zone" t2="Talcahuano Sea Zone"/>
+      <connection t1="South Pacific 14 Sea Zone" t2="Talcahuano Sea Zone"/>
       <connection t1="South Queensland" t2="Sydney"/>
       <connection t1="South Queensland" t2="Sydney Sea Zone"/>
       <connection t1="South Sudan" t2="Ubangi-Shari"/>
@@ -4952,7 +4954,7 @@
             <option name="airDefense" value="6"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Bomber" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="8"/>
+            <option name="attack" value="7"/>
             <option name="defense" value="2"/>
             <option name="movement" value="6"/>
             <option name="carrierCost" value="2"/>
@@ -5170,7 +5172,7 @@
             <option name="production" value="5"/>
             <option name="originalOwner" value="USSR"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="South Pacific 11 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+        <attachment name="territoryAttachment" attachTo="South Pacific 10 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="originalOwner" value="ANZAC"/>
         </attachment>
@@ -6220,6 +6222,9 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Tunesia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
+        </attachment>
+        <attachment name="territoryAttachment" attachTo="Truk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Tuvan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -8040,12 +8045,17 @@
             <option name="directPresenceTerritories" value="Tunesia" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
-        </attachment>	
+        </attachment>
+        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Truk" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Truk" count="1"/>
+            <option name="unitPresence" value="SS-Potential" count="1"/>
+            <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
+        </attachment>
         <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Tuvan" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
             <option name="directPresenceTerritories" value="Tuvan" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Slovakia:Hungary:Romania:Bulgaria:Croatia:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
-        </attachment>	
+        </attachment>
         <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Ubangi-Shari" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
             <option name="directPresenceTerritories" value="Ubangi-Shari" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
@@ -13381,23 +13391,39 @@
             <option name="when" value="before:IranEndTurn"/>	
             <option name="when" value="before:JapanEndTurn"/>	
             <option name="when" value="before:ThailandEndTurn"/>	
-        </attachment>		
-        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Tuvan" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
-            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Tuvan"/>	
-            <option name="placement" value="Tuvan:SS-Potential" count="1"/>	
-            <option name="players" value="Germany"/>	
-            <option name="when" value="before:SlovakiaEndTurn"/>	
-            <option name="when" value="before:HungaryEndTurn"/>	
-            <option name="when" value="before:RomaniaEndTurn"/>	
-            <option name="when" value="before:BulgariaEndTurn"/>	
-            <option name="when" value="before:CroatiaEndTurn"/>	
-            <option name="when" value="before:FinlandEndTurn"/>	
-            <option name="when" value="before:ItalyEndTurn"/>	
-            <option name="when" value="before:IraqEndTurn"/>	
-            <option name="when" value="before:IranEndTurn"/>	
-            <option name="when" value="before:JapanEndTurn"/>	
-            <option name="when" value="before:ThailandEndTurn"/>	
-        </attachment>		
+        </attachment>
+        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Truk" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Truk"/>
+            <option name="placement" value="Truk:SS-Potential" count="1"/>
+            <option name="players" value="Germany"/>
+            <option name="when" value="before:SlovakiaEndTurn"/>
+            <option name="when" value="before:HungaryEndTurn"/>
+            <option name="when" value="before:RomaniaEndTurn"/>
+            <option name="when" value="before:BulgariaEndTurn"/>
+            <option name="when" value="before:CroatiaEndTurn"/>
+            <option name="when" value="before:FinlandEndTurn"/>
+            <option name="when" value="before:ItalyEndTurn"/>
+            <option name="when" value="before:IraqEndTurn"/>
+            <option name="when" value="before:IranEndTurn"/>
+            <option name="when" value="before:JapanEndTurn"/>
+            <option name="when" value="before:ThailandEndTurn"/>
+        </attachment>
+        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Tuvan" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Tuvan"/>
+            <option name="placement" value="Tuvan:SS-Potential" count="1"/>
+            <option name="players" value="Germany"/>
+            <option name="when" value="before:SlovakiaEndTurn"/>
+            <option name="when" value="before:HungaryEndTurn"/>
+            <option name="when" value="before:RomaniaEndTurn"/>
+            <option name="when" value="before:BulgariaEndTurn"/>
+            <option name="when" value="before:CroatiaEndTurn"/>
+            <option name="when" value="before:FinlandEndTurn"/>
+            <option name="when" value="before:ItalyEndTurn"/>
+            <option name="when" value="before:IraqEndTurn"/>
+            <option name="when" value="before:IranEndTurn"/>
+            <option name="when" value="before:JapanEndTurn"/>
+            <option name="when" value="before:ThailandEndTurn"/>
+        </attachment>
         <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Ubangi-Shari" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
             <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Ubangi-Shari"/>	
             <option name="placement" value="Ubangi-Shari:SS-Potential" count="1"/>	
@@ -16051,7 +16077,7 @@
             <territoryOwner territory="South Africa" owner="South-Africa"/>
             <territoryOwner territory="South Australia" owner="ANZAC"/>
             <territoryOwner territory="South Island" owner="ANZAC"/>
-            <territoryOwner territory="South Pacific 11 Sea Zone" owner="ANZAC"/>
+            <territoryOwner territory="South Pacific 10 Sea Zone" owner="ANZAC"/>
             <territoryOwner territory="South Queensland" owner="ANZAC"/>
             <territoryOwner territory="South Sudan" owner="British-Colonies"/>
             <territoryOwner territory="Southern Alaska" owner="USA"/>
@@ -16087,6 +16113,7 @@
             <territoryOwner territory="Trondheim-Narvik" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="Tsitsihar" owner="Japan"/>
             <territoryOwner territory="Tunesia" owner="France"/>
+            <territoryOwner territory="Truk" owner="Japan"/>
             <territoryOwner territory="Tuvan" owner="AI-Pro-Allies-Neutral"/>
             <territoryOwner territory="USA Central" owner="USA"/>
             <territoryOwner territory="USA Midwest" owner="USA"/>
@@ -16563,9 +16590,8 @@
             <unitPlacement unitType="Colony" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Mech-Inf" territory="Hanoi" quantity="1" owner="French-Colonies"/>
-            <unitPlacement unitType="Fighter" territory="Hawaii" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Infantry" territory="Hawaii" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Marines" territory="Hawaii" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Factory" territory="Hawaii" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Marines" territory="Hawaii" quantity="2" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Hawaii" quantity="1" owner="USA"/>
             <unitPlacement unitType="Fighter" territory="Hawaiian Sea Zone" quantity="2" owner="USA"/>
             <unitPlacement unitType="Cruiser" territory="Hawaiian Sea Zone" quantity="1" owner="USA"/>
@@ -16623,8 +16649,8 @@
             <unitPlacement unitType="Factory" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Mech-Inf" territory="Irkutsk" quantity="4" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Italy" quantity="2" owner="Italy"/>
             <unitPlacement unitType="Fighter" territory="Italy" quantity="1" owner="Italy"/>
+            <unitPlacement unitType="Infantry" territory="Italy" quantity="2" owner="Italy"/>
             <unitPlacement unitType="Oil" territory="Italy" quantity="5" owner="Italy"/>
             <unitPlacement unitType="Anti-Air" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Factory" territory="Italy" quantity="1" owner="Italy"/>
@@ -16639,7 +16665,7 @@
             <unitPlacement unitType="Flag" territory="Jamaica" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Fighter" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Bomber" territory="Japan" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Japan" quantity="7" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Japan" quantity="10" owner="Japan"/>
             <unitPlacement unitType="Oil" territory="Japan" quantity="10" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Anti-Air" territory="Japan" quantity="1" owner="Japan"/>
@@ -16896,6 +16922,11 @@
             <unitPlacement unitType="Flag" territory="Orissa" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Orkney" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Oskemen" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Battleship" territory="Truk Lagoon Sea Zone" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Cruiser" territory="Truk Lagoon Sea Zone" quantity="2" owner="Japan"/>
+            <unitPlacement unitType="Destroyer" territory="Truk Lagoon Sea Zone" quantity="2" owner="Japan"/>
+            <unitPlacement unitType="Submarine" territory="Truk Lagoon Sea Zone" quantity="2" owner="Japan"/>
+            <unitPlacement unitType="Transport" territory="Truk Lagoon Sea Zone" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Palau" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Palau" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Palawan" quantity="1" owner="USA"/>
@@ -17153,6 +17184,11 @@
             <unitPlacement unitType="Colony" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="SS-Potential" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Tunesia" quantity="1" owner="France"/>
+            <unitPlacement unitType="Infantry" territory="Truk" quantity="3" owner="Japan"/>
+            <unitPlacement unitType="Fighter" territory="Truk" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Anti-Air" territory="Truk" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Factory" territory="Truk" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Flag" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Tuvan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Tuvan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
             <unitPlacement unitType="Iron" territory="Tuvan" quantity="1" owner="USSR"/>
