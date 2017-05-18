@@ -16665,7 +16665,7 @@
             <unitPlacement unitType="Fighter" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Bomber" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Japan" quantity="10" owner="Japan"/>
-            <unitPlacement unitType="Oil" territory="Japan" quantity="20" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Japan" quantity="15" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Anti-Air" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Japan" quantity="1" owner="Japan"/>
