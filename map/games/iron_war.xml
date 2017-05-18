@@ -16286,7 +16286,6 @@
             <unitPlacement unitType="Oil" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Borneo" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Artillery" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Brazil" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Oil" territory="Brazil" quantity="3" owner="Brazil"/>
@@ -16666,7 +16665,7 @@
             <unitPlacement unitType="Fighter" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Bomber" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Japan" quantity="10" owner="Japan"/>
-            <unitPlacement unitType="Oil" territory="Japan" quantity="10" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Japan" quantity="20" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Anti-Air" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Japan" quantity="1" owner="Japan"/>
@@ -16922,10 +16921,10 @@
             <unitPlacement unitType="Flag" territory="Orissa" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Orkney" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Oskemen" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Battleship" territory="Truk Lagoon Sea Zone" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Cruiser" territory="Truk Lagoon Sea Zone" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Destroyer" territory="Truk Lagoon Sea Zone" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Submarine" territory="Truk Lagoon Sea Zone" quantity="2" owner="Japan"/>
+            <unitPlacement unitType="Battleship" territory="Truk Lagoon Sea Zone" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Transport" territory="Truk Lagoon Sea Zone" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Palau" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Palau" quantity="1" owner="Japan"/>
@@ -17093,10 +17092,10 @@
             <unitPlacement unitType="Infantry" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Oil" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Light-Tank" territory="Sumatra" quantity="1" owner="KNIL"/>
+            <unitPlacement unitType="Colonial-Infantry" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Anti-Air" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Factory" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Sumatra" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Artillery" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Sumbawa" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Sumbawa" quantity="1" owner="KNIL"/>
@@ -17184,9 +17183,9 @@
             <unitPlacement unitType="Colony" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="SS-Potential" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Tunesia" quantity="1" owner="France"/>
-            <unitPlacement unitType="Infantry" territory="Truk" quantity="3" owner="Japan"/>
             <unitPlacement unitType="Fighter" territory="Truk" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Anti-Air" territory="Truk" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Truk" quantity="3" owner="Japan"/>
+            <unitPlacement unitType="Oil" territory="Truk" quantity="5" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Tuvan" quantity="1" owner="AI-Pro-Allies-Neutral"/>
@@ -17284,7 +17283,6 @@
             <unitPlacement unitType="Oil" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Western New Guinea" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Artillery" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Western New Guinea" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Western Tibet" quantity="1" owner="AI-Neutral"/>
             <unitPlacement unitType="Flag" territory="Western Tibet" quantity="1" owner="AI-Neutral"/>
@@ -17318,11 +17316,10 @@
             <resourceGiven player="Italy" resource="Steel" quantity="4"/>
             <resourceGiven player="Italy" resource="PUs" quantity="90"/>
             <resourceGiven player="Italy" resource="CR" quantity="5"/>
-            <resourceGiven player="Japan" resource="Fuel" quantity="55"/>
+            <resourceGiven player="Japan" resource="Fuel" quantity="70"/>
             <resourceGiven player="Japan" resource="Steel" quantity="4"/>
             <resourceGiven player="Japan" resource="PUs" quantity="80"/>
             <resourceGiven player="France" resource="Fuel" quantity="15"/>
-            <resourceGiven player="France" resource="Steel" quantity="0"/>
             <resourceGiven player="France" resource="PUs" quantity="60"/>
             <resourceGiven player="France" resource="CR" quantity="10"/>
             <resourceGiven player="USSR" resource="Fuel" quantity="100"/>
@@ -17359,20 +17356,17 @@
             <resourceGiven player="Thailand" resource="Steel" quantity="2"/>
             <resourceGiven player="Thailand" resource="PUs" quantity="40"/>
             <resourceGiven player="French-Colonies" resource="Fuel" quantity="10"/>
-            <resourceGiven player="French-Colonies" resource="Steel" quantity="0"/>
             <resourceGiven player="French-Colonies" resource="PUs" quantity="25"/>
             <resourceGiven player="French-Colonies" resource="CR" quantity="5"/>
             <resourceGiven player="British-Colonies" resource="Fuel" quantity="10"/>
-            <resourceGiven player="British-Colonies" resource="Steel" quantity="0"/>
             <resourceGiven player="British-Colonies" resource="PUs" quantity="25"/>
             <resourceGiven player="British-Colonies" resource="CR" quantity="10"/>
+            <resourceGiven player="KNIL" resource="Fuel" quantity="10"/>
+            <resourceGiven player="KNIL" resource="PUs" quantity="25"/>
+            <resourceGiven player="KNIL" resource="CR" quantity="5"/>
             <resourceGiven player="South-Africa" resource="Fuel" quantity="15"/>
             <resourceGiven player="South-Africa" resource="Steel" quantity="2"/>
             <resourceGiven player="South-Africa" resource="PUs" quantity="40"/>
-            <resourceGiven player="KNIL" resource="Fuel" quantity="10"/>
-            <resourceGiven player="KNIL" resource="Steel" quantity="0"/>
-            <resourceGiven player="KNIL" resource="PUs" quantity="25"/>
-            <resourceGiven player="KNIL" resource="CR" quantity="5"/>
             <resourceGiven player="China" resource="Fuel" quantity="5"/>
             <resourceGiven player="China" resource="Steel" quantity="1"/>
             <resourceGiven player="China" resource="PUs" quantity="40"/>
