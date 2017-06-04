@@ -1,6 +1,6 @@
 Berlin  (5809,1080)
 Japan  (10456,1904)
-Egypt  (6450,2082)
+Somalia  (6935,3162)
 England  (5307,1141)
 Leningrad  (6426,680)
 California  (1117,1936)
