@@ -16340,9 +16340,7 @@
         <property name="Damage From Bombing Done To Units Instead Of Territories" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="SBR Affects Unit Production" value="true" editable="false">
-            <boolean/>
-        </property>
+
         <property name="Defending Suicide and Munition Units Do Not Fire" value="true" editable="false">
             <boolean/>
         </property>
