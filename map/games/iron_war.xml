@@ -2030,7 +2030,7 @@
         <resource name="CR"/>
         <resource name="SS"/>
         <resource name="Pilot"/>
-        <resource name="Loyalist"/>
+        <resource name="Officials"/>
     </resourceList>
 
     <playerList>
@@ -2314,7 +2314,7 @@
         </productionRule>
         <productionRule name="buyCommissar">
             <cost resource="PUs" quantity="5"/>
-            <cost resource="Loyalist" quantity="5"/>
+            <cost resource="Officials" quantity="5"/>
             <result resourceOrUnit="Commissar" quantity="1"/>
         </productionRule>
         <productionRule name="buySS-Infantry">
@@ -4887,7 +4887,7 @@
         </attachment>
         <attachment name="unitAttachment" attachTo="Commissariat" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
-            <option name="createsResourcesList" value="1:Loyalist"/>
+            <option name="createsResourcesList" value="1:Officials"/>
         </attachment>
 
         <attachment name="territoryAttachment" attachTo="Atlantic 10 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -14059,9 +14059,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:GermanyEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Germany" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Germany" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:GermanyEndTurn"/>
         </attachment>
@@ -14084,9 +14084,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:BalkanEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Balkan" attachTo="Balkan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Balkan" attachTo="Balkan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:BalkanEndTurn"/>
         </attachment>
@@ -14134,9 +14134,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:FinlandEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Finland" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Finland" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:FinlandEndTurn"/>
         </attachment>
@@ -14159,9 +14159,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:FranceEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_France" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_France" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:FranceEndTurn"/>
         </attachment>
@@ -14184,9 +14184,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:French-ColoniesEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_French-Colonies" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_French-Colonies" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:French-ColoniesEndTurn"/>
         </attachment>
@@ -14203,9 +14203,9 @@
             <option name="resourceCount" value="1"/>
             <option name="when" value="before:ItalyPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Italy" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Italy" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ItalyEndTurn"/>
         </attachment>
@@ -14234,9 +14234,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:BritainEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Britain" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Britain" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:BritainEndTurn"/>
         </attachment>
@@ -14259,9 +14259,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:British-ColoniesEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_British-Colonies" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_British-Colonies" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:British-ColoniesEndTurn"/>
         </attachment>
@@ -14290,9 +14290,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:South-AfricaEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_South-Africa" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_South-Africa" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:South-AfricaEndTurn"/>
         </attachment>
@@ -14315,9 +14315,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:British-IndiaEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_British-India" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_British-India" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:British-IndiaEndTurn"/>
         </attachment>
@@ -14340,9 +14340,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:IraqEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Iraq" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Iraq" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:IraqEndTurn"/>
         </attachment>
@@ -14365,9 +14365,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:IranEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Iran" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Iran" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:IranEndTurn"/>
         </attachment>
@@ -14396,9 +14396,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ANZACEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_ANZAC" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_ANZAC" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ANZACEndTurn"/>
         </attachment>
@@ -14421,9 +14421,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:KNILEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_KNIL" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_KNIL" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:KNILEndTurn"/>
         </attachment>
@@ -14452,9 +14452,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ChinaEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_China" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_China" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ChinaEndTurn"/>
         </attachment>
@@ -14477,9 +14477,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:JapanEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Japan" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Japan" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:JapanEndTurn"/>
         </attachment>
@@ -14502,9 +14502,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ThailandEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Thailand" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Thailand" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:ThailandEndTurn"/>
         </attachment>
@@ -14533,9 +14533,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:USAEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_USA" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_USA" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:USAEndTurn"/>
         </attachment>
@@ -14564,9 +14564,9 @@
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:BrazilEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Removing_Loyalists_from_Brazil" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Removing_Officials_from_Brazil" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemoveOtherResourcesFromPlayers"/>
-            <option name="resource" value="Loyalist"/>
+            <option name="resource" value="Officials"/>
             <option name="resourceCount" value="-9999"/>
             <option name="when" value="after:BrazilEndTurn"/>
         </attachment>
@@ -16157,7 +16157,7 @@
             <resourceGiven player="USSR" resource="Fuel" quantity="1"/>
             <resourceGiven player="USSR" resource="Iron" quantity="6"/>
             <resourceGiven player="USSR" resource="PUs" quantity="140"/>
-            <resourceGiven player="USSR" resource="Loyalist" quantity="5"/>
+            <resourceGiven player="USSR" resource="Officials" quantity="5"/>
             <resourceGiven player="Britain" resource="Fuel" quantity="1"/>
             <resourceGiven player="Britain" resource="Iron" quantity="6"/>
             <resourceGiven player="Britain" resource="PUs" quantity="60"/>
@@ -16805,7 +16805,7 @@
 <center><img src="R-SS.png"/></center>
 <br><span style="font-size:13px;color:000000">Kamikaze pilots are recruited by Japan in Japan, but this cannot be done before round 6 (year 1944).</span><br>
 <center><img src="R-Kamikaze.png"/></center>
-<br><span style="font-size:13px;color:000000">Soviet Loyalists are created by Commissariats. Loyalists are used to create Commissars who can inspire USSR Infantry units in battle.</span><br>
+<br><span style="font-size:13px;color:000000">Soviet Officials are created by Commissariats. Officials are used to create Commissars who can inspire USSR Infantry units in battle.</span><br>
 <center><img src="USSRCommissariat.png"/></center>
 <br><span style="font-size:13px;color:000000">Some resource deposits around the world are claimed by specific nations from game start. Friendly nations will automatically hand over these resources if captured from enemy forces.</span><br>
 <br><center><img src="Bar6.png"/></center>
