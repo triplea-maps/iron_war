@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War (BETA)" version="0.2.1"/>
+  <info name="Iron War" version="0.2.1"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -214,7 +214,7 @@
       <territory name="Himalayas"/>
       <territory name="Hispaniola"/>
       <territory name="Hokkaido"/>
-      <territory name="Hong Kong"/>
+      <territory name="Canton"/>
       <territory name="Hsinking"/>
       <territory name="Hudson Bay Sea Zone" water="true"/>
       <territory name="Hudson Strait Sea Zone" water="true"/>
@@ -659,7 +659,7 @@
       <connection t1="Ambon" t2="Java Sea Zone"/>
       <connection t1="Amoy" t2="Changsha"/>
       <connection t1="Amoy" t2="East China Sea Zone"/>
-      <connection t1="Amoy" t2="Hong Kong"/>
+      <connection t1="Amoy" t2="Canton"/>
       <connection t1="Amoy" t2="Shanghai"/>
       <connection t1="Amoy" t2="South China Sea Zone"/>
       <connection t1="Amu River" t2="Aral Sea Zone"/>
@@ -993,7 +993,7 @@
       <connection t1="Burma Road" t2="Chungking"/>
       <connection t1="Burma Road" t2="Hanoi"/>
       <connection t1="Burma Road" t2="Himalayas"/>
-      <connection t1="Burma Road" t2="Hong Kong"/>
+      <connection t1="Burma Road" t2="Canton"/>
       <connection t1="Buryat" t2="Chita"/>
       <connection t1="Buryat" t2="Eastern Mongolia"/>
       <connection t1="Buryat" t2="Lake Baikal"/>
@@ -1121,7 +1121,7 @@
       <connection t1="Chad" t2="South Sudan"/>
       <connection t1="Chad" t2="Ubangi-Shari"/>
       <connection t1="Changsha" t2="Chungking"/>
-      <connection t1="Changsha" t2="Hong Kong"/>
+      <connection t1="Changsha" t2="Canton"/>
       <connection t1="Changsha" t2="Lanchow"/>
       <connection t1="Changsha" t2="Peking"/>
       <connection t1="Changsha" t2="Shanghai"/>
@@ -1415,7 +1415,7 @@
       <connection t1="Halifax" t2="Toronto"/>
       <connection t1="Halifax" t2="USA North Atlantic"/>
       <connection t1="Halmahera" t2="Java Sea Zone"/>
-      <connection t1="Hanoi" t2="Hong Kong"/>
+      <connection t1="Hanoi" t2="Canton"/>
       <connection t1="Hanoi" t2="South China Sea Zone"/>
       <connection t1="Hanoi" t2="Thailand"/>
       <connection t1="Hawaii" t2="Hawaiian Sea Zone"/>
@@ -1430,7 +1430,7 @@
       <connection t1="Himalayas" t2="Western Tibet"/>
       <connection t1="Hokkaido" t2="Japan Sea Zone"/>
       <connection t1="Hokkaido" t2="Japanese East Coast Sea Zone"/>
-      <connection t1="Hong Kong" t2="South China Sea Zone"/>
+      <connection t1="Canton" t2="South China Sea Zone"/>
       <connection t1="Hsinking" t2="Jehol"/>
       <connection t1="Hsinking" t2="Korea"/>
       <connection t1="Hsinking" t2="Vladivostok"/>
@@ -5447,7 +5447,7 @@
         <attachment name="territoryAttachment" attachTo="Hokkaido" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="Hong Kong" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+        <attachment name="territoryAttachment" attachTo="Canton" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Hsinking" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -6966,7 +6966,7 @@
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
         <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Hong_Kong" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
-            <option name="directPresenceTerritories" value="Hong Kong" count="1"/>
+            <option name="directPresenceTerritories" value="Canton" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
@@ -9766,7 +9766,7 @@
         </attachment>		
         <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Hong_Kong" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
             <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Hong_Kong"/>	
-            <option name="placement" value="Hong Kong:SS-Potential" count="1"/>	
+            <option name="placement" value="Canton:SS-Potential" count="1"/>	
             <option name="players" value="Germany"/>	
             <option name="when" value="before:BalkanEndTurn"/>	
             <option name="when" value="before:FinlandEndTurn"/>	
@@ -14917,7 +14917,7 @@
             <territoryOwner territory="Hebrides" owner="Britain"/>
             <territoryOwner territory="Hispaniola" owner="Pro-Allies-Neutral"/>
             <territoryOwner territory="Hokkaido" owner="Japan"/>
-            <territoryOwner territory="Hong Kong" owner="Japan"/>
+            <territoryOwner territory="Canton" owner="Japan"/>
             <territoryOwner territory="Hsinking" owner="Japan"/>
             <territoryOwner territory="Hungary" owner="Balkan"/>
             <territoryOwner territory="Iceland" owner="True-Neutral"/>
@@ -15595,10 +15595,10 @@
             <unitPlacement unitType="Infantry" territory="Hokkaido" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Hokkaido" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Hokkaido" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Hong Kong" quantity="3" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Hong Kong" quantity="4" owner="Japan"/>
-            <unitPlacement unitType="Artillery" territory="Hong Kong" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Flag" territory="Hong Kong" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Canton" quantity="3" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Canton" quantity="4" owner="Japan"/>
+            <unitPlacement unitType="Artillery" territory="Canton" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Flag" territory="Canton" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Hsinking" quantity="6" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Hsinking" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Hsinking" quantity="1" owner="Japan"/>
