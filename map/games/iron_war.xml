@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War" version="0.2.1"/>
+  <info name="Iron War" version="0.2.2"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -5673,7 +5673,6 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Irkutsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
-            <option name="victoryCity" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Mozambique" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -5753,7 +5752,8 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Norway" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="5"/>
+            <option name="victoryCity" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Novosibirsk" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -6021,7 +6021,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Trondheim-Narvik" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Tsitsihar" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -13477,12 +13477,12 @@
         
         <attachment name="conditionAttachment-Egypt-is-now-under-Allied-control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Egypt" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="3"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="2"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
         </attachment>
         <attachment name="triggerAttachment_Britain_now_claims_the_fuel_in_Egypt" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Egypt-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Egypt:Fuel-Barrel" count="3"/>
+            <option name="removeUnits" value="Egypt:Fuel-Barrel" count="2"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -13498,7 +13498,7 @@
         </attachment>
         <attachment name="triggerAttachment_Egypt_is_now_under_Allied_control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Egypt-is-now-under-Allied-control"/>	
-            <option name="placement" value="Egypt:Fuel-Barrel" count="3"/>	
+            <option name="placement" value="Egypt:Fuel-Barrel" count="2"/>	
             <option name="players" value="Britain"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -13587,6 +13587,44 @@
             <option name="when" value="before:KNILEndTurn"/>
             <option name="when" value="before:ChinaEndTurn"/>
             <option name="when" value="before:BrazilEndTurn"/>	
+        </attachment>
+        
+        <attachment name="conditionAttachment-Trondheim-Narvik-is-now-under-Allied-control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Trondheim-Narvik" count="1"/>
+            <option name="unitPresence" value="Iron-Ore" count="1"/>
+            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_now_claims_the_Iron_in_Trondheim-Narvik" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Trondheim-Narvik-is-now-under-Allied-control"/>
+            <option name="removeUnits" value="Trondheim-Narvik:Iron-Ore" count="1"/>
+            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
+            <option name="when" value="before:USSREndTurn"/>
+            <option name="when" value="before:FranceEndTurn"/>
+            <option name="when" value="before:French-ColoniesEndTurn"/>
+            <option name="when" value="before:South-AfricaEndTurn"/>
+            <option name="when" value="before:British-ColoniesEndTurn"/>
+            <option name="when" value="before:USAEndTurn"/>
+            <option name="when" value="before:British-IndiaEndTurn"/>
+            <option name="when" value="before:ANZACEndTurn"/>
+            <option name="when" value="before:KNILEndTurn"/>
+            <option name="when" value="before:ChinaEndTurn"/>
+            <option name="when" value="before:BrazilEndTurn"/>
+        </attachment>
+        <attachment name="triggerAttachment_Trondheim-Narvik_is_now_under_Allied_control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Trondheim-Narvik-is-now-under-Allied-control"/>
+            <option name="placement" value="Trondheim-Narvik:Iron-Ore" count="1"/>
+            <option name="players" value="Britain"/>
+            <option name="when" value="before:USSREndTurn"/>
+            <option name="when" value="before:FranceEndTurn"/>
+            <option name="when" value="before:French-ColoniesEndTurn"/>
+            <option name="when" value="before:South-AfricaEndTurn"/>
+            <option name="when" value="before:British-ColoniesEndTurn"/>
+            <option name="when" value="before:USAEndTurn"/>
+            <option name="when" value="before:British-IndiaEndTurn"/>
+            <option name="when" value="before:ANZACEndTurn"/>
+            <option name="when" value="before:KNILEndTurn"/>
+            <option name="when" value="before:ChinaEndTurn"/>
+            <option name="when" value="before:BrazilEndTurn"/>
         </attachment>
 <!-- End Some resources are claimed buy Britain -->
 
@@ -15017,7 +15055,7 @@
             <territoryOwner territory="Northern Mexico" owner="Pro-Allies-Neutral"/>
             <territoryOwner territory="Northern Spain" owner="Pro-Axis-Neutral"/>
             <territoryOwner territory="Northern Tibet" owner="True-Neutral"/>
-            <territoryOwner territory="Norway" owner="Pro-Allies-Neutral"/>
+            <territoryOwner territory="Norway" owner="True-Neutral"/>
             <territoryOwner territory="Norwegian Northern Sea Zone" owner="USSR"/>
             <territoryOwner territory="Novosibirsk" owner="USSR"/>
             <territoryOwner territory="Nubian Desert" owner="British-Colonies"/>
@@ -15101,8 +15139,8 @@
             <territoryOwner territory="Tobruk" owner="Italy"/>
             <territoryOwner territory="Toronto" owner="Britain"/>
             <territoryOwner territory="Transjordan" owner="British-Colonies"/>
-            <territoryOwner territory="Troms-Finnmark" owner="Pro-Allies-Neutral"/>
-            <territoryOwner territory="Trondheim-Narvik" owner="Pro-Allies-Neutral"/>
+            <territoryOwner territory="Troms-Finnmark" owner="True-Neutral"/>
+            <territoryOwner territory="Trondheim-Narvik" owner="True-Neutral"/>
             <territoryOwner territory="Tsitsihar" owner="Japan"/>
             <territoryOwner territory="Tunesia" owner="France"/>
             <territoryOwner territory="Truk" owner="Japan"/>
@@ -15180,7 +15218,6 @@
             <unitPlacement unitType="SS-Potential" territory="Albania" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Flag" territory="Alberta" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Aldan" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Artillery" territory="Aldan" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Aldan" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Algeria" quantity="1" owner="France"/>
             <unitPlacement unitType="Infantry" territory="Algeria" quantity="1" owner="France"/>
@@ -15193,12 +15230,11 @@
             <unitPlacement unitType="Flag" territory="Altai" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Ambon" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Ambon" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Infantry" territory="Amoy" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Amoy" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Amoy" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Mech-Inf" territory="Amoy" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Amu River" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Infantry" territory="Khabarovsk" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Artillery" territory="Khabarovsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Khabarovsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Anadyr" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Andaman" quantity="1" owner="British-India"/>
@@ -15211,7 +15247,7 @@
             <unitPlacement unitType="Patrol-Boat" territory="Arabian Sea Zone" quantity="2" owner="Iran"/>
             <unitPlacement unitType="Patrol-Boat" territory="Arabian Sea Zone" quantity="2" owner="Iraq"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Archangel" quantity="3" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Archangel" quantity="3" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Archangel" quantity="2" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Archangel" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Archangel" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Infantry" territory="Argentina" quantity="1" owner="Pro-Axis-Neutral"/>
@@ -15224,7 +15260,7 @@
             <unitPlacement unitType="Infantry" territory="Austria-Bohemia" quantity="4" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="Austria-Bohemia" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Flag" territory="Austria-Bohemia" quantity="1" owner="Germany"/>
-            <unitPlacement unitType="Infantry" territory="Ayan" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Ayan" quantity="2" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Ayan" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Cruiser" territory="Azov Sea Zone" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Submarine" territory="Azov Sea Zone" quantity="1" owner="USSR"/>
@@ -15242,7 +15278,7 @@
             <unitPlacement unitType="Flag" territory="Bartsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Bashkortostan" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Cruiser" territory="Bay of Biscay Sea Zone" quantity="1" owner="France"/>
-            <unitPlacement unitType="Battleship" territory="Bay of Biscay Sea Zone" quantity="1" owner="France"/>
+            <unitPlacement unitType="Destroyer" territory="Bay of Biscay Sea Zone" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Bechuanaland" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Beira" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Beira" quantity="1" owner="True-Neutral"/>
@@ -15276,7 +15312,7 @@
             <unitPlacement unitType="Colonial-Infantry" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Borneo" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Brazil" quantity="3" owner="Brazil"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Brazil" quantity="2" owner="Brazil"/>
             <unitPlacement unitType="Infantry" territory="Brazil" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Iron-Ore" territory="Brazil" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Factory" territory="Brazil" quantity="1" owner="Brazil"/>
@@ -15318,7 +15354,7 @@
             <unitPlacement unitType="Factory" territory="Egypt" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Artillery" territory="Egypt" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Egypt" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Egypt" quantity="3" owner="Britain"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Egypt" quantity="2" owner="Britain"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Calgary" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Calgary" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Fuel-Barrel" territory="California" quantity="6" owner="USA"/>
@@ -15351,7 +15387,7 @@
             <unitPlacement unitType="Submarine" territory="Celtic Sea Zone" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Destroyer" territory="Celtic Sea Zone" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Battleship" territory="Celtic Sea Zone" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Patrol-Boat" territory="Celtic Sea Zone" quantity="3" owner="Britain"/>
+            <unitPlacement unitType="Patrol-Boat" territory="Celtic Sea Zone" quantity="2" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Central America" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Central America" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Central America" quantity="1" owner="Pro-Allies-Neutral"/>
@@ -15381,7 +15417,6 @@
             <unitPlacement unitType="Mech-Inf" territory="Chile" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Iron-Ore" territory="Chile" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Chita" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Artillery" territory="Chita" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Chita" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Chokurdakh" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Chukotsky" quantity="1" owner="USSR"/>
@@ -15443,6 +15478,7 @@
             <unitPlacement unitType="Flag" territory="Eastern Finland" quantity="1" owner="Finland"/>
             <unitPlacement unitType="Flag" territory="Eastern Greenland" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Eastern Mongolia" quantity="1" owner="Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Artillery" territory="Eastern Mongolia" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Eastern Mongolia" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Eastern Mongolia" quantity="2" owner="USSR"/>
             <unitPlacement unitType="Mech-Inf" territory="Eastern Mongolia" quantity="2" owner="USSR"/>
@@ -15599,8 +15635,8 @@
             <unitPlacement unitType="Infantry" territory="Canton" quantity="4" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Canton" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Canton" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Hsinking" quantity="6" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Hsinking" quantity="2" owner="Japan"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Hsinking" quantity="5" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Hsinking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Hsinking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Hsinking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Mech-Inf" territory="Hsinking" quantity="1" owner="Japan"/>
@@ -15634,7 +15670,7 @@
             <unitPlacement unitType="Light-Tank" territory="Ireland" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Ireland" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Ireland" quantity="1" owner="True-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Irkutsk" quantity="3" owner="USSR"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Irkutsk" quantity="2" owner="USSR"/>
             <unitPlacement unitType="Infantry" territory="Irkutsk" quantity="5" owner="USSR"/>
             <unitPlacement unitType="SP-Artillery" territory="Irkutsk" quantity="5" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Irkutsk" quantity="1" owner="USSR"/>
@@ -15674,8 +15710,7 @@
             <unitPlacement unitType="Infantry" territory="Java" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Java" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Java" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Infantry" territory="Jehol" quantity="2" owner="Japan"/>
-            <unitPlacement unitType="Light-Tank" territory="Jehol" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Jehol" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Jehol" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Jehol" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Jezkazgan" quantity="1" owner="USSR"/>
@@ -15812,9 +15847,9 @@
             <unitPlacement unitType="Factory" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Moscow" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Siberia" quantity="2" owner="USSR"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Infantry" territory="Siberia" quantity="5" owner="USSR"/>
-            <unitPlacement unitType="Iron-Ore" territory="Siberia" quantity="3" owner="USSR"/>
+            <unitPlacement unitType="Iron-Ore" territory="Siberia" quantity="2" owner="USSR"/>
             <unitPlacement unitType="SP-Artillery" territory="Siberia" quantity="5" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Siberia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Siberia" quantity="1" owner="USSR"/>
@@ -15824,7 +15859,9 @@
             <unitPlacement unitType="Infantry" territory="Mozambique" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Colony" territory="Mozambique" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Mozambique" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Murmansk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Murmansk" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Iron-Ore" territory="Murmansk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Namaqualand" quantity="1" owner="South-Africa"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Naryan-Mar" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Naryan-Mar" quantity="1" owner="USSR"/>
@@ -15843,7 +15880,8 @@
             <unitPlacement unitType="Factory" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Colony" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Nigeria" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Infantry" territory="Nikolaevsk" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Nikolaevsk" quantity="2" owner="USSR"/>
+            <unitPlacement unitType="Artillery" territory="Nikolaevsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Iron-Ore" territory="Nikolaevsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Nikolaevsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Nizhniye Kresty" quantity="1" owner="USSR"/>
@@ -15895,11 +15933,10 @@
             <unitPlacement unitType="Iron-Ore" territory="Northern Spain" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="Northern Tibet" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Northern Tibet" quantity="1" owner="True-Neutral"/>
-            <unitPlacement unitType="Infantry" territory="Norway" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Iron-Ore" territory="Norway" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Artillery" territory="Norway" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="SS-Potential" territory="Norway" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Norway" quantity="1" owner="Pro-Allies-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Norway" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Artillery" territory="Norway" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="SS-Potential" territory="Norway" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Norway" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Novosibirsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Novosibirsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Nubian Desert" quantity="1" owner="British-Colonies"/>
@@ -15943,7 +15980,7 @@
             <unitPlacement unitType="Flag" territory="Patagonia" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Mech-Inf" territory="Patagonia" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Pavlodar" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Peking" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Peking" quantity="4" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Peking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Peking" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Peking" quantity="1" owner="Japan"/>
@@ -15962,14 +15999,14 @@
             <unitPlacement unitType="Colony" territory="Punjab" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Punjab" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Quebec" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Infantry" territory="Vladivostok" quantity="4" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Vladivostok" quantity="5" owner="USSR"/>
             <unitPlacement unitType="Light-Tank" territory="Vladivostok" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Anti-Air" territory="Vladivostok" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Vladivostok" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Vladivostok" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Rhodesia" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Cruiser" territory="Rio de Janeiro Sea Zone" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Transport" territory="Rio de Janeiro Sea Zone" quantity="1" owner="Brazil"/>
-            <unitPlacement unitType="Patrol-Boat" territory="Rio de Janeiro Sea Zone" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Infantry" territory="Riyadh" quantity="3" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Riyadh" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Riyadh" quantity="2" owner="Britain"/>
@@ -15979,7 +16016,7 @@
             <unitPlacement unitType="Fuel-Barrel" territory="Romania" quantity="15" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="Romania" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Ryojun" quantity="3" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Ryojun" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Ryojun" quantity="6" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Ryojun" quantity="1" owner="Japan"/>
             <unitPlacement unitType="SP-Artillery" territory="Ryojun" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Ryojun" quantity="1" owner="Japan"/>
@@ -16004,7 +16041,7 @@
             <unitPlacement unitType="Colony" territory="Senegal" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Senegal" quantity="1" owner="France"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Shanghai" quantity="3" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Shanghai" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Shanghai" quantity="2" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Shanghai" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Shanghai" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Shetland" quantity="1" owner="Britain"/>
@@ -16162,13 +16199,13 @@
             <unitPlacement unitType="Colonial-Infantry" territory="Transjordan" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="SS-Potential" territory="Transjordan" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Transjordan" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Infantry" territory="Troms-Finnmark" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Iron-Ore" territory="Troms-Finnmark" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Troms-Finnmark" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Infantry" territory="Trondheim-Narvik" quantity="2" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Artillery" territory="Trondheim-Narvik" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Flag" territory="Trondheim-Narvik" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Infantry" territory="Tsitsihar" quantity="2" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Troms-Finnmark" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Troms-Finnmark" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Trondheim-Narvik" quantity="2" owner="True-Neutral"/>
+            <unitPlacement unitType="Artillery" territory="Trondheim-Narvik" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Flag" territory="Trondheim-Narvik" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Iron-Ore" territory="Trondheim-Narvik" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Tsitsihar" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Tsitsihar" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Tsitsihar" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Tunesia" quantity="1" owner="France"/>
@@ -16177,7 +16214,7 @@
             <unitPlacement unitType="Flag" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Fighter" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Truk" quantity="4" owner="Japan"/>
-            <unitPlacement unitType="Infantry" territory="Truk" quantity="3" owner="Japan"/>
+            <unitPlacement unitType="Infantry" territory="Truk" quantity="4" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Tuvan" quantity="1" owner="Pro-Allies-Neutral"/>
@@ -16241,14 +16278,15 @@
             <unitPlacement unitType="Artillery" territory="Victoria" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Philippines" quantity="3" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Philippines" quantity="1" owner="USA"/>
-            <unitPlacement unitType="Infantry" territory="Amur" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Amur" quantity="3" owner="USSR"/>
+            <unitPlacement unitType="Artillery" territory="Amur" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Amur" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Volga" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Wabakimi" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Wake" quantity="1" owner="USA"/>
             <unitPlacement unitType="Colony" territory="West Africa" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="West Africa" quantity="1" owner="France"/>
-            <unitPlacement unitType="Fighter" territory="West Germany" quantity="1" owner="Germany"/>
+            <unitPlacement unitType="Fighter" territory="West Germany" quantity="2" owner="Germany"/>
             <unitPlacement unitType="Fuel-Barrel" territory="West Germany" quantity="5" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="West Germany" quantity="20" owner="Germany"/>
             <unitPlacement unitType="Air-Transport" territory="West Germany" quantity="1" owner="Germany"/>
@@ -16313,7 +16351,7 @@
             <resourceGiven player="USSR" resource="PUs" quantity="140"/>
             <resourceGiven player="USSR" resource="Officials" quantity="5"/>
             <resourceGiven player="Britain" resource="Fuel" quantity="1"/>
-            <resourceGiven player="Britain" resource="Iron" quantity="6"/>
+            <resourceGiven player="Britain" resource="Iron" quantity="5"/>
             <resourceGiven player="Britain" resource="PUs" quantity="60"/>
             <resourceGiven player="France" resource="Fuel" quantity="1"/>
             <resourceGiven player="France" resource="PUs" quantity="40"/>
@@ -16921,25 +16959,28 @@
 <br><span style="font-size:13px;color:000000"><img src="Dot1.png"/>This map uses 10-sided dice.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot2.png"/>There are two alliances, 8 Axis vs. 12 Allied.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot3.png"/>Order of play is as listed in the Economy and Stats tabs.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot4.png"/>Some nations can financially support other nations, as long as these other nations have a Factory on the map.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot4.png"/>Some nations can financially support minor nations, as long as these minor nations have a Factory on the map.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot5.png"/>Battleships and Carriers have 2 Hitpoints and are repaired at start of player turns.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot6.png"/>Canals are controlled by single territories marked with boom barriers.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot7.png"/>Factories are destroyed upon capture.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot8.png"/>Factories can only be placed on 5+ PU value territories.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot9.png"/>Factories have a production capacity of 5 units.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot10.png"/>Factories have 5 HP, can be strategically bombarded, damaged and lowered in production capacity.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot11.png"/>It is possible to escort and intercept Bombers.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot12.png"/>Air battles can only last two rounds.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot13.png"/>Defending suicide units and munitions do not fire if attacked, but they may be taken as casualties. This is true for Kamikaze-Planes, Nuclear-Bombs, V1- and V2-Rockets.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot14.png"/>Anti-Air and Cruisers have an extra special attack every round, with a 10 % hit chance, against aircraft.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot15.png"/>Dive-Bombers have an extra special attack every round, with a 10 % hit chance, against land vehicles and surface ships.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot16.png"/>Tank-Destroyers have an extra special attack every round, with a 10 % hit chance, against land vehicles.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot9.png"/>Factories can not be placed in newly captured territories.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot10.png"/>Factories have a production capacity of 5 units.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot11.png"/>Factories have 5 HP, can be strategically bombarded, damaged and lowered in production capacity.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot12.png"/>Purchased units do not need to be placed in the same round as they are bought.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot13.png"/>It is possible to purchase and place new aircraft directly on newly placed carriers.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot14.png"/>It is possible to escort and intercept Bombers.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot15.png"/>Air battles can only last two rounds.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot16.png"/>Defending suicide units and munitions do not fire if attacked, but they may be taken as casualties. This is true for Kamikaze-Planes, Nuclear-Bombs, V1- and V2-Rockets.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot17.png"/>Anti-Air and Cruisers have an extra special attack every round, with a 10 % hit chance, against aircraft.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot18.png"/>Dive-Bombers have an extra special attack every round, with a 10 % hit chance, against land vehicles and surface ships.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot19.png"/>Tank-Destroyers have an extra special attack every round, with a 10 % hit chance, against land vehicles.</span><br>
 <br><center><img src="Painting2.png"/></center>
 <br><center><img src="Bar4.png"/></center>
 <br><b><span style="font-size:16px;color:151515">Options and Requirements:</span></b>
-<br><span style="font-size:13px;color:000000"><img src="Dot17.png"/>Recommended resolution: 1920 x 1080. (Because of the purchase screen size.)</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot18.png"/>Music can be turned off by unchecking: Game - Sound Options - Start of Your Turn Control.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot19.png"/>This map is compatible with Fast and Hard AI, not Easy AI.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot20.png"/>Recommended resolution: 1920 x 1080. (Because of the purchase screen size.)</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot21.png"/>Music can be turned off by unchecking: Game - Sound Options - Start of Your Turn Control.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot22.png"/>This map is compatible with Fast and Hard AI, not Easy AI.</span><br>
 <br><center><img src="Bar5.png"/></center>
 <br><b><span style="font-size:16px;color:151515">Resources:</span></b>
 <br><span style="font-size:13px;color:000000">PUs are used for all unit purchases. Territories worth 1-4 PUs have silver markers. Territories worth 5+ PUs have golden markers and are able to hold a Factory.</span><br>
@@ -16956,7 +16997,7 @@
 <center><img src="R-SS.png"/></center>
 <br><span style="font-size:13px;color:000000">Kamikaze pilots are recruited by Japan in Japan, but this cannot be done before round 6 (year 1944).</span><br>
 <center><img src="R-Kamikaze.png"/></center>
-<br><span style="font-size:13px;color:000000">Soviet Officials are created by Commissariats. Officials are used to create Commissars who can inspire USSR Infantry units in battle.</span><br>
+<br><span style="font-size:13px;color:000000">Soviet Officials are created by Commissariats. Officials are used to create Commissars who can inspire USSR Infantry during battle.</span><br>
 <center><img src="USSRCommissariat.png"/></center>
 <br><span style="font-size:13px;color:000000">Some resource deposits around the world are claimed by specific nations from game start. Friendly nations will automatically hand over these resources if captured from enemy forces.</span><br>
 <br><center><img src="Bar6.png"/></center>
