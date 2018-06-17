@@ -12511,7 +12511,7 @@
             <option name="activateTrigger" value="triggerAttachment_Balkan_receive_financial_support-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Balkan_receive_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Germany_Balkan_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12534,7 +12534,7 @@
             <option name="activateTrigger" value="triggerAttachment_Finland_receives_financial_support-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Finland_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Germany_Finland_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
@@ -12557,7 +12557,7 @@
             <option name="activateTrigger" value="triggerAttachment_Iraq_receives_financial_support-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Iraq_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Germany_Iraq_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
@@ -12580,7 +12580,7 @@
             <option name="activateTrigger" value="triggerAttachment_Iran_receives_financial_support-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Iran_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Germany_Iran_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
@@ -12603,7 +12603,7 @@
             <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Germany-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Germany-2:1:false:false:false:false"/>
             <option name="text" value="Germany_Italy_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12626,7 +12626,7 @@
             <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Germany-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Germany-2:1:false:false:false:false"/>
             <option name="text" value="Germany_Japan_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12649,7 +12649,7 @@
             <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Italy-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Italy-2:1:false:false:false:false"/>
             <option name="text" value="Italy_Germany_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12672,7 +12672,7 @@
             <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Italy-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Italy-2:1:false:false:false:false"/>
             <option name="text" value="Italy_Japan_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
@@ -12695,7 +12695,7 @@
             <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Japan-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Japan-2:1:false:false:false:false"/>
             <option name="text" value="Japan_Germany_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12718,7 +12718,7 @@
             <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Japan-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Japan-2:1:false:false:false:false"/>
             <option name="text" value="Japan_Italy_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12741,7 +12741,7 @@
             <option name="activateTrigger" value="triggerAttachment_Brazil_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Brazil_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_Brazil_5_PUs"/>
-            <option name="costPU" value="5"/>
+            <option name="costResources" value="5:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12764,7 +12764,7 @@
             <option name="activateTrigger" value="triggerAttachment_China_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_China_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_China_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12787,7 +12787,7 @@
             <option name="activateTrigger" value="triggerAttachment_France_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_France_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_France_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
@@ -12810,7 +12810,7 @@
             <option name="activateTrigger" value="triggerAttachment_KNIL_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_KNIL_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="ANZAC_KNIL_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12833,7 +12833,7 @@
             <option name="activateTrigger" value="triggerAttachment_USSR_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_USSR_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_USSR_20_PUs"/>
-            <option name="costPU" value="20"/>
+            <option name="costResources" value="20:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12856,7 +12856,7 @@
             <option name="activateTrigger" value="triggerAttachment_Britain_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Britain_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_Britain_25_PUs"/>
-            <option name="costPU" value="25"/>
+            <option name="costResources" value="25:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12879,7 +12879,7 @@
             <option name="activateTrigger" value="triggerAttachment_ANZAC_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_ANZAC_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_ANZAC_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12902,7 +12902,7 @@
             <option name="activateTrigger" value="triggerAttachment_South-Africa_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_South-Africa_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_South-Africa_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12925,7 +12925,7 @@
             <option name="activateTrigger" value="triggerAttachment_British-India_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_British-India_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_British-India_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12948,7 +12948,7 @@
             <option name="activateTrigger" value="triggerAttachment_British-Colonies_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_British-Colonies_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_British-Colonies_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12971,7 +12971,7 @@
             <option name="activateTrigger" value="triggerAttachment_French-Colonies_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_French-Colonies_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="France_French-Colonies_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12994,7 +12994,7 @@
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Japan_Thailand_10_PUs"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-3" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -13010,7 +13010,7 @@
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-3:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-4:1:false:false:false:false"/>
             <option name="text" value="Japan_Thailand_15_PUs"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-5" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -13026,7 +13026,7 @@
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-5:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-6:1:false:false:false:false"/>
             <option name="text" value="Japan_Thailand_20_PUs"/>
-            <option name="costPU" value="20"/>
+            <option name="costResources" value="20:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 <!-- End Major players can support and supply minor players as political actions -->
