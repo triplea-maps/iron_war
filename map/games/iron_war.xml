@@ -2119,6 +2119,7 @@
         <unit name="Colony"/>
         <unit name="Kamikaze-Potential"/>
         <unit name="Commissariat"/>
+        <unit name="Submarine-Pen"/>
     </unitList>
 
     <relationshipTypes>
@@ -2264,6 +2265,7 @@
                 <step name="IraqCombatMove" delegate="move" player="Iraq" display="Combat Move"/>
                 <step name="IraqBattle" delegate="battle" player="Iraq" display="Combat"/>
                 <step name="IraqNonCombatMove" delegate="move" player="Iraq" display="Non Combat Move"/>
+                <step name="IraqUserActions" delegate="userActions" player="Iraq" display="Aid Axis powers"/>
                 <step name="IraqPurchase" delegate="purchase" player="Iraq" display="Purchase Units"/>
                 <step name="IraqPlace" delegate="place" player="Iraq" display="Place Units"/>
                 <step name="IraqEndTurn" delegate="endTurn" player="Iraq" display="Turn Complete"/>
@@ -2273,6 +2275,7 @@
                 <step name="IranCombatMove" delegate="move" player="Iran" display="Combat Move"/>
                 <step name="IranBattle" delegate="battle" player="Iran" display="Combat"/>
                 <step name="IranNonCombatMove" delegate="move" player="Iran" display="Non Combat Move"/>
+                <step name="IranUserActions" delegate="userActions" player="Iran" display="Aid Axis powers"/>
                 <step name="IranPurchase" delegate="purchase" player="Iran" display="Purchase Units"/>
                 <step name="IranPlace" delegate="place" player="Iran" display="Place Units"/>
                 <step name="IranEndTurn" delegate="endTurn" player="Iran" display="Turn Complete"/>
@@ -2538,6 +2541,10 @@
         <productionRule name="buyCommissariat">
             <cost resource="PUs" quantity="1"/>
             <result resourceOrUnit="Commissariat" quantity="1"/>
+        </productionRule>
+        <productionRule name="buySubmarine-Pen">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Submarine-Pen" quantity="1"/>
         </productionRule>
 
 <!-- Repair rules -->
@@ -4925,6 +4932,12 @@
             <option name="canOnlyBePlacedInTerritoryValuedAtX" value="5"/>
         </attachment>
 
+        <attachment name="unitAttachment" attachTo="Submarine-Pen" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+            <option name="isInfrastructure" value="true"/>
+            <option name="givesMovement" value="1:Submarine"/>
+            <option name="destroyedWhenCapturedFrom" value="Germany:Italy:Japan"/>
+        </attachment>
+
         <attachment name="unitAttachment" attachTo="Flag" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
         </attachment>
@@ -5662,7 +5675,7 @@
             <option name="victoryCity" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Siberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="10"/>
+            <option name="production" value="15"/>
             <option name="capital" value="USSR"/>
             <option name="victoryCity" value="1"/>
         </attachment>
@@ -12583,144 +12596,6 @@
             <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
-        
-        <attachment name="conditionAttachment_Italy_receives_financial_support_from_Germany" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-            <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="Italy"/>
-        </attachment>
-        <attachment name="triggerAttachment_Italy_receives_financial_support_from_Germany-1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="25"/>
-            <option name="players" value="Italy"/>
-        </attachment>
-        <attachment name="triggerAttachment_Italy_receives_financial_support_from_Germany-2" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_A_Italy_receives_financial_support_from_Germany" attachTo="Germany" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Italy_receives_financial_support_from_Germany"/>
-            <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Germany-1:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Germany-2:1:false:false:false:false"/>
-            <option name="text" value="Germany_Italy_25_PUs"/>
-            <option name="costResources" value="25:PUs"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-
-        <attachment name="conditionAttachment_Japan_receives_financial_support_from_Germany" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-            <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="Japan"/>
-        </attachment>
-        <attachment name="triggerAttachment_Japan_receives_financial_support_from_Germany-1" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="25"/>
-            <option name="players" value="Japan"/>
-        </attachment>
-        <attachment name="triggerAttachment_Japan_receives_financial_support_from_Germany-2" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_B_Japan_receives_financial_support_from_Germany" attachTo="Germany" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Japan_receives_financial_support_from_Germany"/>
-            <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Germany-1:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Germany-2:1:false:false:false:false"/>
-            <option name="text" value="Germany_Japan_25_PUs"/>
-            <option name="costResources" value="25:PUs"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-
-        <attachment name="conditionAttachment_Germany_receives_financial_support_from_Italy" attachTo="Italy" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-            <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="Germany"/>
-        </attachment>
-        <attachment name="triggerAttachment_Germany_receives_financial_support_from_Italy-1" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="25"/>
-            <option name="players" value="Germany"/>
-        </attachment>
-        <attachment name="triggerAttachment_Germany_receives_financial_support_from_Italy-2" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_C_Germany_receives_financial_support_from_Italy" attachTo="Italy" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Germany_receives_financial_support_from_Italy"/>
-            <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Italy-1:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Italy-2:1:false:false:false:false"/>
-            <option name="text" value="Italy_Germany_25_PUs"/>
-            <option name="costResources" value="25:PUs"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-
-        <attachment name="conditionAttachment_Japan_receives_financial_support_from_Italy" attachTo="Italy" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-            <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="Japan"/>
-        </attachment>
-        <attachment name="triggerAttachment_Japan_receives_financial_support_from_Italy-1" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="25"/>
-            <option name="players" value="Japan"/>
-        </attachment>
-        <attachment name="triggerAttachment_Japan_receives_financial_support_from_Italy-2" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_D_Japan_receives_financial_support_from_Italy" attachTo="Italy" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Japan_receives_financial_support_from_Italy"/>
-            <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Italy-1:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Japan_receives_financial_support_from_Italy-2:1:false:false:false:false"/>
-            <option name="text" value="Italy_Japan_25_PUs"/>
-            <option name="costResources" value="25:PUs"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-        
-        <attachment name="conditionAttachment_Germany_receives_financial_support_from_Japan" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-            <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="Germany"/>
-        </attachment>
-        <attachment name="triggerAttachment_Germany_receives_financial_support_from_Japan-1" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="25"/>
-            <option name="players" value="Germany"/>
-        </attachment>
-        <attachment name="triggerAttachment_Germany_receives_financial_support_from_Japan-2" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_E_Germany_receives_financial_support_from_Japan" attachTo="Japan" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Germany_receives_financial_support_from_Japan"/>
-            <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Japan-1:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Germany_receives_financial_support_from_Japan-2:1:false:false:false:false"/>
-            <option name="text" value="Japan_Germany_25_PUs"/>
-            <option name="costResources" value="25:PUs"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-
-        <attachment name="conditionAttachment_Italy_receives_financial_support_from_Japan" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-            <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="Italy"/>
-        </attachment>
-        <attachment name="triggerAttachment_Italy_receives_financial_support_from_Japan-1" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="25"/>
-            <option name="players" value="Italy"/>
-        </attachment>
-        <attachment name="triggerAttachment_Italy_receives_financial_support_from_Japan-2" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_F_Italy_receives_financial_support_from_Japan" attachTo="Japan" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Italy_receives_financial_support_from_Japan"/>
-            <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Japan-1:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Italy_receives_financial_support_from_Japan-2:1:false:false:false:false"/>
-            <option name="text" value="Japan_Italy_25_PUs"/>
-            <option name="costResources" value="25:PUs"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
 
         <attachment name="conditionAttachment_Brazil_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
@@ -12744,6 +12619,29 @@
             <option name="costResources" value="5:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
+        
+        <attachment name="conditionAttachment_Brazil_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Brazil"/>
+        </attachment>
+        <attachment name="triggerAttachment_Brazil_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Brazil"/>
+        </attachment>
+        <attachment name="triggerAttachment_Brazil_receives_fuel_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_2_Brazil_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Brazil_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_Brazil_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Brazil_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="USA_Brazil_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
 
         <attachment name="conditionAttachment_China_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
@@ -12759,12 +12657,35 @@
         <attachment name="triggerAttachment_China_receives_financial_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_2_China_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_3_China_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_China_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_China_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_China_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_China_10_PUs"/>
             <option name="costResources" value="10:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_China_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="China"/>
+        </attachment>
+        <attachment name="triggerAttachment_China_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="China"/>
+        </attachment>
+        <attachment name="triggerAttachment_China_receives_fuel_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_4_China_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_China_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_China_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_China_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="USA_China_10_Fuel"/>
+            <option name="costResources" value="10:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12782,7 +12703,7 @@
         <attachment name="triggerAttachment_France_receives_financial_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_3_France_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_5_France_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_France_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_France_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_France_receives_financial_support-2:1:false:false:false:false"/>
@@ -12790,27 +12711,27 @@
             <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
-        
-        <attachment name="conditionAttachment_KNIL_receives_financial_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+
+        <attachment name="conditionAttachment_France_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
             <option name="directPresenceTerritories" value="map" count="1"/>
             <option name="unitPresence" value="Factory" count="1"/>
-            <option name="players" value="KNIL"/>
+            <option name="players" value="France"/>
         </attachment>
-        <attachment name="triggerAttachment_KNIL_receives_financial_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="10"/>
-            <option name="players" value="KNIL"/>
+        <attachment name="triggerAttachment_France_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="France"/>
         </attachment>
-        <attachment name="triggerAttachment_KNIL_receives_financial_support-2" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_France_receives_fuel_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_2_KNIL_receives_financial_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_KNIL_receives_financial_support"/>
-            <option name="activateTrigger" value="triggerAttachment_KNIL_receives_financial_support:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_KNIL_receives_financial_support-2:1:false:false:false:false"/>
-            <option name="text" value="ANZAC_KNIL_10_PUs"/>
-            <option name="costResources" value="10:PUs"/>
+        <attachment name="userActionAttachment_6_France_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_France_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_France_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_France_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="USA_France_15_Fuel"/>
+            <option name="costResources" value="15:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12828,12 +12749,35 @@
         <attachment name="triggerAttachment_USSR_receives_financial_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_4_USSR_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_7_USSR_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_USSR_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_USSR_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_USSR_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_USSR_20_PUs"/>
             <option name="costResources" value="20:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_USSR_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="USSR"/>
+        </attachment>
+        <attachment name="triggerAttachment_USSR_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="20"/>
+            <option name="players" value="USSR"/>
+        </attachment>
+        <attachment name="triggerAttachment_USSR_receives_fuel_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_8_USSR_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_USSR_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_USSR_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_USSR_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="USA_USSR_20_Fuel"/>
+            <option name="costResources" value="20:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12851,12 +12795,35 @@
         <attachment name="triggerAttachment_Britain_receives_financial_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_5_Britain_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_A9_Britain_receives_financial_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_Britain_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_Britain_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Britain_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="USA_Britain_25_PUs"/>
             <option name="costResources" value="25:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_Britain_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="25"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_fuel_support-2" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_B9_Britain_receives_fuel_support" attachTo="USA" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Britain_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="USA_Britain_25_Fuel"/>
+            <option name="costResources" value="25:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12882,6 +12849,29 @@
             <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
+        
+        <attachment name="conditionAttachment_ANZAC_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="ANZAC"/>
+        </attachment>
+        <attachment name="triggerAttachment_ANZAC_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="ANZAC"/>
+        </attachment>
+        <attachment name="triggerAttachment_ANZAC_receives_fuel_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_2_ANZAC_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_ANZAC_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_ANZAC_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_ANZAC_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Britain_ANZAC_15_Fuel"/>
+            <option name="costResources" value="15:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
 
         <attachment name="conditionAttachment_South-Africa_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
@@ -12897,12 +12887,35 @@
         <attachment name="triggerAttachment_South-Africa_receives_financial_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_2_South-Africa_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_3_South-Africa_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_South-Africa_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_South-Africa_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_South-Africa_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_South-Africa_15_PUs"/>
             <option name="costResources" value="15:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_South-Africa_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="South-Africa"/>
+        </attachment>
+        <attachment name="triggerAttachment_South-Africa_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="South-Africa"/>
+        </attachment>
+        <attachment name="triggerAttachment_South-Africa_receives_fuel_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_4_South-Africa_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_South-Africa_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_South-Africa_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_South-Africa_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Britain_South-Africa_15_Fuel"/>
+            <option name="costResources" value="15:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12920,12 +12933,35 @@
         <attachment name="triggerAttachment_British-India_receives_financial_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_3_British-India_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_5_British-India_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_British-India_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_British-India_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_British-India_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_British-India_15_PUs"/>
             <option name="costResources" value="15:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_British-India_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="British-India"/>
+        </attachment>
+        <attachment name="triggerAttachment_British-India_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="British-India"/>
+        </attachment>
+        <attachment name="triggerAttachment_British-India_receives_fuel_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_6_British-India_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_British-India_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_British-India_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_British-India_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Britain_British-India_15_Fuel"/>
+            <option name="costResources" value="15:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12943,12 +12979,81 @@
         <attachment name="triggerAttachment_British-Colonies_receives_financial_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="aid"/>
         </attachment>
-        <attachment name="userActionAttachment_4_British-Colonies_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+        <attachment name="userActionAttachment_7_British-Colonies_receives_financial_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
             <option name="conditions" value="conditionAttachment_British-Colonies_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_British-Colonies_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_British-Colonies_receives_financial_support-2:1:false:false:false:false"/>
             <option name="text" value="Britain_British-Colonies_15_PUs"/>
             <option name="costResources" value="15:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_British-Colonies_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="British-Colonies"/>
+        </attachment>
+        <attachment name="triggerAttachment_British-Colonies_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="British-Colonies"/>
+        </attachment>
+        <attachment name="triggerAttachment_British-Colonies_receives_fuel_support-2" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_8_British-Colonies_receives_fuel_support" attachTo="Britain" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_British-Colonies_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_British-Colonies_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_British-Colonies_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Britain_British-Colonies_15_Fuel"/>
+            <option name="costResources" value="15:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_KNIL_receives_financial_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="KNIL"/>
+        </attachment>
+        <attachment name="triggerAttachment_KNIL_receives_financial_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="KNIL"/>
+        </attachment>
+        <attachment name="triggerAttachment_KNIL_receives_financial_support-2" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_1_KNIL_receives_financial_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_KNIL_receives_financial_support"/>
+            <option name="activateTrigger" value="triggerAttachment_KNIL_receives_financial_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_KNIL_receives_financial_support-2:1:false:false:false:false"/>
+            <option name="text" value="ANZAC_KNIL_10_PUs"/>
+            <option name="costResources" value="10:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_KNIL_receives_fuel_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="KNIL"/>
+        </attachment>
+        <attachment name="triggerAttachment_KNIL_receives_fuel_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="KNIL"/>
+        </attachment>
+        <attachment name="triggerAttachment_KNIL_receives_fuel_support-2" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_2_KNIL_receives_fuel_support" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_KNIL_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_KNIL_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_KNIL_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="ANZAC_KNIL_10_Fuel"/>
+            <option name="costResources" value="10:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12960,7 +13065,7 @@
         </attachment>
         <attachment name="triggerAttachment_French-Colonies_receives_financial_support" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="15"/>
+            <option name="resourceCount" value="10"/>
             <option name="players" value="French-Colonies"/>
         </attachment>
         <attachment name="triggerAttachment_French-Colonies_receives_financial_support-2" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -12970,8 +13075,31 @@
             <option name="conditions" value="conditionAttachment_French-Colonies_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_French-Colonies_receives_financial_support:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_French-Colonies_receives_financial_support-2:1:false:false:false:false"/>
-            <option name="text" value="France_French-Colonies_15_PUs"/>
-            <option name="costResources" value="15:PUs"/>
+            <option name="text" value="France_French-Colonies_10_PUs"/>
+            <option name="costResources" value="10:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_French-Colonies_receives_fuel_support" attachTo="France" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="French-Colonies"/>
+        </attachment>
+        <attachment name="triggerAttachment_French-Colonies_receives_fuel_support" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="French-Colonies"/>
+        </attachment>
+        <attachment name="triggerAttachment_French-Colonies_receives_fuel_support-2" attachTo="France" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_2_French-Colonies_receives_fuel_support" attachTo="France" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_French-Colonies_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_French-Colonies_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_French-Colonies_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="France_French-Colonies_10_Fuel"/>
+            <option name="costResources" value="10:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -12983,7 +13111,7 @@
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-1" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="10"/>
+            <option name="resourceCount" value="5"/>
             <option name="players" value="Thailand"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-2" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -12993,13 +13121,13 @@
             <option name="conditions" value="conditionAttachment_Thailand_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-1:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-2:1:false:false:false:false"/>
-            <option name="text" value="Japan_Thailand_10_PUs"/>
-            <option name="costResources" value="10:PUs"/>
+            <option name="text" value="Japan_Thailand_5_PUs"/>
+            <option name="costResources" value="5:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-3" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="15"/>
+            <option name="resourceCount" value="10"/>
             <option name="players" value="Thailand"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-4" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -13009,13 +13137,13 @@
             <option name="conditions" value="conditionAttachment_Thailand_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-3:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-4:1:false:false:false:false"/>
-            <option name="text" value="Japan_Thailand_15_PUs"/>
-            <option name="costResources" value="15:PUs"/>
+            <option name="text" value="Japan_Thailand_10_PUs"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-5" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="20"/>
+            <option name="resourceCount" value="15"/>
             <option name="players" value="Thailand"/>
         </attachment>
         <attachment name="triggerAttachment_Thailand_receives_financial_support-6" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -13025,8 +13153,215 @@
             <option name="conditions" value="conditionAttachment_Thailand_receives_financial_support"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-5:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Thailand_receives_financial_support-6:1:false:false:false:false"/>
-            <option name="text" value="Japan_Thailand_20_PUs"/>
-            <option name="costResources" value="20:PUs"/>
+            <option name="text" value="Japan_Thailand_15_PUs"/>
+            <option name="costResources" value="15:PUs"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_1_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Thailand"/>
+        </attachment>
+        <attachment name="triggerAttachment_1_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Thailand"/>
+        </attachment>
+        <attachment name="triggerAttachment_1_Thailand_receives_fuel_support-2" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_1_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_1_Thailand_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_1_Thailand_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_1_Thailand_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Japan_Thailand_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_2_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Thailand"/>
+        </attachment>
+        <attachment name="triggerAttachment_2_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="Thailand"/>
+        </attachment>
+        <attachment name="triggerAttachment_2_Thailand_receives_fuel_support-2" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_2_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_2_Thailand_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_2_Thailand_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_2_Thailand_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Japan_Thailand_10_Fuel"/>
+            <option name="costResources" value="10:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_3_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Thailand"/>
+        </attachment>
+        <attachment name="triggerAttachment_3_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="Thailand"/>
+        </attachment>
+        <attachment name="triggerAttachment_3_Thailand_receives_fuel_support-2" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_3_Thailand_receives_fuel_support" attachTo="Japan" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_3_Thailand_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_3_Thailand_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_3_Thailand_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Japan_Thailand_15_Fuel"/>
+            <option name="costResources" value="15:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_1_Germany_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_1_Germany_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_1_Germany_receives_fuel_support-2" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_1_Germany_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_1_Germany_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_1_Germany_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_1_Germany_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Iraq_Germany_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_2_Italy_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Italy"/>
+        </attachment>
+        <attachment name="triggerAttachment_2_Italy_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Italy"/>
+        </attachment>
+        <attachment name="triggerAttachment_2_Italy_receives_fuel_support-2" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_2_Italy_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_2_Italy_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_2_Italy_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_2_Italy_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Iraq_Italy_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_3_Japan_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Japan"/>
+        </attachment>
+        <attachment name="triggerAttachment_3_Japan_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Japan"/>
+        </attachment>
+        <attachment name="triggerAttachment_3_Japan_receives_fuel_support-2" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_3_Japan_receives_fuel_support" attachTo="Iraq" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_3_Japan_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_3_Japan_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_3_Japan_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Iraq_Japan_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_4_Germany_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_4_Germany_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_4_Germany_receives_fuel_support-2" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_4_Germany_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_4_Germany_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_4_Germany_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_4_Germany_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Iran_Germany_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_5_Italy_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Italy"/>
+        </attachment>
+        <attachment name="triggerAttachment_5_Italy_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Italy"/>
+        </attachment>
+        <attachment name="triggerAttachment_5_Italy_receives_fuel_support-2" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_5_Italy_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_5_Italy_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_5_Italy_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_5_Italy_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Iran_Italy_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_6_Japan_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Japan"/>
+        </attachment>
+        <attachment name="triggerAttachment_6_Japan_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Fuel"/>
+            <option name="resourceCount" value="5"/>
+            <option name="players" value="Japan"/>
+        </attachment>
+        <attachment name="triggerAttachment_6_Japan_receives_fuel_support-2" attachTo="Iran" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_6_Japan_receives_fuel_support" attachTo="Iran" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_6_Japan_receives_fuel_support"/>
+            <option name="activateTrigger" value="triggerAttachment_6_Japan_receives_fuel_support:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_6_Japan_receives_fuel_support-2:1:false:false:false:false"/>
+            <option name="text" value="Iran_Japan_5_Fuel"/>
+            <option name="costResources" value="5:Fuel"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 <!-- End Major players can support and supply minor players as political actions -->
@@ -13313,95 +13648,15 @@
             <option name="when" value="before:ChinaEndTurn"/>
             <option name="when" value="before:BrazilEndTurn"/>	
         </attachment>
-<!-- End Some resources are claimed buy USA -->
-
-<!-- Start Some resources are claimed buy South-Africa -->
-        <attachment name="conditionAttachment-Colombia-is-now-under-Allied-control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="Colombia" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="3"/>
-            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
-        </attachment>
-        <attachment name="triggerAttachment_South_Africa_now_claims_the_fuel_in_Colombia" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Colombia-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Colombia:Fuel-Barrel" count="3"/>
-            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
-            <option name="when" value="before:USSREndTurn"/>
-            <option name="when" value="before:FranceEndTurn"/>
-            <option name="when" value="before:French-ColoniesEndTurn"/>
-            <option name="when" value="before:BritainEndTurn"/>
-            <option name="when" value="before:British-ColoniesEndTurn"/>
-            <option name="when" value="before:USAEndTurn"/>
-            <option name="when" value="before:British-IndiaEndTurn"/>
-            <option name="when" value="before:ANZACEndTurn"/>
-            <option name="when" value="before:KNILEndTurn"/>
-            <option name="when" value="before:ChinaEndTurn"/>
-            <option name="when" value="before:BrazilEndTurn"/>
-        </attachment>
-        <attachment name="triggerAttachment_Colombia_is_now_under_Allied_control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Colombia-is-now-under-Allied-control"/>	
-            <option name="placement" value="Colombia:Fuel-Barrel" count="3"/>
-            <option name="players" value="Britain"/>
-            <option name="when" value="before:USSREndTurn"/>
-            <option name="when" value="before:FranceEndTurn"/>
-            <option name="when" value="before:French-ColoniesEndTurn"/>
-            <option name="when" value="before:BritainEndTurn"/>
-            <option name="when" value="before:British-ColoniesEndTurn"/>
-            <option name="when" value="before:USAEndTurn"/>
-            <option name="when" value="before:British-IndiaEndTurn"/>
-            <option name="when" value="before:ANZACEndTurn"/>
-            <option name="when" value="before:KNILEndTurn"/>
-            <option name="when" value="before:ChinaEndTurn"/>
-            <option name="when" value="before:BrazilEndTurn"/>	
-        </attachment>
-<!-- End Some resources are claimed buy South-Africa -->
-
-<!-- Start Some resources are claimed buy Britain -->
-        <attachment name="conditionAttachment-Mexico-City-is-now-under-Allied-control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        
+        <attachment name="conditionAttachment-Mexico-City-is-now-under-Allied-control" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Mexico City" count="1"/>
             <option name="unitPresence" value="Fuel-Barrel" count="2"/>
-            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
-        </attachment>
-        <attachment name="triggerAttachment_Britain_now_claims_the_fuel_in_Mexico_City" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Mexico-City-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Mexico City:Fuel-Barrel" count="2"/>
-            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:ANZAC:KNIL:China:Brazil"/>
-            <option name="when" value="before:USSREndTurn"/>
-            <option name="when" value="before:FranceEndTurn"/>
-            <option name="when" value="before:French-ColoniesEndTurn"/>
-            <option name="when" value="before:South-AfricaEndTurn"/>
-            <option name="when" value="before:British-ColoniesEndTurn"/>
-            <option name="when" value="before:USAEndTurn"/>
-            <option name="when" value="before:British-IndiaEndTurn"/>
-            <option name="when" value="before:ANZACEndTurn"/>
-            <option name="when" value="before:KNILEndTurn"/>
-            <option name="when" value="before:ChinaEndTurn"/>
-            <option name="when" value="before:BrazilEndTurn"/>
-        </attachment>
-        <attachment name="triggerAttachment_Mexico_City_is_now_under_Allied_control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Mexico-City-is-now-under-Allied-control"/>	
-            <option name="placement" value="Mexico City:Fuel-Barrel" count="2"/>
-            <option name="players" value="Britain"/>
-            <option name="when" value="before:USSREndTurn"/>
-            <option name="when" value="before:FranceEndTurn"/>
-            <option name="when" value="before:French-ColoniesEndTurn"/>
-            <option name="when" value="before:South-AfricaEndTurn"/>
-            <option name="when" value="before:British-ColoniesEndTurn"/>
-            <option name="when" value="before:USAEndTurn"/>
-            <option name="when" value="before:British-IndiaEndTurn"/>
-            <option name="when" value="before:ANZACEndTurn"/>
-            <option name="when" value="before:KNILEndTurn"/>
-            <option name="when" value="before:ChinaEndTurn"/>
-            <option name="when" value="before:BrazilEndTurn"/>	
-        </attachment>
-        
-        <attachment name="conditionAttachment-Venezuela-is-now-under-Allied-control" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="Venezuela" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="5"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
         </attachment>
-        <attachment name="triggerAttachment_USA_now_claims_the_fuel_in_Venezuela" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Venezuela-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Venezuela:Fuel-Barrel" count="5"/>
+        <attachment name="triggerAttachment_Britain_now_claims_the_fuel_in_Mexico_City" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Mexico-City-is-now-under-Allied-control"/>
+            <option name="removeUnits" value="Mexico City:Fuel-Barrel" count="2"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -13415,9 +13670,9 @@
             <option name="when" value="before:ChinaEndTurn"/>
             <option name="when" value="before:BrazilEndTurn"/>
         </attachment>
-        <attachment name="triggerAttachment_Venezuela_is_now_under_Allied_control" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Venezuela-is-now-under-Allied-control"/>	
-            <option name="placement" value="Venezuela:Fuel-Barrel" count="5"/>
+        <attachment name="triggerAttachment_Mexico_City_is_now_under_Allied_control" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Mexico-City-is-now-under-Allied-control"/>	
+            <option name="placement" value="Mexico City:Fuel-Barrel" count="2"/>
             <option name="players" value="USA"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -13429,9 +13684,87 @@
             <option name="when" value="before:ANZACEndTurn"/>
             <option name="when" value="before:KNILEndTurn"/>
             <option name="when" value="before:ChinaEndTurn"/>
-            <option name="when" value="before:BrazilEndTurn"/>	
+            <option name="when" value="before:BrazilEndTurn"/>
         </attachment>
         
+        <attachment name="conditionAttachment-Venezuela-is-now-under-Allied-control" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Venezuela" count="1"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="15"/>
+            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_now_claims_the_fuel_in_Venezuela" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Venezuela-is-now-under-Allied-control"/>
+            <option name="removeUnits" value="Venezuela:Fuel-Barrel" count="15"/>
+            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
+            <option name="when" value="before:USSREndTurn"/>
+            <option name="when" value="before:FranceEndTurn"/>
+            <option name="when" value="before:French-ColoniesEndTurn"/>
+            <option name="when" value="before:BritainEndTurn"/>
+            <option name="when" value="before:British-ColoniesEndTurn"/>
+            <option name="when" value="before:South-AfricaEndTurn"/>
+            <option name="when" value="before:British-IndiaEndTurn"/>
+            <option name="when" value="before:ANZACEndTurn"/>
+            <option name="when" value="before:KNILEndTurn"/>
+            <option name="when" value="before:ChinaEndTurn"/>
+            <option name="when" value="before:BrazilEndTurn"/>
+        </attachment>
+        <attachment name="triggerAttachment_Venezuela_is_now_under_Allied_control" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Venezuela-is-now-under-Allied-control"/>	
+            <option name="placement" value="Venezuela:Fuel-Barrel" count="15"/>
+            <option name="players" value="USA"/>
+            <option name="when" value="before:USSREndTurn"/>
+            <option name="when" value="before:FranceEndTurn"/>
+            <option name="when" value="before:French-ColoniesEndTurn"/>
+            <option name="when" value="before:BritainEndTurn"/>
+            <option name="when" value="before:British-ColoniesEndTurn"/>
+            <option name="when" value="before:South-AfricaEndTurn"/>
+            <option name="when" value="before:British-IndiaEndTurn"/>
+            <option name="when" value="before:ANZACEndTurn"/>
+            <option name="when" value="before:KNILEndTurn"/>
+            <option name="when" value="before:ChinaEndTurn"/>
+            <option name="when" value="before:BrazilEndTurn"/>
+        </attachment>
+
+        <attachment name="conditionAttachment-Colombia-is-now-under-Allied-control" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Colombia" count="1"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="5"/>
+            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_now_claims_the_fuel_in_Colombia" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Colombia-is-now-under-Allied-control"/>
+            <option name="removeUnits" value="Colombia:Fuel-Barrel" count="5"/>
+            <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
+            <option name="when" value="before:USSREndTurn"/>
+            <option name="when" value="before:FranceEndTurn"/>
+            <option name="when" value="before:French-ColoniesEndTurn"/>
+            <option name="when" value="before:BritainEndTurn"/>
+            <option name="when" value="before:British-ColoniesEndTurn"/>
+            <option name="when" value="before:South-AfricaEndTurn"/>
+            <option name="when" value="before:British-IndiaEndTurn"/>
+            <option name="when" value="before:ANZACEndTurn"/>
+            <option name="when" value="before:KNILEndTurn"/>
+            <option name="when" value="before:ChinaEndTurn"/>
+            <option name="when" value="before:BrazilEndTurn"/>
+        </attachment>
+        <attachment name="triggerAttachment_Colombia_is_now_under_Allied_control" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Colombia-is-now-under-Allied-control"/>	
+            <option name="placement" value="Colombia:Fuel-Barrel" count="5"/>
+            <option name="players" value="USA"/>
+            <option name="when" value="before:USSREndTurn"/>
+            <option name="when" value="before:FranceEndTurn"/>
+            <option name="when" value="before:French-ColoniesEndTurn"/>
+            <option name="when" value="before:BritainEndTurn"/>
+            <option name="when" value="before:British-ColoniesEndTurn"/>
+            <option name="when" value="before:South-AfricaEndTurn"/>
+            <option name="when" value="before:British-IndiaEndTurn"/>
+            <option name="when" value="before:ANZACEndTurn"/>
+            <option name="when" value="before:KNILEndTurn"/>
+            <option name="when" value="before:ChinaEndTurn"/>
+            <option name="when" value="before:BrazilEndTurn"/>
+        </attachment>
+<!-- End Some resources are claimed buy USA -->
+
+<!-- Start Some resources are claimed buy Britain -->
         <attachment name="conditionAttachment-Egypt-is-now-under-Allied-control" attachTo="Britain" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Egypt" count="1"/>
             <option name="unitPresence" value="Fuel-Barrel" count="1"/>
@@ -14696,6 +15029,36 @@
             <option name="when" value="after:Pro-Allies-NeutralEndTurn"/>
         </attachment>
 <!-- End Triggers that continuously remove all non-relevant resources from players -->
+
+<!-- Start Triggers that give Axis free Submarines if owning Submarine-Pens -->
+        <attachment name="conditionAttachment_German_Submarine-Pens_produce_submarines" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Submarine-Pen" count="1"/>
+            <option name="rounds" value="1-+"/>
+        </attachment>
+        <attachment name="conditionAttachment_Italian_Submarine-Pens_produce_submarines" attachTo="Italy" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Submarine-Pen" count="1"/>
+            <option name="rounds" value="1-+"/>
+        </attachment>
+        <attachment name="conditionAttachment_Japanese_Submarine-Pens_produce_submarines" attachTo="Japan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Submarine-Pen" count="1"/>
+            <option name="rounds" value="1-+"/>
+        </attachment>
+        <attachment name="triggerAttachment_German_Submarine-Pens_produce_submarines" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_German_Submarine-Pens_produce_submarines"/>
+            <option name="purchase" value="Submarine" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Italian_Submarine-Pens_produce_submarines" attachTo="Italy" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Italian_Submarine-Pens_produce_submarines"/>
+            <option name="purchase" value="Submarine" count="1"/>
+        </attachment>
+        <attachment name="triggerAttachment_Japanese_Submarine-Pens_produce_submarines" attachTo="Japan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Japanese_Submarine-Pens_produce_submarines"/>
+            <option name="purchase" value="Submarine" count="1"/>
+        </attachment>
+<!-- End Triggers that give Axis free Submarines if owning Submarine-Pens -->
     </attachmentList>
 
     <initialize>
@@ -15134,7 +15497,7 @@
             <unitPlacement unitType="Flag" territory="Argentina" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Aru" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Astana" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Austria-Bohemia" quantity="4" owner="Germany"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Austria-Bohemia" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="Austria-Bohemia" quantity="4" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="Austria-Bohemia" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Flag" territory="Austria-Bohemia" quantity="1" owner="Germany"/>
@@ -15170,8 +15533,8 @@
             <unitPlacement unitType="SS-Potential" territory="Bengal" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Bengal" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Bomber" territory="Berlin" quantity="1" owner="Germany"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Berlin" quantity="6" owner="Germany"/>
-            <unitPlacement unitType="Infantry" territory="Berlin" quantity="10" owner="Germany"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Berlin" quantity="5" owner="Germany"/>
+            <unitPlacement unitType="Infantry" territory="Berlin" quantity="5" owner="Germany"/>
             <unitPlacement unitType="SS-Infantry" territory="Berlin" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Iron-Ore" territory="Berlin" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Anti-Air" territory="Berlin" quantity="1" owner="Germany"/>
@@ -15186,11 +15549,11 @@
             <unitPlacement unitType="Infantry" territory="Bolivia" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Bolivia" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Boothia" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Borneo" quantity="2" owner="KNIL"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colony" territory="Borneo" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Borneo" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Brazil" quantity="2" owner="Brazil"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Brazil" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Infantry" territory="Brazil" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Iron-Ore" territory="Brazil" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Factory" territory="Brazil" quantity="1" owner="Brazil"/>
@@ -15232,7 +15595,7 @@
             <unitPlacement unitType="Artillery" territory="Egypt" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Egypt" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Egypt" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Calgary" quantity="2" owner="Britain"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Calgary" quantity="3" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Calgary" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Fuel-Barrel" territory="California" quantity="1" owner="USA"/>
             <unitPlacement unitType="Light-Tank" territory="California" quantity="1" owner="USA"/>
@@ -15266,14 +15629,14 @@
             <unitPlacement unitType="Artillery" territory="Central America" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Central America" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Fighter" territory="India" quantity="1" owner="British-India"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="India" quantity="3" owner="British-India"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="India" quantity="2" owner="British-India"/>
             <unitPlacement unitType="Infantry" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Colonial-Infantry" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Anti-Air" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Factory" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Colony" territory="India" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="India" quantity="1" owner="British-India"/>
-            <unitPlacement unitType="Infantry" territory="Central Russia" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Central Russia" quantity="7" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Central Russia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Commissar" territory="Central Russia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Central Russia" quantity="1" owner="USSR"/>
@@ -15300,10 +15663,10 @@
             <unitPlacement unitType="Factory" territory="Chungking" quantity="1" owner="China"/>
             <unitPlacement unitType="Artillery" territory="Chungking" quantity="1" owner="China"/>
             <unitPlacement unitType="Flag" territory="Chungking" quantity="1" owner="China"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Colombia" quantity="5" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Colombia" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Colombia" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Mech-Inf" territory="Colombia" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Colombia" quantity="3" owner="Britain"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Ceylon" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Ceylon" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="Corsica" quantity="1" owner="France"/>
@@ -15393,7 +15756,7 @@
             <unitPlacement unitType="Flag" territory="Fiji" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Fiji" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Finland" quantity="3" owner="Finland"/>
-            <unitPlacement unitType="Infantry" territory="Finland" quantity="10" owner="Finland"/>
+            <unitPlacement unitType="Infantry" territory="Finland" quantity="5" owner="Finland"/>
             <unitPlacement unitType="Light-Tank" territory="Finland" quantity="1" owner="Finland"/>
             <unitPlacement unitType="Anti-Air" territory="Finland" quantity="1" owner="Finland"/>
             <unitPlacement unitType="Factory" territory="Finland" quantity="1" owner="Finland"/>
@@ -15414,7 +15777,7 @@
             <unitPlacement unitType="Factory" territory="French Guiana" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colony" territory="French Guiana" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="French Guiana" quantity="1" owner="French-Colonies"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="French Indochina" quantity="1" owner="French-Colonies"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="French Indochina" quantity="3" owner="French-Colonies"/>
             <unitPlacement unitType="Infantry" territory="French Indochina" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colonial-Infantry" territory="French Indochina" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Factory" territory="French Indochina" quantity="1" owner="French-Colonies"/>
@@ -15423,7 +15786,7 @@
             <unitPlacement unitType="Infantry" territory="French India" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colony" territory="French India" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="French India" quantity="1" owner="French-Colonies"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Gabon" quantity="1" owner="France"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Gabon" quantity="2" owner="France"/>
             <unitPlacement unitType="Infantry" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Iron-Ore" territory="Gabon" quantity="1" owner="France"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Gabon" quantity="1" owner="France"/>
@@ -15482,11 +15845,11 @@
             <unitPlacement unitType="Flag" territory="Halifax" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Halmahera" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Halmahera" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Colony" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Mech-Inf" territory="Hanoi" quantity="1" owner="French-Colonies"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Hanoi" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Factory" territory="Hawaii" quantity="1" owner="USA"/>
             <unitPlacement unitType="Marines" territory="Hawaii" quantity="3" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Hawaii" quantity="1" owner="USA"/>
@@ -15519,7 +15882,7 @@
             <unitPlacement unitType="Destroyer" territory="Indian Coast Sea Zone" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Transport" territory="Indian Coast Sea Zone" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Fighter" territory="Iran" quantity="1" owner="Iran"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Iran" quantity="3" owner="Iran"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Iran" quantity="10" owner="Iran"/>
             <unitPlacement unitType="Infantry" territory="Iran" quantity="2" owner="Iran"/>
             <unitPlacement unitType="Iron-Ore" territory="Iran" quantity="1" owner="Iran"/>
             <unitPlacement unitType="Light-Tank" territory="Iran" quantity="1" owner="Iran"/>
@@ -15528,7 +15891,7 @@
             <unitPlacement unitType="Factory" territory="Iran" quantity="1" owner="Iran"/>
             <unitPlacement unitType="Flag" territory="Iran" quantity="1" owner="Iran"/>
             <unitPlacement unitType="Fighter" territory="Iraq" quantity="1" owner="Iraq"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Iraq" quantity="3" owner="Iraq"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Iraq" quantity="10" owner="Iraq"/>
             <unitPlacement unitType="Infantry" territory="Iraq" quantity="2" owner="Iraq"/>
             <unitPlacement unitType="Iron-Ore" territory="Iraq" quantity="1" owner="Iraq"/>
             <unitPlacement unitType="Light-Tank" territory="Iraq" quantity="1" owner="Iraq"/>
@@ -15541,7 +15904,7 @@
             <unitPlacement unitType="Light-Tank" territory="Ireland" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Ireland" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Ireland" quantity="1" owner="True-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Irkutsk" quantity="3" owner="USSR"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Infantry" territory="Irkutsk" quantity="5" owner="USSR"/>
             <unitPlacement unitType="SP-Artillery" territory="Irkutsk" quantity="5" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Irkutsk" quantity="1" owner="USSR"/>
@@ -15549,12 +15912,13 @@
             <unitPlacement unitType="Mech-Inf" territory="Irkutsk" quantity="5" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fighter" territory="Italy" quantity="1" owner="Italy"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Italy" quantity="5" owner="Italy"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Italy" quantity="3" owner="Italy"/>
             <unitPlacement unitType="Infantry" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Iron-Ore" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Anti-Air" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Factory" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Flag" territory="Italy" quantity="1" owner="Italy"/>
+            <unitPlacement unitType="Submarine-Pen" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="SS-Potential" territory="Italy" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Ivory Coast" quantity="1" owner="France"/>
             <unitPlacement unitType="Colony" territory="Ivory Coast" quantity="1" owner="France"/>
@@ -15571,6 +15935,7 @@
             <unitPlacement unitType="Factory" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Artillery" territory="Japan" quantity="3" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Japan" quantity="1" owner="Japan"/>
+            <unitPlacement unitType="Submarine-Pen" territory="Japan" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Fighter" territory="Japan Sea Zone" quantity="3" owner="Japan"/>
             <unitPlacement unitType="Cruiser" territory="Japan Sea Zone" quantity="3" owner="Japan"/>
             <unitPlacement unitType="Destroyer" territory="Japan Sea Zone" quantity="4" owner="Japan"/>
@@ -15598,8 +15963,8 @@
             <unitPlacement unitType="Colony" territory="Kenya" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Artillery" territory="Kenya" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Kenya" quantity="1" owner="British-Colonies"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Kerman" quantity="1" owner="Iran"/>
-            <unitPlacement unitType="Infantry" territory="Kerman" quantity="1" owner="Iran"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Kerman" quantity="3" owner="Iran"/>
+            <unitPlacement unitType="Infantry" territory="Kerman" quantity="2" owner="Iran"/>
             <unitPlacement unitType="Light-Tank" territory="Kerman" quantity="1" owner="Iran"/>
             <unitPlacement unitType="Artillery" territory="Kerman" quantity="1" owner="Iran"/>
             <unitPlacement unitType="Flag" territory="Kerman" quantity="1" owner="Iran"/>
@@ -15650,7 +16015,7 @@
             <unitPlacement unitType="Colony" territory="Sierra Leone" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Sierra Leone" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Fighter" territory="Libya" quantity="1" owner="Italy"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Libya" quantity="3" owner="Italy"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Libya" quantity="2" owner="Italy"/>
             <unitPlacement unitType="Infantry" territory="Libya" quantity="10" owner="Italy"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Libya" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Light-Tank" territory="Libya" quantity="1" owner="Italy"/>
@@ -15694,11 +16059,11 @@
             <unitPlacement unitType="Infantry" territory="Melbourne" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Melbourne" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Melville" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Mexico City" quantity="2" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Mexico City" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Mexico City" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Mexico City" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Mech-Inf" territory="Mexico City" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Mexico City" quantity="2" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Mid-West-Gascoyne" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Artillery" territory="Mid-West-Gascoyne" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Mid-West-Gascoyne" quantity="1" owner="ANZAC"/>
@@ -15717,13 +16082,13 @@
             <unitPlacement unitType="Flag" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Medium-Tank" territory="Moscow" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Siberia" quantity="5" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Siberia" quantity="5" owner="USSR"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Siberia" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Iron-Ore" territory="Siberia" quantity="2" owner="USSR"/>
-            <unitPlacement unitType="SP-Artillery" territory="Siberia" quantity="5" owner="USSR"/>
+            <unitPlacement unitType="SP-Artillery" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Siberia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Siberia" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Mech-Inf" territory="Siberia" quantity="5" owner="USSR"/>
+            <unitPlacement unitType="Mech-Inf" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Siberia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Mozambique" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Mozambique" quantity="1" owner="True-Neutral"/>
@@ -15745,7 +16110,7 @@
             <unitPlacement unitType="Colonial-Infantry" territory="New Hebrides" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="New Hebrides" quantity="1" owner="French-Colonies"/>
             <unitPlacement unitType="Flag" territory="Newfoundland" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Nigeria" quantity="3" owner="British-Colonies"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Nigeria" quantity="2" owner="British-Colonies"/>
             <unitPlacement unitType="Infantry" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Factory" territory="Nigeria" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Colony" territory="Nigeria" quantity="1" owner="British-Colonies"/>
@@ -15810,7 +16175,7 @@
             <unitPlacement unitType="SS-Potential" territory="Norway" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Norway" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Norway" quantity="1" owner="True-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Novosibirsk" quantity="2" owner="USSR"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Novosibirsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Novosibirsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Nubian Desert" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Nubian Desert" quantity="1" owner="British-Colonies"/>
@@ -15887,7 +16252,7 @@
             <unitPlacement unitType="Flag" territory="Romania" quantity="1" owner="Balkan"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Romania" quantity="15" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="Romania" quantity="1" owner="Germany"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Ryojun" quantity="3" owner="Japan"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Ryojun" quantity="5" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Ryojun" quantity="6" owner="Japan"/>
             <unitPlacement unitType="Light-Tank" territory="Ryojun" quantity="1" owner="Japan"/>
             <unitPlacement unitType="SP-Artillery" territory="Ryojun" quantity="1" owner="Japan"/>
@@ -15992,7 +16357,7 @@
             <unitPlacement unitType="Factory" territory="Stalingrad" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Stalingrad" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Dive-Bomber" territory="Sumatra" quantity="1" owner="KNIL"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Sumatra" quantity="3" owner="KNIL"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Infantry" territory="Sumatra" quantity="4" owner="KNIL"/>
             <unitPlacement unitType="Light-Tank" territory="Sumatra" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Anti-Air" territory="Sumatra" quantity="1" owner="KNIL"/>
@@ -16011,8 +16376,7 @@
             <unitPlacement unitType="Medium-Tank" territory="Sweden" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Tank-Destroyer" territory="Sweden" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Sweden" quantity="1" owner="Pro-Axis-Neutral"/>
-            <unitPlacement unitType="Infantry" territory="Switzerland" quantity="2" owner="True-Neutral"/>
-            <unitPlacement unitType="Artillery" territory="Switzerland" quantity="1" owner="True-Neutral"/>
+            <unitPlacement unitType="Infantry" territory="Switzerland" quantity="3" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Switzerland" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Sydney" quantity="3" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="Sydney" quantity="1" owner="ANZAC"/>
@@ -16021,7 +16385,7 @@
             <unitPlacement unitType="Factory" territory="Sydney" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Artillery" territory="Sydney" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="Sydney" quantity="1" owner="ANZAC"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="North Island" quantity="2" owner="ANZAC"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="North Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="North Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Artillery" territory="North Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="North Island" quantity="1" owner="ANZAC"/>
@@ -16082,7 +16446,7 @@
             <unitPlacement unitType="SS-Potential" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Tunesia" quantity="1" owner="France"/>
             <unitPlacement unitType="Fighter" territory="Truk" quantity="1" owner="Japan"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Truk" quantity="5" owner="Japan"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Truk" quantity="3" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Truk" quantity="4" owner="Japan"/>
             <unitPlacement unitType="Factory" territory="Truk" quantity="1" owner="Japan"/>
             <unitPlacement unitType="Flag" territory="Truk" quantity="1" owner="Japan"/>
@@ -16120,11 +16484,11 @@
             <unitPlacement unitType="Colonial-Infantry" territory="United Provinces" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Colony" territory="United Provinces" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Flag" territory="United Provinces" quantity="1" owner="British-India"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Ural" quantity="2" owner="USSR"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Ural" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Ural" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Atyrau" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Atyrau" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Urimchi" quantity="2" owner="China"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Urimchi" quantity="1" owner="China"/>
             <unitPlacement unitType="Infantry" territory="Urimchi" quantity="6" owner="China"/>
             <unitPlacement unitType="Iron-Ore" territory="Urimchi" quantity="1" owner="China"/>
             <unitPlacement unitType="Factory" territory="Urimchi" quantity="1" owner="China"/>
@@ -16135,7 +16499,7 @@
             <unitPlacement unitType="Flag" territory="Uruguay" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Ust-Maysky" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Uzbekistan" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Venezuela" quantity="5" owner="USA"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Venezuela" quantity="15" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Venezuela" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Venezuela" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Venezuela" quantity="1" owner="Pro-Allies-Neutral"/>
@@ -16157,17 +16521,18 @@
             <unitPlacement unitType="Colony" territory="West Africa" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="West Africa" quantity="1" owner="France"/>
             <unitPlacement unitType="Fighter" territory="West Germany" quantity="2" owner="Germany"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="West Germany" quantity="5" owner="Germany"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="West Germany" quantity="4" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="West Germany" quantity="20" owner="Germany"/>
             <unitPlacement unitType="Air-Transport" territory="West Germany" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Light-Tank" territory="West Germany" quantity="2" owner="Germany"/>
             <unitPlacement unitType="Anti-Air" territory="West Germany" quantity="1" owner="Germany"/>
-            <unitPlacement unitType="Medium-Tank" territory="West Germany" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Factory" territory="West Germany" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Artillery" territory="West Germany" quantity="5" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="West Germany" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Flag" territory="West Germany" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Mech-Inf" territory="West Germany" quantity="5" owner="Germany"/>
+            <unitPlacement unitType="Submarine-Pen" territory="West Germany" quantity="1" owner="Germany"/>
+            <unitPlacement unitType="Medium-Tank" territory="West Germany" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Flag" territory="Western Alaska" quantity="1" owner="USA"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Western Angola" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Western Angola" quantity="1" owner="True-Neutral"/>
@@ -16207,7 +16572,7 @@
 
         <resourceInitialize>
             <resourceGiven player="Germany" resource="SS" quantity="20"/>
-            <resourceGiven player="Germany" resource="Fuel" quantity="70"/>
+            <resourceGiven player="Germany" resource="Fuel" quantity="80"/>
             <resourceGiven player="Germany" resource="Iron" quantity="6"/>
             <resourceGiven player="Germany" resource="PUs" quantity="120"/>
             <resourceGiven player="Balkan" resource="Fuel" quantity="5"/>
@@ -16235,9 +16600,9 @@
             <resourceGiven player="South-Africa" resource="PUs" quantity="30"/>
             <resourceGiven player="Italy" resource="Fuel" quantity="40"/>
             <resourceGiven player="Italy" resource="Iron" quantity="6"/>
-            <resourceGiven player="Italy" resource="PUs" quantity="65"/>
+            <resourceGiven player="Italy" resource="PUs" quantity="70"/>
             <resourceGiven player="Italy" resource="CR" quantity="10"/>
-            <resourceGiven player="Iraq" resource="Fuel" quantity="5"/>
+            <resourceGiven player="Iraq" resource="Fuel" quantity="10"/>
             <resourceGiven player="Iraq" resource="Iron" quantity="2"/>
             <resourceGiven player="Iraq" resource="PUs" quantity="30"/>
             <resourceGiven player="Iran" resource="Fuel" quantity="10"/>
@@ -16257,16 +16622,16 @@
             <resourceGiven player="ANZAC" resource="Fuel" quantity="20"/>
             <resourceGiven player="ANZAC" resource="Iron" quantity="2"/>
             <resourceGiven player="ANZAC" resource="PUs" quantity="40"/>
-            <resourceGiven player="Japan" resource="Fuel" quantity="100"/>
+            <resourceGiven player="Japan" resource="Fuel" quantity="90"/>
             <resourceGiven player="Japan" resource="Iron" quantity="6"/>
             <resourceGiven player="Japan" resource="PUs" quantity="70"/>
             <resourceGiven player="Thailand" resource="Fuel" quantity="10"/>
             <resourceGiven player="Thailand" resource="Iron" quantity="2"/>
             <resourceGiven player="Thailand" resource="PUs" quantity="30"/>
-            <resourceGiven player="China" resource="Fuel" quantity="10"/>
+            <resourceGiven player="China" resource="Fuel" quantity="5"/>
             <resourceGiven player="China" resource="Iron" quantity="2"/>
             <resourceGiven player="China" resource="PUs" quantity="30"/>
-            <resourceGiven player="USA" resource="Fuel" quantity="40"/>
+            <resourceGiven player="USA" resource="Fuel" quantity="70"/>
             <resourceGiven player="USA" resource="Iron" quantity="6"/>
             <resourceGiven player="USA" resource="PUs" quantity="100"/>
             <resourceGiven player="Brazil" resource="Fuel" quantity="5"/>
@@ -16872,6 +17237,8 @@
 <center><img src="R-Kamikaze.png"/></center>
 <br><span style="font-size:13px;color:000000">Soviet Officials are created by Commissariats. Officials are used to create Commissars who can inspire USSR Infantry during battle.</span><br>
 <center><img src="USSRCommissariat.png"/></center>
+<br><span style="font-size:13px;color:000000">Hidden Axis Submarine-Pens continuously create new Submarines throughout the war. Pens also enable Submarines to launch long range attacks and therefore represent a constant threat to Allied fleets until located and destroyed.</span><br>
+<center><img src="U-boats.png"/></center>
 <br><span style="font-size:13px;color:000000">Some resource deposits around the world are claimed by specific nations from game start. Friendly nations will automatically hand over these resources if captured from enemy forces.</span><br>
 <br><center><img src="Bar6.png"/></center>
 <br><center><b><span style="font-size:16px;color:151515">Timeline and Events:</span></b></center>
