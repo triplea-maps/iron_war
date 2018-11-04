@@ -2120,6 +2120,7 @@
         <unit name="Kamikaze-Potential"/>
         <unit name="Commissariat"/>
         <unit name="Submarine-Pen"/>
+        <unit name="Airfield"/>
     </unitList>
 
     <relationshipTypes>
@@ -2190,6 +2191,7 @@
                 <step name="BalkanCombatMove" delegate="move" player="Balkan" display="Combat Move"/>
                 <step name="BalkanBattle" delegate="battle" player="Balkan" display="Combat"/>
                 <step name="BalkanNonCombatMove" delegate="move" player="Balkan" display="Non Combat Move"/>
+                <step name="BalkanUserActions" delegate="userActions" player="Balkan" display="Export to Germany"/>
                 <step name="BalkanPurchase" delegate="purchase" player="Balkan" display="Purchase Units"/>
                 <step name="BalkanPlace" delegate="place" player="Balkan" display="Place Units"/>
                 <step name="BalkanEndTurn" delegate="endTurn" player="Balkan" display="Turn Complete"/>
@@ -2199,6 +2201,7 @@
                 <step name="FinlandCombatMove" delegate="move" player="Finland" display="Combat Move"/>
                 <step name="FinlandBattle" delegate="battle" player="Finland" display="Combat"/>
                 <step name="FinlandNonCombatMove" delegate="move" player="Finland" display="Non Combat Move"/>
+                <step name="FinlandUserActions" delegate="userActions" player="Finland" display="Export to Germany"/>
                 <step name="FinlandPurchase" delegate="purchase" player="Finland" display="Purchase Units"/>
                 <step name="FinlandPlace" delegate="place" player="Finland" display="Place Units"/>
                 <step name="FinlandEndTurn" delegate="endTurn" player="Finland" display="Turn Complete"/>
@@ -2237,6 +2240,7 @@
                 <step name="British-ColoniesCombatMove" delegate="move" player="British-Colonies" display="Combat Move"/>
                 <step name="British-ColoniesBattle" delegate="battle" player="British-Colonies" display="Combat"/>
                 <step name="British-ColoniesNonCombatMove" delegate="move" player="British-Colonies" display="Non Combat Move"/>
+                <step name="British-ColoniesUserActions" delegate="userActions" player="British-Colonies" display="Export to Britain"/>
                 <step name="British-ColoniesPurchase" delegate="purchase" player="British-Colonies" display="Purchase Units"/>
                 <step name="British-ColoniesPlace" delegate="place" player="British-Colonies" display="Place Units"/>
                 <step name="British-ColoniesEndTurn" delegate="endTurn" player="British-Colonies" display="Turn Complete"/>
@@ -2246,6 +2250,7 @@
                 <step name="South-AfricaCombatMove" delegate="move" player="South-Africa" display="Combat Move"/>
                 <step name="South-AfricaBattle" delegate="battle" player="South-Africa" display="Combat"/>
                 <step name="South-AfricaNonCombatMove" delegate="move" player="South-Africa" display="Non Combat Move"/>
+                <step name="South-AfricaUserActions" delegate="userActions" player="South-Africa" display="Export to Britain"/>
                 <step name="South-AfricaPurchase" delegate="purchase" player="South-Africa" display="Purchase Units"/>
                 <step name="South-AfricaPlace" delegate="place" player="South-Africa" display="Place Units"/>
                 <step name="South-AfricaEndTurn" delegate="endTurn" player="South-Africa" display="Turn Complete"/>
@@ -2285,6 +2290,7 @@
                 <step name="British-IndiaCombatMove" delegate="move" player="British-India" display="Combat Move"/>
                 <step name="British-IndiaBattle" delegate="battle" player="British-India" display="Combat"/>
                 <step name="British-IndiaNonCombatMove" delegate="move" player="British-India" display="Non Combat Move"/>
+                <step name="British-IndiaUserActions" delegate="userActions" player="British-India" display="Export to Britain"/>
                 <step name="British-IndiaPurchase" delegate="purchase" player="British-India" display="Purchase Units"/>
                 <step name="British-IndiaPlace" delegate="place" player="British-India" display="Place Units"/>
                 <step name="British-IndiaEndTurn" delegate="endTurn" player="British-India" display="Turn Complete"/>
@@ -2294,6 +2300,7 @@
                 <step name="French-ColoniesCombatMove" delegate="move" player="French-Colonies" display="Combat Move"/>
                 <step name="French-ColoniesBattle" delegate="battle" player="French-Colonies" display="Combat"/>
                 <step name="French-ColoniesNonCombatMove" delegate="move" player="French-Colonies" display="Non Combat Move"/>
+                <step name="French-ColoniesUserActions" delegate="userActions" player="French-Colonies" display="Export to Imperial France"/>
                 <step name="French-ColoniesPurchase" delegate="purchase" player="French-Colonies" display="Purchase Units"/>
                 <step name="French-ColoniesPlace" delegate="place" player="French-Colonies" display="Place Units"/>
                 <step name="French-ColoniesEndTurn" delegate="endTurn" player="French-Colonies" display="Turn Complete"/>
@@ -2313,6 +2320,7 @@
                 <step name="KNILCombatMove" delegate="move" player="KNIL" display="Combat Move"/>
                 <step name="KNILBattle" delegate="battle" player="KNIL" display="Combat"/>
                 <step name="KNILNonCombatMove" delegate="move" player="KNIL" display="Non Combat Move"/>
+                <step name="KNILUserActions" delegate="userActions" player="KNIL" display="Aid the ANZAC"/>
                 <step name="KNILPurchase" delegate="purchase" player="KNIL" display="Purchase Units"/>
                 <step name="KNILPlace" delegate="place" player="KNIL" display="Place Units"/>
                 <step name="KNILEndTurn" delegate="endTurn" player="KNIL" display="Turn Complete"/>
@@ -2332,6 +2340,7 @@
                 <step name="ThailandCombatMove" delegate="move" player="Thailand" display="Combat Move"/>
                 <step name="ThailandBattle" delegate="battle" player="Thailand" display="Combat"/>
                 <step name="ThailandNonCombatMove" delegate="move" player="Thailand" display="Non Combat Move"/>
+                <step name="ThailandUserActions" delegate="userActions" player="Thailand" display="Export to Imperial Japan"/>
                 <step name="ThailandPurchase" delegate="purchase" player="Thailand" display="Purchase Units"/>
                 <step name="ThailandPlace" delegate="place" player="Thailand" display="Place Units"/>
                 <step name="ThailandEndTurn" delegate="endTurn" player="Thailand" display="Turn Complete"/>
@@ -2351,6 +2360,7 @@
                 <step name="ChinaCombatMove" delegate="move" player="China" display="Combat Move"/>
                 <step name="ChinaBattle" delegate="battle" player="China" display="Combat"/>
                 <step name="ChinaNonCombatMove" delegate="move" player="China" display="Non Combat Move"/>
+                <step name="ChinaUserActions" delegate="userActions" player="China" display="Export to the USA"/>
                 <step name="ChinaPurchase" delegate="purchase" player="China" display="Purchase Units"/>
                 <step name="ChinaPlace" delegate="place" player="China" display="Place Units"/>
                 <step name="ChinaEndTurn" delegate="endTurn" player="China" display="Turn Complete"/>
@@ -2360,6 +2370,7 @@
                 <step name="BrazilCombatMove" delegate="move" player="Brazil" display="Combat Move"/>
                 <step name="BrazilBattle" delegate="battle" player="Brazil" display="Combat"/>
                 <step name="BrazilNonCombatMove" delegate="move" player="Brazil" display="Non Combat Move"/>
+                <step name="BrazilUserActions" delegate="userActions" player="Brazil" display="Export to the USA"/>
                 <step name="BrazilPurchase" delegate="purchase" player="Brazil" display="Purchase Units"/>
                 <step name="BrazilPlace" delegate="place" player="Brazil" display="Place Units"/>
                 <step name="BrazilEndTurn" delegate="endTurn" player="Brazil" display="Turn Complete"/>
@@ -2545,6 +2556,10 @@
         <productionRule name="buySubmarine-Pen">
             <cost resource="PUs" quantity="1"/>
             <result resourceOrUnit="Submarine-Pen" quantity="1"/>
+        </productionRule>
+        <productionRule name="buyAirfield">
+            <cost resource="PUs" quantity="1"/>
+            <result resourceOrUnit="Airfield" quantity="1"/>
         </productionRule>
 
 <!-- Repair rules -->
@@ -4936,6 +4951,18 @@
             <option name="isInfrastructure" value="true"/>
             <option name="givesMovement" value="1:Submarine"/>
             <option name="destroyedWhenCapturedFrom" value="Germany:Italy:Japan"/>
+        </attachment>
+
+        <attachment name="unitAttachment" attachTo="Airfield" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+            <option name="isInfrastructure" value="true"/>
+            <option name="givesMovement" value="1:Air-Transport"/>
+            <option name="givesMovement" value="1:Bomber"/>
+            <option name="givesMovement" value="1:Dive-Bomber"/>
+            <option name="givesMovement" value="1:Fighter"/>
+            <option name="givesMovement" value="1:Jet-Fighter"/>
+            <option name="givesMovement" value="1:Nuclear-Bomb"/>
+            <option name="destroyedWhenCapturedFrom" value="USA:USSR:Britain"/>
+            <option name="createsUnitsList" value="1:Air-Transport"/>
         </attachment>
 
         <attachment name="unitAttachment" attachTo="Flag" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -13366,6 +13393,238 @@
         </attachment>
 <!-- End Major players can support and supply minor players as political actions -->
 
+<!-- Start Minor players can support and supply major players as political actions -->
+        <attachment name="conditionAttachment_Germany_receives_iron_from_Balkan" attachTo="Balkan" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germany_receives_iron_from_Balkan" attachTo="Balkan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germany_receives_iron_from_Balkan-2" attachTo="Balkan" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Germany_receives_iron_from_Balkan" attachTo="Balkan" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Germany_receives_iron_from_Balkan"/>
+            <option name="activateTrigger" value="triggerAttachment_Germany_receives_iron_from_Balkan:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Germany_receives_iron_from_Balkan-2:1:false:false:false:false"/>
+            <option name="text" value="Balkan_Germany_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_Germany_receives_iron_from_Finland" attachTo="Finland" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germany_receives_iron_from_Finland" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="Germany"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germany_receives_iron_from_Finland-2" attachTo="Finland" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Germany_receives_iron_from_Finland" attachTo="Finland" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Germany_receives_iron_from_Finland"/>
+            <option name="activateTrigger" value="triggerAttachment_Germany_receives_iron_from_Finland:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Germany_receives_iron_from_Finland-2:1:false:false:false:false"/>
+            <option name="text" value="Finland_Germany_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_Britain_receives_iron_from_British-Colonies" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_iron_from_British-Colonies" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_iron_from_British-Colonies-2" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Britain_receives_iron_from_British-Colonies" attachTo="British-Colonies" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Britain_receives_iron_from_British-Colonies"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_iron_from_British-Colonies:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_iron_from_British-Colonies-2:1:false:false:false:false"/>
+            <option name="text" value="British-Colonies_Britain_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_Britain_receives_iron_from_British-India" attachTo="British-India" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_iron_from_British-India" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_iron_from_British-India-2" attachTo="British-India" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Britain_receives_iron_from_British-India" attachTo="British-India" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Britain_receives_iron_from_British-India"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_iron_from_British-India:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_iron_from_British-India-2:1:false:false:false:false"/>
+            <option name="text" value="British-India_Britain_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_Britain_receives_iron_from_South-Africa" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_iron_from_South-Africa" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="Britain"/>
+        </attachment>
+        <attachment name="triggerAttachment_Britain_receives_iron_from_South-Africa-2" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Britain_receives_iron_from_South-Africa" attachTo="South-Africa" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Britain_receives_iron_from_South-Africa"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_iron_from_South-Africa:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Britain_receives_iron_from_South-Africa-2:1:false:false:false:false"/>
+            <option name="text" value="South-Africa_Britain_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_France_receives_iron_from_French-Colonies" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="France"/>
+        </attachment>
+        <attachment name="triggerAttachment_France_receives_iron_from_French-Colonies" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="France"/>
+        </attachment>
+        <attachment name="triggerAttachment_France_receives_iron_from_French-Colonies-2" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_France_receives_iron_from_French-Colonies" attachTo="French-Colonies" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_France_receives_iron_from_French-Colonies"/>
+            <option name="activateTrigger" value="triggerAttachment_France_receives_iron_from_French-Colonies:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_France_receives_iron_from_French-Colonies-2:1:false:false:false:false"/>
+            <option name="text" value="French-Colonies_France_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_ANZAC_receives_iron_from_KNIL" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="ANZAC"/>
+        </attachment>
+        <attachment name="triggerAttachment_ANZAC_receives_iron_from_KNIL" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="ANZAC"/>
+        </attachment>
+        <attachment name="triggerAttachment_ANZAC_receives_iron_from_KNIL-2" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_ANZAC_receives_iron_from_KNIL" attachTo="KNIL" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_ANZAC_receives_iron_from_KNIL"/>
+            <option name="activateTrigger" value="triggerAttachment_ANZAC_receives_iron_from_KNIL:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_ANZAC_receives_iron_from_KNIL-2:1:false:false:false:false"/>
+            <option name="text" value="KNIL_ANZAC_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_Japan_receives_iron_from_Thailand" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="Japan"/>
+        </attachment>
+        <attachment name="triggerAttachment_Japan_receives_iron_from_Thailand" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="Japan"/>
+        </attachment>
+        <attachment name="triggerAttachment_Japan_receives_iron_from_Thailand-2" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Japan_receives_iron_from_Thailand" attachTo="Thailand" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Japan_receives_iron_from_Thailand"/>
+            <option name="activateTrigger" value="triggerAttachment_Japan_receives_iron_from_Thailand:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Japan_receives_iron_from_Thailand-2:1:false:false:false:false"/>
+            <option name="text" value="Thailand_Japan_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_USA_receives_iron_from_China" attachTo="China" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="USA"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_receives_iron_from_China" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="USA"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_receives_iron_from_China-2" attachTo="China" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_USA_receives_iron_from_China" attachTo="China" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_USA_receives_iron_from_China"/>
+            <option name="activateTrigger" value="triggerAttachment_USA_receives_iron_from_China:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_USA_receives_iron_from_China-2:1:false:false:false:false"/>
+            <option name="text" value="China_USA_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+        
+        <attachment name="conditionAttachment_USA_receives_iron_from_Brazil" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+            <option name="directPresenceTerritories" value="map" count="1"/>
+            <option name="unitPresence" value="Factory" count="1"/>
+            <option name="players" value="USA"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_receives_iron_from_Brazil" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="Iron"/>
+            <option name="resourceCount" value="1"/>
+            <option name="players" value="USA"/>
+        </attachment>
+        <attachment name="triggerAttachment_USA_receives_iron_from_Brazil-2" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_USA_receives_iron_from_Brazil" attachTo="Brazil" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_USA_receives_iron_from_Brazil"/>
+            <option name="activateTrigger" value="triggerAttachment_USA_receives_iron_from_Brazil:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_USA_receives_iron_from_Brazil-2:1:false:false:false:false"/>
+            <option name="text" value="Brazil_USA_1_Iron"/>
+            <option name="costResources" value="1:Iron"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+<!-- End Minor players can support and supply major players as political actions -->
+
 <!-- Start Some resources are claimed buy Germany -->
         <attachment name="conditionAttachment-Paraguay-is-now-under-Axis-control" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Paraguay" count="1"/>
@@ -15843,6 +16102,7 @@
             <unitPlacement unitType="Factory" territory="Halifax" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Artillery" territory="Halifax" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Halifax" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Airfield" territory="Halifax" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Halmahera" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Halmahera" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Hanoi" quantity="1" owner="French-Colonies"/>
@@ -16090,6 +16350,7 @@
             <unitPlacement unitType="Flag" territory="Siberia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Mech-Inf" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Siberia" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Airfield" territory="Siberia" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Mozambique" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Mozambique" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Colony" territory="Mozambique" quantity="1" owner="True-Neutral"/>
@@ -16462,6 +16723,7 @@
             <unitPlacement unitType="Infantry" territory="USA North Atlantic" quantity="3" owner="USA"/>
             <unitPlacement unitType="Factory" territory="USA North Atlantic" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="USA North Atlantic" quantity="1" owner="USA"/>
+            <unitPlacement unitType="Airfield" territory="USA North Atlantic" quantity="1" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="USA Northwest" quantity="1" owner="USA"/>
             <unitPlacement unitType="Flag" territory="USA Northwest" quantity="1" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="USA South Atlantic" quantity="1" owner="USA"/>
@@ -17239,6 +17501,8 @@
 <center><img src="USSRCommissariat.png"/></center>
 <br><span style="font-size:13px;color:000000">Hidden Axis Submarine-Pens continuously create new Submarines throughout the war. Pens also enable Submarines to launch long range attacks and therefore represent a constant threat to Allied fleets until located and destroyed.</span><br>
 <center><img src="U-boats.png"/></center>
+<br><span style="font-size:13px;color:000000">Allied Airfields continuously create new Air-Transports throughout the war. Additionally, they extend the range of friendly air units launching from their territory. Airfields continue to function until they are captured and destroyed.</span><br>
+<center><img src="AlliedAirfield.png"/></center>
 <br><span style="font-size:13px;color:000000">Some resource deposits around the world are claimed by specific nations from game start. Friendly nations will automatically hand over these resources if captured from enemy forces.</span><br>
 <br><center><img src="Bar6.png"/></center>
 <br><center><b><span style="font-size:16px;color:151515">Timeline and Events:</span></b></center>
