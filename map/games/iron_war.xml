@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War" version="0.2.6"/>
+  <info name="Iron War" version="0.2.8"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -273,12 +273,12 @@
       <territory name="Labrador Sea Zone" water="true"/>
       <territory name="Lake Baikal" water="true"/>
       <territory name="Lake Balkhash" water="true"/>
-      <territory name="Lake Erie" water="true"/>
-      <territory name="Lake Ladoga" water="true"/>
+      <territory name="Lake Erie"/>
+      <territory name="Lake Ladoga"/>
       <territory name="Lake Michigan-Huron" water="true"/>
       <territory name="Lake Nyasa" water="true"/>
-      <territory name="Lake Onega" water="true"/>
-      <territory name="Lake Ontario" water="true"/>
+      <territory name="Lake Onega"/>
+      <territory name="Lake Ontario"/>
       <territory name="Lake Superior" water="true"/>
       <territory name="Lake Tanganyika" water="true"/>
       <territory name="Lake Victoria" water="true"/>
@@ -414,7 +414,7 @@
       <territory name="San Diego Sea Zone" water="true"/>
       <territory name="Sao Paulo"/>
       <territory name="Sardinia"/>
-      <territory name="Saskatchewan"/>
+      <territory name="Winnipeg"/>
       <territory name="Scotland"/>
       <territory name="Senegal"/>
       <territory name="Shanghai"/>
@@ -516,11 +516,11 @@
       <territory name="Uzbekistan"/>
       <territory name="Venezuela"/>
       <territory name="Vichy"/>
-      <territory name="Victoria"/>
+      <territory name="Vancouver"/>
       <territory name="Philippines"/>
       <territory name="Amur"/>
       <territory name="Volga"/>
-      <territory name="Wabakimi"/>
+      <territory name="Port Arthur"/>
       <territory name="Wake"/>
       <territory name="Wake Island Sea Zone" water="true"/>
       <territory name="West Africa"/>
@@ -607,8 +607,8 @@
       <connection t1="Alberta" t2="British Columbia"/>
       <connection t1="Alberta" t2="Calgary"/>
       <connection t1="Alberta" t2="Manitoba"/>
-      <connection t1="Alberta" t2="Saskatchewan"/>
-      <connection t1="Alberta" t2="Victoria"/>
+      <connection t1="Alberta" t2="Winnipeg"/>
+      <connection t1="Alberta" t2="Vancouver"/>
       <connection t1="Alberta" t2="Yellowknife"/>
       <connection t1="Aldan" t2="Khabarovsk"/>
       <connection t1="Aldan" t2="Chita"/>
@@ -966,7 +966,7 @@
       <connection t1="Bristol Bay Sea Zone" t2="Southern Alaska"/>
       <connection t1="British Columbia" t2="Gulf of Alaska Sea Zone"/>
       <connection t1="British Columbia" t2="Southern Alaska"/>
-      <connection t1="British Columbia" t2="Victoria"/>
+      <connection t1="British Columbia" t2="Vancouver"/>
       <connection t1="British Columbia" t2="Yellowknife"/>
       <connection t1="British Guiana" t2="Dutch Guiana"/>
       <connection t1="British Guiana" t2="Guiana Sea Zone"/>
@@ -1006,9 +1006,9 @@
       <connection t1="Egypt" t2="Red Sea Zone"/>
       <connection t1="Egypt" t2="Transjordan"/>
       <connection t1="Calgary" t2="Montana"/>
-      <connection t1="Calgary" t2="Saskatchewan"/>
+      <connection t1="Calgary" t2="Winnipeg"/>
       <connection t1="Calgary" t2="USA Northwest"/>
-      <connection t1="Calgary" t2="Victoria"/>
+      <connection t1="Calgary" t2="Vancouver"/>
       <connection t1="California" t2="Great Plains"/>
       <connection t1="California" t2="Northern Mexico"/>
       <connection t1="California" t2="Pacific Coast Sea Zone"/>
@@ -1364,7 +1364,7 @@
       <connection t1="Gulf of Alaska Sea Zone" t2="Pacific Coast Sea Zone"/>
       <connection t1="Gulf of Alaska Sea Zone" t2="Southern Alaska"/>
       <connection t1="Gulf of Alaska Sea Zone" t2="USA Northwest"/>
-      <connection t1="Gulf of Alaska Sea Zone" t2="Victoria"/>
+      <connection t1="Gulf of Alaska Sea Zone" t2="Vancouver"/>
       <connection t1="Gulf of Bothnia Sea Zone" t2="Leningrad"/>
       <connection t1="Gulf of Bothnia Sea Zone" t2="Norrland"/>
       <connection t1="Gulf of Bothnia Sea Zone" t2="Svealand"/>
@@ -1423,7 +1423,6 @@
       <connection t1="Hawaiian Sea Zone" t2="Pacific 6 Sea Zone"/>
       <connection t1="Hawaiian Sea Zone" t2="Pacific 7 Sea Zone"/>
       <connection t1="Hawaiian Sea Zone" t2="San Diego Sea Zone"/>
-      <connection t1="Hebrides" t2="Scotland"/>
       <connection t1="Himalayas" t2="Nepal"/>
       <connection t1="Himalayas" t2="Punjab"/>
       <connection t1="Himalayas" t2="Kashgar"/>
@@ -1626,7 +1625,7 @@
       <connection t1="Lake Ontario" t2="USA North Atlantic"/>
       <connection t1="Lake Superior" t2="Toronto"/>
       <connection t1="Lake Superior" t2="USA North"/>
-      <connection t1="Lake Superior" t2="Wabakimi"/>
+      <connection t1="Lake Superior" t2="Port Arthur"/>
       <connection t1="Lake Tanganyika" t2="Lindi"/>
       <connection t1="Lake Tanganyika" t2="Northern Congo"/>
       <connection t1="Lake Tanganyika" t2="Rhodesia"/>
@@ -1634,8 +1633,8 @@
       <connection t1="Lake Tanganyika" t2="Tanganyika"/>
       <connection t1="Lake Victoria" t2="Tanganyika"/>
       <connection t1="Lake Victoria" t2="Uganda"/>
-      <connection t1="Lake Winnipeg" t2="Saskatchewan"/>
-      <connection t1="Lake Winnipeg" t2="Wabakimi"/>
+      <connection t1="Lake Winnipeg" t2="Winnipeg"/>
+      <connection t1="Lake Winnipeg" t2="Port Arthur"/>
       <connection t1="Lanchow" t2="Peking"/>
       <connection t1="Lanchow" t2="Qinghai"/>
       <connection t1="Lapland" t2="Murmansk"/>
@@ -1679,8 +1678,8 @@
       <connection t1="Mallorca" t2="Mediterranean Sea Zone"/>
       <connection t1="Manitoba" t2="Melville"/>
       <connection t1="Manitoba" t2="Ontario"/>
-      <connection t1="Manitoba" t2="Saskatchewan"/>
-      <connection t1="Manitoba" t2="Wabakimi"/>
+      <connection t1="Manitoba" t2="Winnipeg"/>
+      <connection t1="Manitoba" t2="Port Arthur"/>
       <connection t1="Mansia" t2="Sverdlovsk"/>
       <connection t1="Mansia" t2="Tatarstan"/>
       <connection t1="Mansia" t2="Ural"/>
@@ -1719,7 +1718,7 @@
       <connection t1="Mombasa Sea Zone" t2="Mozambique Channel Sea Zone"/>
       <connection t1="Mombasa Sea Zone" t2="Somalia"/>
       <connection t1="Mombasa Sea Zone" t2="Tanganyika"/>
-      <connection t1="Montana" t2="Saskatchewan"/>
+      <connection t1="Montana" t2="Winnipeg"/>
       <connection t1="Montana" t2="USA Midwest"/>
       <connection t1="Montana" t2="USA North"/>
       <connection t1="Montana" t2="USA Northwest"/>
@@ -1837,7 +1836,7 @@
       <connection t1="Oman" t2="Riyadh"/>
       <connection t1="Ontario" t2="Quebec"/>
       <connection t1="Ontario" t2="Toronto"/>
-      <connection t1="Ontario" t2="Wabakimi"/>
+      <connection t1="Ontario" t2="Port Arthur"/>
       <connection t1="Orissa" t2="United Provinces"/>
       <connection t1="Oskemen" t2="Pavlodar"/>
       <connection t1="Oskemen" t2="Urimchi"/>
@@ -1917,8 +1916,8 @@
       <connection t1="Kuybyshev" t2="Volga"/>
       <connection t1="Sao Paulo" t2="Uruguay"/>
       <connection t1="Sardinia" t2="Tyrrhenian Sea Zone"/>
-      <connection t1="Saskatchewan" t2="USA North"/>
-      <connection t1="Saskatchewan" t2="Wabakimi"/>
+      <connection t1="Winnipeg" t2="USA North"/>
+      <connection t1="Winnipeg" t2="Port Arthur"/>
       <connection t1="Senegal" t2="West African Sea Zone"/>
       <connection t1="Sicily" t2="Tyrrhenian Sea Zone"/>
       <connection t1="Sind" t2="United Provinces"/>
@@ -1997,7 +1996,7 @@
       <connection t1="Tien Shan" t2="Uzbekistan"/>
       <connection t1="Toronto" t2="USA North"/>
       <connection t1="Toronto" t2="USA North Atlantic"/>
-      <connection t1="Toronto" t2="Wabakimi"/>
+      <connection t1="Toronto" t2="Port Arthur"/>
       <connection t1="Trafalgar Sea Zone" t2="West African Sea Zone"/>
       <connection t1="Troms-Finnmark" t2="Trondheim-Narvik"/>
       <connection t1="Troms-Finnmark" t2="White Sea Zone"/>
@@ -2010,9 +2009,9 @@
       <connection t1="USA Central" t2="USA North Atlantic"/>
       <connection t1="USA Central" t2="USA South Atlantic"/>
       <connection t1="USA Midwest" t2="USA North"/>
-      <connection t1="USA North" t2="Wabakimi"/>
+      <connection t1="USA North" t2="Port Arthur"/>
       <connection t1="USA North Atlantic" t2="USA South Atlantic"/>
-      <connection t1="USA Northwest" t2="Victoria"/>
+      <connection t1="USA Northwest" t2="Vancouver"/>
       <connection t1="Ubangi-Shari" t2="Uganda"/>
       <connection t1="Ulan Bator" t2="Western Mongolia"/>
       <connection t1="Ural" t2="Yamalia"/>
@@ -4955,12 +4954,6 @@
 
         <attachment name="unitAttachment" attachTo="Airfield" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
-            <option name="givesMovement" value="1:Air-Transport"/>
-            <option name="givesMovement" value="1:Bomber"/>
-            <option name="givesMovement" value="1:Dive-Bomber"/>
-            <option name="givesMovement" value="1:Fighter"/>
-            <option name="givesMovement" value="1:Jet-Fighter"/>
-            <option name="givesMovement" value="1:Nuclear-Bomb"/>
             <option name="destroyedWhenCapturedFrom" value="USA:USSR:Britain"/>
             <option name="createsUnitsList" value="1:Air-Transport"/>
         </attachment>
@@ -5036,6 +5029,19 @@
         <attachment name="territoryAttachment" attachTo="South Pacific 10 Sea Zone" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
             <option name="originalOwner" value="ANZAC"/>
+        </attachment>
+
+        <attachment name="territoryAttachment" attachTo="Lake Ladoga" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="isImpassable" value="true"/>
+        </attachment>
+        <attachment name="territoryAttachment" attachTo="Lake Onega" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="isImpassable" value="true"/>
+        </attachment>
+        <attachment name="territoryAttachment" attachTo="Lake Ontario" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="isImpassable" value="true"/>
+        </attachment>
+        <attachment name="territoryAttachment" attachTo="Lake Erie" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+            <option name="isImpassable" value="true"/>
         </attachment>
 
         <attachment name="territoryAttachment" attachTo="Abyysky" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -5292,7 +5298,7 @@
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Darwin" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Denmark" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -5662,8 +5668,7 @@
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Melbourne" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="5"/>
-            <option name="capital" value="ANZAC"/>
+            <option name="production" value="3"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Melville" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
@@ -5766,7 +5771,7 @@
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="North Queensland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="North Sudan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -5903,7 +5908,7 @@
         <attachment name="territoryAttachment" attachTo="Sardinia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="Saskatchewan" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+        <attachment name="territoryAttachment" attachTo="Winnipeg" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Scotland" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -6142,7 +6147,7 @@
         <attachment name="territoryAttachment" attachTo="Vichy" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="Victoria" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+        <attachment name="territoryAttachment" attachTo="Vancouver" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="5"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Philippines" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -6154,7 +6159,7 @@
         <attachment name="territoryAttachment" attachTo="Volga" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
-        <attachment name="territoryAttachment" attachTo="Wabakimi" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
+        <attachment name="territoryAttachment" attachTo="Port Arthur" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Wake" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
@@ -7655,8 +7660,8 @@
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
-        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Saskatchewan" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
-            <option name="directPresenceTerritories" value="Saskatchewan" count="1"/>
+        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Winnipeg" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
+            <option name="directPresenceTerritories" value="Winnipeg" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
@@ -8020,8 +8025,8 @@
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
-        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Victoria" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
-            <option name="directPresenceTerritories" value="Victoria" count="1"/>
+        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Vancouver" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
+            <option name="directPresenceTerritories" value="Vancouver" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
@@ -8040,8 +8045,8 @@
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
-        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Wabakimi" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
-            <option name="directPresenceTerritories" value="Wabakimi" count="1"/>
+        <attachment name="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Port Arthur" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">	
+            <option name="directPresenceTerritories" value="Port Arthur" count="1"/>
             <option name="unitPresence" value="SS-Potential" count="1"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>	
@@ -11245,7 +11250,7 @@
             <option name="players" value="Germany"/>	
             <option name="when" value="before:BalkanEndTurn"/>	
             <option name="when" value="before:FinlandEndTurn"/>	
-            <option name="when" value="before:ItalyEndTurn"/>	
+            <option name="when" value="before:ItalyEndTurn"/>
             <option name="when" value="before:IraqEndTurn"/>	
             <option name="when" value="before:IranEndTurn"/>	
             <option name="when" value="before:JapanEndTurn"/>
@@ -11371,9 +11376,9 @@
             <option name="when" value="before:JapanEndTurn"/>	
             <option name="when" value="before:ThailandEndTurn"/>	
         </attachment>		
-        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Saskatchewan" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
-            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Saskatchewan"/>	
-            <option name="placement" value="Saskatchewan:SS-Potential" count="1"/>	
+        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Winnipeg" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
+            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Winnipeg"/>	
+            <option name="placement" value="Winnipeg:SS-Potential" count="1"/>	
             <option name="players" value="Germany"/>	
             <option name="when" value="before:BalkanEndTurn"/>	
             <option name="when" value="before:FinlandEndTurn"/>	
@@ -11921,7 +11926,7 @@
             <option name="when" value="before:IraqEndTurn"/>	
             <option name="when" value="before:IranEndTurn"/>	
             <option name="when" value="before:JapanEndTurn"/>	
-            <option name="when" value="before:ThailandEndTurn"/>	
+            <option name="when" value="before:ThailandEndTurn"/>
         </attachment>		
         <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Troms-Finnmark" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
             <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Troms-Finnmark"/>	
@@ -12247,13 +12252,13 @@
             <option name="when" value="before:JapanEndTurn"/>	
             <option name="when" value="before:ThailandEndTurn"/>	
         </attachment>		
-        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Victoria" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
-            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Victoria"/>	
-            <option name="placement" value="Victoria:SS-Potential" count="1"/>	
+        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Vancouver" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
+            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Vancouver"/>	
+            <option name="placement" value="Vancouver:SS-Potential" count="1"/>	
             <option name="players" value="Germany"/>	
             <option name="when" value="before:BalkanEndTurn"/>	
             <option name="when" value="before:FinlandEndTurn"/>	
-            <option name="when" value="before:ItalyEndTurn"/>	
+            <option name="when" value="before:ItalyEndTurn"/>
             <option name="when" value="before:IraqEndTurn"/>	
             <option name="when" value="before:IranEndTurn"/>	
             <option name="when" value="before:JapanEndTurn"/>	
@@ -12295,9 +12300,9 @@
             <option name="when" value="before:JapanEndTurn"/>	
             <option name="when" value="before:ThailandEndTurn"/>	
         </attachment>		
-        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Wabakimi" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
-            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Wabakimi"/>	
-            <option name="placement" value="Wabakimi:SS-Potential" count="1"/>	
+        <attachment name="triggerAttachment_The_SS_is_now_recruiting_from_Port Arthur" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
+            <option name="conditions" value="conditionAttachment-A-Non-German-Axis-SS-Potential-Is-In-Territory-Port Arthur"/>	
+            <option name="placement" value="Port Arthur:SS-Potential" count="1"/>	
             <option name="players" value="Germany"/>	
             <option name="when" value="before:BalkanEndTurn"/>	
             <option name="when" value="before:FinlandEndTurn"/>	
@@ -13748,12 +13753,12 @@
 
         <attachment name="conditionAttachment-Romania-is-now-under-Axis-control" attachTo="Germany" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Romania" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="15"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="12"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
         </attachment>
         <attachment name="triggerAttachment_Germany_now_claims_the_fuel_in_Romania" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Romania-is-now-under-Axis-control"/>
-            <option name="removeUnits" value="Romania:Fuel-Barrel" count="15"/>
+            <option name="removeUnits" value="Romania:Fuel-Barrel" count="12"/>
             <option name="players" value="Balkan:Finland:Italy:Iraq:Iran:Japan:Thailand"/>
             <option name="when" value="before:BalkanEndTurn"/>
             <option name="when" value="before:FinlandEndTurn"/>
@@ -13765,7 +13770,7 @@
         </attachment>
         <attachment name="triggerAttachment_Romania_is_now_under_Axis_control" attachTo="Germany" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">		
             <option name="conditions" value="conditionAttachment-Romania-is-now-under-Axis-control"/>	
-            <option name="placement" value="Romania:Fuel-Barrel" count="15"/>
+            <option name="placement" value="Romania:Fuel-Barrel" count="12"/>
             <option name="players" value="Germany"/>	
             <option name="when" value="before:BalkanEndTurn"/>
             <option name="when" value="before:FinlandEndTurn"/>	
@@ -13948,12 +13953,12 @@
         
         <attachment name="conditionAttachment-Venezuela-is-now-under-Allied-control" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Venezuela" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="15"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="7"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
         </attachment>
         <attachment name="triggerAttachment_USA_now_claims_the_fuel_in_Venezuela" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Venezuela-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Venezuela:Fuel-Barrel" count="15"/>
+            <option name="removeUnits" value="Venezuela:Fuel-Barrel" count="7"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -13969,7 +13974,7 @@
         </attachment>
         <attachment name="triggerAttachment_Venezuela_is_now_under_Allied_control" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Venezuela-is-now-under-Allied-control"/>	
-            <option name="placement" value="Venezuela:Fuel-Barrel" count="15"/>
+            <option name="placement" value="Venezuela:Fuel-Barrel" count="7"/>
             <option name="players" value="USA"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -13986,12 +13991,12 @@
 
         <attachment name="conditionAttachment-Colombia-is-now-under-Allied-control" attachTo="USA" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Colombia" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="5"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="3"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
         </attachment>
         <attachment name="triggerAttachment_USA_now_claims_the_fuel_in_Colombia" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Colombia-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Colombia:Fuel-Barrel" count="5"/>
+            <option name="removeUnits" value="Colombia:Fuel-Barrel" count="3"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:Britain:British-India:ANZAC:KNIL:China:Brazil"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -14007,7 +14012,7 @@
         </attachment>
         <attachment name="triggerAttachment_Colombia_is_now_under_Allied_control" attachTo="USA" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Colombia-is-now-under-Allied-control"/>	
-            <option name="placement" value="Colombia:Fuel-Barrel" count="5"/>
+            <option name="placement" value="Colombia:Fuel-Barrel" count="3"/>
             <option name="players" value="USA"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -14180,12 +14185,12 @@
 <!-- Start Some resources are claimed buy ANZAC -->
         <attachment name="conditionAttachment-Peru-is-now-under-Allied-control" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Peru" count="1"/>
-            <option name="unitPresence" value="Fuel-Barrel" count="2"/>
+            <option name="unitPresence" value="Fuel-Barrel" count="1"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:Britain:KNIL:China:Brazil"/>
         </attachment>
         <attachment name="triggerAttachment_ANZAC_now_claims_the_fuel_in_Peru" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Peru-is-now-under-Allied-control"/>
-            <option name="removeUnits" value="Peru:Fuel-Barrel" count="2"/>
+            <option name="removeUnits" value="Peru:Fuel-Barrel" count="1"/>
             <option name="players" value="USSR:France:French-Colonies:South-Africa:British-Colonies:USA:British-India:Britain:KNIL:China:Brazil"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -14201,7 +14206,7 @@
         </attachment>
         <attachment name="triggerAttachment_Peru_is_now_under_Allied_control" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Peru-is-now-under-Allied-control"/>	
-            <option name="placement" value="Peru:Fuel-Barrel" count="2"/>
+            <option name="placement" value="Peru:Fuel-Barrel" count="1"/>
             <option name="players" value="ANZAC"/>
             <option name="when" value="before:USSREndTurn"/>
             <option name="when" value="before:FranceEndTurn"/>
@@ -15593,7 +15598,7 @@
             <territoryOwner territory="Kuybyshev" owner="USSR"/>
             <territoryOwner territory="Sao Paulo" owner="Brazil"/>
             <territoryOwner territory="Sardinia" owner="Italy"/>
-            <territoryOwner territory="Saskatchewan" owner="Britain"/>
+            <territoryOwner territory="Winnipeg" owner="Britain"/>
             <territoryOwner territory="Scotland" owner="Britain"/>
             <territoryOwner territory="Senegal" owner="France"/>
             <territoryOwner territory="Shanghai" owner="Japan"/>
@@ -15667,11 +15672,11 @@
             <territoryOwner territory="Uzbekistan" owner="USSR"/>
             <territoryOwner territory="Venezuela" owner="Pro-Allies-Neutral"/>
             <territoryOwner territory="Vichy" owner="France"/>
-            <territoryOwner territory="Victoria" owner="Britain"/>
+            <territoryOwner territory="Vancouver" owner="Britain"/>
             <territoryOwner territory="Philippines" owner="USA"/>
             <territoryOwner territory="Amur" owner="USSR"/>
             <territoryOwner territory="Volga" owner="USSR"/>
-            <territoryOwner territory="Wabakimi" owner="Britain"/>
+            <territoryOwner territory="Port Arthur" owner="Britain"/>
             <territoryOwner territory="Wake" owner="USA"/>
             <territoryOwner territory="West Africa" owner="France"/>
             <territoryOwner territory="West Germany" owner="Germany"/>
@@ -15756,6 +15761,7 @@
             <unitPlacement unitType="Flag" territory="Argentina" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Flag" territory="Aru" quantity="1" owner="KNIL"/>
             <unitPlacement unitType="Flag" territory="Astana" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Astana" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Austria-Bohemia" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="Austria-Bohemia" quantity="4" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="Austria-Bohemia" quantity="1" owner="Germany"/>
@@ -15922,7 +15928,7 @@
             <unitPlacement unitType="Factory" territory="Chungking" quantity="1" owner="China"/>
             <unitPlacement unitType="Artillery" territory="Chungking" quantity="1" owner="China"/>
             <unitPlacement unitType="Flag" territory="Chungking" quantity="1" owner="China"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Colombia" quantity="5" owner="USA"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Colombia" quantity="3" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Colombia" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Colombia" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Mech-Inf" territory="Colombia" quantity="1" owner="Pro-Allies-Neutral"/>
@@ -16172,7 +16178,7 @@
             <unitPlacement unitType="Mech-Inf" territory="Irkutsk" quantity="5" owner="USSR"/>
             <unitPlacement unitType="Commissariat" territory="Irkutsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fighter" territory="Italy" quantity="1" owner="Italy"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Italy" quantity="3" owner="Italy"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Italy" quantity="5" owner="Italy"/>
             <unitPlacement unitType="Infantry" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Iron-Ore" territory="Italy" quantity="1" owner="Italy"/>
             <unitPlacement unitType="Anti-Air" territory="Italy" quantity="1" owner="Italy"/>
@@ -16343,7 +16349,6 @@
             <unitPlacement unitType="Commissariat" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Medium-Tank" territory="Moscow" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Siberia" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Infantry" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Iron-Ore" territory="Siberia" quantity="2" owner="USSR"/>
             <unitPlacement unitType="SP-Artillery" territory="Siberia" quantity="3" owner="USSR"/>
             <unitPlacement unitType="Factory" territory="Siberia" quantity="1" owner="USSR"/>
@@ -16438,6 +16443,7 @@
             <unitPlacement unitType="Fuel-Barrel" territory="Norway" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Novosibirsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Novosibirsk" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Novosibirsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Colonial-Infantry" territory="Nubian Desert" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Flag" territory="Nubian Desert" quantity="1" owner="British-Colonies"/>
             <unitPlacement unitType="Submarine" territory="Okhotsk Sea Zone" quantity="2" owner="USSR"/>
@@ -16484,7 +16490,7 @@
             <unitPlacement unitType="Infantry" territory="Peru" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Peru" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Peru" quantity="1" owner="Pro-Allies-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Peru" quantity="2" owner="ANZAC"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Peru" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="Portugal" quantity="2" owner="True-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Portugal" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Portugal" quantity="1" owner="True-Neutral"/>
@@ -16511,7 +16517,7 @@
             <unitPlacement unitType="Infantry" territory="Romania" quantity="5" owner="Balkan"/>
             <unitPlacement unitType="Factory" territory="Romania" quantity="1" owner="Balkan"/>
             <unitPlacement unitType="Flag" territory="Romania" quantity="1" owner="Balkan"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Romania" quantity="15" owner="Germany"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Romania" quantity="12" owner="Germany"/>
             <unitPlacement unitType="SS-Potential" territory="Romania" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Ryojun" quantity="5" owner="Japan"/>
             <unitPlacement unitType="Infantry" territory="Ryojun" quantity="6" owner="Japan"/>
@@ -16531,7 +16537,7 @@
             <unitPlacement unitType="Infantry" territory="Sao Paulo" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Flag" territory="Sao Paulo" quantity="1" owner="Brazil"/>
             <unitPlacement unitType="Flag" territory="Sardinia" quantity="1" owner="Italy"/>
-            <unitPlacement unitType="Flag" territory="Saskatchewan" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Flag" territory="Winnipeg" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Scotland" quantity="3" owner="Britain"/>
             <unitPlacement unitType="Artillery" territory="Scotland" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Scotland" quantity="1" owner="Britain"/>
@@ -16589,7 +16595,7 @@
             <unitPlacement unitType="Light-Tank" territory="South Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Artillery" territory="South Island" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="South Island" quantity="1" owner="ANZAC"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="South Queensland" quantity="2" owner="ANZAC"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="South Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="South Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Artillery" territory="South Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Flag" territory="South Queensland" quantity="1" owner="ANZAC"/>
@@ -16632,6 +16638,7 @@
             <unitPlacement unitType="Flag" territory="Svealand" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Sverdlovsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Sverdlovsk" quantity="1" owner="USSR"/>
+            <unitPlacement unitType="Infantry" territory="Sverdlovsk" quantity="1" owner="USSR"/>
             <unitPlacement unitType="SS-Potential" territory="Sweden" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="Sweden" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Medium-Tank" territory="Sweden" quantity="1" owner="Pro-Axis-Neutral"/>
@@ -16639,7 +16646,7 @@
             <unitPlacement unitType="Flag" territory="Sweden" quantity="1" owner="Pro-Axis-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Switzerland" quantity="3" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Switzerland" quantity="1" owner="True-Neutral"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Sydney" quantity="3" owner="ANZAC"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Sydney" quantity="2" owner="ANZAC"/>
             <unitPlacement unitType="Infantry" territory="Sydney" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Iron-Ore" territory="Sydney" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="Light-Tank" territory="Sydney" quantity="1" owner="ANZAC"/>
@@ -16761,16 +16768,16 @@
             <unitPlacement unitType="Flag" territory="Uruguay" quantity="1" owner="True-Neutral"/>
             <unitPlacement unitType="Flag" territory="Ust-Maysky" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Uzbekistan" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Venezuela" quantity="15" owner="USA"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Venezuela" quantity="7" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Venezuela" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Artillery" territory="Venezuela" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Flag" territory="Venezuela" quantity="1" owner="Pro-Allies-Neutral"/>
             <unitPlacement unitType="Infantry" territory="Vichy" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="Vichy" quantity="1" owner="France"/>
-            <unitPlacement unitType="Infantry" territory="Victoria" quantity="2" owner="Britain"/>
-            <unitPlacement unitType="Artillery" territory="Victoria" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Factory" territory="Victoria" quantity="1" owner="Britain"/>
-            <unitPlacement unitType="Fuel-Barrel" territory="Victoria" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Infantry" territory="Vancouver" quantity="2" owner="Britain"/>
+            <unitPlacement unitType="Artillery" territory="Vancouver" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Factory" territory="Vancouver" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Fuel-Barrel" territory="Vancouver" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Infantry" territory="Philippines" quantity="3" owner="USA"/>
             <unitPlacement unitType="Flag" territory="Philippines" quantity="1" owner="USA"/>
             <unitPlacement unitType="Infantry" territory="Amur" quantity="3" owner="USSR"/>
@@ -16778,7 +16785,7 @@
             <unitPlacement unitType="Flag" territory="Amur" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Flag" territory="Volga" quantity="1" owner="USSR"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Volga" quantity="1" owner="USSR"/>
-            <unitPlacement unitType="Flag" territory="Wabakimi" quantity="1" owner="Britain"/>
+            <unitPlacement unitType="Flag" territory="Port Arthur" quantity="1" owner="Britain"/>
             <unitPlacement unitType="Flag" territory="Wake" quantity="1" owner="USA"/>
             <unitPlacement unitType="Colony" territory="West Africa" quantity="1" owner="France"/>
             <unitPlacement unitType="Flag" territory="West Africa" quantity="1" owner="France"/>
@@ -17321,6 +17328,9 @@
         </property>
         <property name="Transport Control Sea Zone" value="true" editable="false">
             <boolean/>
+        </property>        
+        <property name="Units Can Load In Hostile Sea Zones" value="true" editable="false">
+            <boolean/>
         </property>
         <property name="Defending Subs Sneak Attack" value="true" editable="false">
             <boolean/>
@@ -17499,9 +17509,9 @@
 <center><img src="R-Kamikaze.png"/></center>
 <br><span style="font-size:13px;color:000000">Soviet Officials are created by Commissariats. Officials are used to create Commissars who can inspire USSR Infantry during battle.</span><br>
 <center><img src="USSRCommissariat.png"/></center>
-<br><span style="font-size:13px;color:000000">Hidden Axis Submarine-Pens continuously create new Submarines throughout the war. Pens also enable Submarines to launch long range attacks and therefore represent a constant threat to Allied fleets until located and destroyed.</span><br>
+<br><span style="font-size:13px;color:000000">Axis Submarine-Pens continuously create new Submarines throughout the war. Pens also enable Submarines to launch long range attacks and therefore represent a constant threat to Allied fleets until captured and destroyed.</span><br>
 <center><img src="U-boats.png"/></center>
-<br><span style="font-size:13px;color:000000">Allied Airfields continuously create new Air-Transports throughout the war. Additionally, they extend the range of friendly air units launching from their territory. Airfields continue to function until they are captured and destroyed.</span><br>
+<br><span style="font-size:13px;color:000000">Allied Airfields continuously create new Allied Air-Transports throughout the war. Airfields will continue to function until they are captured and destroyed by the Axis.</span><br>
 <center><img src="AlliedAirfield.png"/></center>
 <br><span style="font-size:13px;color:000000">Some resource deposits around the world are claimed by specific nations from game start. Friendly nations will automatically hand over these resources if captured from enemy forces.</span><br>
 <br><center><img src="Bar6.png"/></center>
