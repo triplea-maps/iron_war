@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Iron War" version="0.2.8"/>
+  <info name="Iron War" version="0.2.9"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -2114,6 +2114,7 @@
         <unit name="Flag"/>
         <unit name="Iron-Ore"/>
         <unit name="Fuel-Barrel"/>
+        <unit name="Synthetic-Fuel"/>
         <unit name="SS-Potential"/>
         <unit name="Colony"/>
         <unit name="Kamikaze-Potential"/>
@@ -2536,6 +2537,10 @@
             <cost resource="PUs" quantity="1"/>
             <result resourceOrUnit="Fuel-Barrel" quantity="1"/>
         </productionRule>
+        <productionRule name="buySynthetic-Fuel">
+            <cost resource="PUs" quantity="5"/>
+            <result resourceOrUnit="Synthetic-Fuel" quantity="1"/>
+        </productionRule>
         <productionRule name="buySS-Potential">
             <cost resource="PUs" quantity="1"/>
             <result resourceOrUnit="SS-Potential" quantity="1"/>
@@ -2593,6 +2598,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2617,6 +2623,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2641,6 +2648,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2665,6 +2673,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2689,9 +2698,10 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
-        
+
         <productionFrontier name="production_Germany_2">
             <frontierRules name="buySS-Infantry"/>
             <frontierRules name="buySS-Panzer"/>         <!-- New -->
@@ -2715,6 +2725,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
         
@@ -2742,6 +2753,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
         
@@ -2770,6 +2782,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
         
@@ -2799,6 +2812,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
         
@@ -2829,6 +2843,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2841,6 +2856,7 @@
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
         
@@ -2861,6 +2877,7 @@
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
         
@@ -2882,6 +2899,7 @@
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2906,6 +2924,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2931,6 +2950,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2957,6 +2977,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2984,6 +3005,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -2999,6 +3021,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3020,6 +3043,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3042,6 +3066,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3065,6 +3090,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3089,6 +3115,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3114,6 +3141,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3140,6 +3168,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3164,6 +3193,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3189,6 +3219,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3215,6 +3246,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3239,6 +3271,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3264,6 +3297,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3290,6 +3324,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3313,6 +3348,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3337,6 +3373,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3362,6 +3399,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3388,6 +3426,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3412,6 +3451,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3437,6 +3477,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3463,6 +3504,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3486,6 +3528,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3510,6 +3553,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3535,6 +3579,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3559,6 +3604,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3584,6 +3630,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3610,6 +3657,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3623,6 +3671,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3637,6 +3686,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3660,6 +3710,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3684,6 +3735,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3709,6 +3761,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3733,6 +3786,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3758,6 +3812,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3784,6 +3839,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3807,6 +3863,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3831,6 +3888,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3856,6 +3914,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3882,6 +3941,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3909,6 +3969,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3926,6 +3987,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3950,6 +4012,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -3975,6 +4038,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4001,6 +4065,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4028,6 +4093,7 @@
             <frontierRules name="buyBattleship"/>
             <frontierRules name="buyCarrier"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4044,6 +4110,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4064,6 +4131,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4085,6 +4153,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4096,6 +4165,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4114,6 +4184,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4133,6 +4204,7 @@
             <frontierRules name="buyDestroyer"/>
             <frontierRules name="buyCruiser"/>
             <frontierRules name="buyAnti-Air"/>
+            <frontierRules name="buySynthetic-Fuel"/>
             <frontierRules name="buyFactory"/>
         </productionFrontier>
 
@@ -4968,6 +5040,11 @@
         <attachment name="unitAttachment" attachTo="Fuel-Barrel" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
             <option name="createsResourcesList" value="1:Fuel"/>
+        </attachment>
+        <attachment name="unitAttachment" attachTo="Synthetic-Fuel" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+            <option name="isInfrastructure" value="true"/>
+            <option name="createsResourcesList" value="1:Fuel"/>
+            <option name="destroyedWhenCapturedFrom" value="Germany:Balkan:USSR:Finland:France:French-Colonies:Italy:Britain:British-Colonies:South-Africa:British-India:Iraq:Iran:ANZAC:KNIL:China:Japan:Thailand:USA:Brazil:Neutral:True-Neutral:Pro-Axis-Neutral:Pro-Allies-Neutral"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="SS-Potential" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
@@ -15799,6 +15876,7 @@
             <unitPlacement unitType="Flag" territory="Bengal" quantity="1" owner="British-India"/>
             <unitPlacement unitType="Bomber" territory="Berlin" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Fuel-Barrel" territory="Berlin" quantity="5" owner="Germany"/>
+            <unitPlacement unitType="Synthetic-Fuel" territory="Berlin" quantity="1" owner="Germany"/>
             <unitPlacement unitType="Infantry" territory="Berlin" quantity="5" owner="Germany"/>
             <unitPlacement unitType="SS-Infantry" territory="Berlin" quantity="3" owner="Germany"/>
             <unitPlacement unitType="Iron-Ore" territory="Berlin" quantity="3" owner="Germany"/>
@@ -17472,7 +17550,7 @@
 <br><span style="font-size:13px;color:000000"><img src="Dot4.png"/>Some nations can financially support minor nations, as long as these minor nations have a Factory on the map.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot5.png"/>Battleships and Carriers have 2 Hitpoints and are repaired at start of player turns.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot6.png"/>Canals are controlled by single territories marked with boom barriers.</span><br>
-<br><span style="font-size:13px;color:000000"><img src="Dot7.png"/>Factories are destroyed upon capture.</span><br>
+<br><span style="font-size:13px;color:000000"><img src="Dot7.png"/>Factories and Synthetic-Fuel are destroyed during capture.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot8.png"/>Factories can only be placed on 5+ PU value territories.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot9.png"/>Factories can not be placed in newly captured territories.</span><br>
 <br><span style="font-size:13px;color:000000"><img src="Dot10.png"/>Factories have a production capacity of 5 units.</span><br>
@@ -17499,8 +17577,8 @@
 <center><img src="R-Convoy.png"/></center>
 <br><span style="font-size:13px;color:000000">Iron is used to make armor and is required to produce ships and land vehicles.</span><br>
 <center><img src="R-Iron.png"/></center>
-<br><span style="font-size:13px;color:000000">Fuel is used by ships, land vehicles and planes to move. 1 unit moving to an adjacent territory consumes 1 Fuel. Planes are an exception to this rule, as they always consume Fuel equal to half of their full potential movement.</span><br>
-<center><img src="R-Oil.png"/></center>
+<br><span style="font-size:13px;color:000000">Fuel is used by ships, land vehicles and planes to move. 1 unit moving to an adjacent territory consumes 1 Fuel. Planes are an exception to this rule, as they always consume Fuel equal to half of their full potential movement. Note that all Synthetic-Fuel production is destroyed during capture, unlike regular fuel resources.</span><br>
+<center><img src="R-Oil.png"/><img src="R-Synth.png"/></center>
 <br><span style="font-size:13px;color:000000">Colonial Recruitment (CR) comes from controlling specific territories and is used to purchase colonial infantry units. Several Allied nations plus Italy can make use of this resource.</span><br>
 <center><img src="R-Colony.png"/></center>
 <br><span style="font-size:13px;color:000000">Schutzstaffel Recruitment (SS) comes from Axis controlling specific territories and is used to purchase SS infantry and tank units. All SS recruitment is done by Germany.</span><br>
