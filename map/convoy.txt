@@ -9,4 +9,5 @@ North Pacific 1 Sea Zone  (11723,1213)
 Indian Ocean 2 Sea Zone  (7790,3238)
 Indian Ocean 3 Sea Zone  (8550,3120)
 Indian Ocean 5 Sea Zone  (8550,3590)
+Port Elizabeth Sea Zone  (6600,4700)
 
