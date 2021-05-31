@@ -1,0 +1,3 @@
+map_name: iron_war
+games:
+- {game_name: Iron War, file_name: iron_war.xml}
